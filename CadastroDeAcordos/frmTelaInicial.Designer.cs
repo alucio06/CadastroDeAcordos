@@ -1,6 +1,6 @@
 ﻿namespace CadastroDeAcordos
 {
-    partial class Form1
+    partial class frmTelaInicial
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaInicial));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -38,11 +38,11 @@
             this.btnCadastrarAcordo = new FontAwesome.Sharp.IconButton();
             this.btnVisualizarAcordos = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,6 +138,7 @@
             this.btnAtualizarStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtualizarStatus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAtualizarStatus.UseVisualStyleBackColor = true;
+            this.btnAtualizarStatus.Click += new System.EventHandler(this.btnAtualizarStatus_Click);
             // 
             // btnCadastrarAcordo
             // 
@@ -162,6 +163,7 @@
             this.btnCadastrarAcordo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarAcordo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrarAcordo.UseVisualStyleBackColor = true;
+            this.btnCadastrarAcordo.Click += new System.EventHandler(this.btnCadastrarAcordo_Click);
             // 
             // btnVisualizarAcordos
             // 
@@ -186,6 +188,7 @@
             this.btnVisualizarAcordos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVisualizarAcordos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVisualizarAcordos.UseVisualStyleBackColor = true;
+            this.btnVisualizarAcordos.Click += new System.EventHandler(this.btnVisualizarAcordos_Click);
             // 
             // panel2
             // 
@@ -195,15 +198,15 @@
             this.panel2.Size = new System.Drawing.Size(182, 54);
             this.panel2.TabIndex = 1;
             // 
-            // panel1
+            // panelChildForm
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(182, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(589, 429);
-            this.panel1.TabIndex = 1;
+            this.panelChildForm.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelChildForm.Controls.Add(this.pictureBox1);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(182, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(589, 429);
+            this.panelChildForm.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -220,20 +223,20 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // frmTelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 429);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "Form1";
+            this.Name = "frmTelaInicial";
             this.Text = "Acordos Internacionais";
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -242,7 +245,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelChildForm;
         private FontAwesome.Sharp.IconButton btnVisualizarAcordos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
