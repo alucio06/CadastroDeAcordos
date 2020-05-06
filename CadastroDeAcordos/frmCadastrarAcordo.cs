@@ -51,7 +51,7 @@ namespace CadastroDeAcordos
 
                 comando = new SqlCommand(strSQL, conexao);
 
-                comando.Parameters.AddWithValue("@NUMEROPROCESSUAL", txtNome.Text);
+                comando.Parameters.AddWithValue("@NUMEROPROCESSUAL", txtNumeroProcessual.Text);
                 comando.Parameters.AddWithValue("@NOME", txtNome.Text);
                 comando.Parameters.AddWithValue("@NUMEROTELEFONE", txtTelefone.Text);
 
@@ -65,7 +65,132 @@ namespace CadastroDeAcordos
             finally
             {
                 conexao.Close();
-                comando.Clone();
+                conexao = null;
+                comando = null;
+            }
+        }
+
+        private void btnExibir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                conexao = new SqlConnection(@"Data Source=DESKTOP-KVLIDHN;Initial Catalog=CadastroDeAcordos;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
+
+                strSQL = "SELECT * FROM CAD_ACORDO";
+
+                DataSet ds = new DataSet();
+
+                da = new SqlDataAdapter(strSQL, conexao);
+
+                conexao.Open();
+
+                da.Fill(ds);
+
+                dgvDados.DataSource = ds.Tables[0];
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+                conexao = null;
+                comando = null;
+            }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                conexao = new SqlConnection(@"Data Source=DESKTOP-KVLIDHN;Initial Catalog=CadastroDeAcordos;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
+
+                strSQL = "SELECT * FROM CAD_ACORDO WHERE numeroProcessual = @NUMEROPROCESSUAL";
+
+                comando = new SqlCommand(strSQL, conexao);
+
+                comando.Parameters.AddWithValue("@NUMEROPROCESSUAL", txtNumeroProcessual.Text);
+               
+                conexao.Open();
+                dr = comando.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txtNome.Text = (string)dr["nome"];
+                    txtTelefone.Text = (string)(dr["numero"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+                conexao = null;
+                comando = null;
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                conexao = new SqlConnection(@"Data Source=DESKTOP-KVLIDHN;Initial Catalog=CadastroDeAcordos;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
+
+                strSQL = "UPDATE CAD_ACORDO SET nome = @NOME, numeroTelefone = @NUMEROTELEFONE WHERE numeroProcessual = @NUMEROPROCESSUAL)";
+
+                comando = new SqlCommand(strSQL, conexao);
+
+                comando.Parameters.AddWithValue("@NUMEROPROCESSUAL", txtNumeroProcessual.Text);
+                comando.Parameters.AddWithValue("@NOME", txtNome.Text);
+                comando.Parameters.AddWithValue("@NUMEROTELEFONE", txtTelefone.Text);
+
+                conexao.Open();
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+                conexao = null;
+                comando = null;
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                conexao = new SqlConnection(@"Data Source=DESKTOP-KVLIDHN;Initial Catalog=CadastroDeAcordos;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
+
+                strSQL = "DELETE CAD_ACORDO WHERE numeroProcessual = @NUMEROPROCESSUAL";
+
+                comando = new SqlCommand(strSQL, conexao);
+
+                comando.Parameters.AddWithValue("@NUMEROPROCESSUAL", txtNumeroProcessual.Text);
+
+                conexao.Open();
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
                 conexao = null;
                 comando = null;
             }
