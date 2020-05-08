@@ -52,7 +52,7 @@ namespace CadastroDeAcordos
                 comando = new SqlCommand(strSQL, conexao);
 
                 comando.Parameters.AddWithValue("@NUMEROPROCESSUAL", txtNumeroProcessual.Text);
-                comando.Parameters.AddWithValue("@NOME", txtNome.Text);
+                comando.Parameters.AddWithValue("@NOME", txtNomeInstituicao.Text);
                 comando.Parameters.AddWithValue("@NUMEROTELEFONE", txtTelefone.Text);
 
                 conexao.Open();
@@ -120,7 +120,7 @@ namespace CadastroDeAcordos
 
                 while (dr.Read())
                 {
-                    txtNome.Text = (string)dr["nome"];
+                    txtNomeInstituicao.Text = (string)dr["nome"];
                     txtTelefone.Text = (string)(dr["numero"]);
                 }
             }
@@ -148,7 +148,7 @@ namespace CadastroDeAcordos
                 comando = new SqlCommand(strSQL, conexao);
 
                 comando.Parameters.AddWithValue("@NUMEROPROCESSUAL", txtNumeroProcessual.Text);
-                comando.Parameters.AddWithValue("@NOME", txtNome.Text);
+                comando.Parameters.AddWithValue("@NOME", txtNomeInstituicao.Text);
                 comando.Parameters.AddWithValue("@NUMEROTELEFONE", txtTelefone.Text);
 
                 conexao.Open();
@@ -194,6 +194,11 @@ namespace CadastroDeAcordos
                 conexao = null;
                 comando = null;
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

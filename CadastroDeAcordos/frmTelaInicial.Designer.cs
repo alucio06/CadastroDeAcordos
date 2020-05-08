@@ -48,7 +48,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(167)))));
             this.panelMenu.Controls.Add(this.label1);
             this.panelMenu.Controls.Add(this.panel3);
             this.panelMenu.Controls.Add(this.btnAtualizarStatus);
@@ -58,7 +58,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(182, 429);
+            this.panelMenu.Size = new System.Drawing.Size(182, 539);
             this.panelMenu.TabIndex = 0;
             // 
             // label1
@@ -66,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 372);
+            this.label1.Location = new System.Drawing.Point(0, 482);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 13);
             this.label1.TabIndex = 6;
@@ -77,7 +77,7 @@
             this.panel3.Controls.Add(this.btnSair);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 385);
+            this.panel3.Location = new System.Drawing.Point(0, 495);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(182, 44);
             this.panel3.TabIndex = 5;
@@ -205,7 +205,7 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(182, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(589, 429);
+            this.panelChildForm.Size = new System.Drawing.Size(766, 539);
             this.panelChildForm.TabIndex = 1;
             // 
             // pictureBox1
@@ -218,7 +218,7 @@
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(89, 143);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(448, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(625, 228);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -227,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 429);
+            this.ClientSize = new System.Drawing.Size(948, 539);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
