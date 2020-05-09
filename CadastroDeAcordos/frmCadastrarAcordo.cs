@@ -42,7 +42,21 @@ namespace CadastroDeAcordos
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            Cadastro cad = new Cadastro(txtNomeInteressado.Text, txtTelefone.Text);
+            Cadastro cad = new Cadastro();
+            if(cbSituacao.Text == "Concluído")
+            {
+                dtpDataPublicacao.Checked = true;
+                dtpDataInicio.Checked = true;
+                dtpDataFinal.Checked = true;
+                cad = new Cadastro(txtNumeroProcessual.Text, cbTipoDeAcordo.Text, cbContinente.Text, cbPais.Text, txtNomeInstituicao.Text, dtpDataPublicacao.Value, dtpDataInicio.Value, dtpDataFinal.Value, cbSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
+            } else
+            {
+                dtpDataPublicacao.Checked = false;
+                dtpDataInicio.Checked = false;
+                dtpDataFinal.Checked = false;
+                cad = new Cadastro(txtNumeroProcessual.Text, cbTipoDeAcordo.Text, cbContinente.Text, cbPais.Text, txtNomeInstituicao.Text, cbSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
+            }
+
             MessageBox.Show(cad.mensagem);
 
             /*try
@@ -204,6 +218,21 @@ namespace CadastroDeAcordos
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtpDataPublicacao_ValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cbSituacao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbSituacao.Text == "Concluído")
+            {
+                dtpDataPublicacao.Checked = true;
+                dtpDataInicio.Checked = true;
+                dtpDataFinal.Checked = true;
+            }
         }
     }
 }
