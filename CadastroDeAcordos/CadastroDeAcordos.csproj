@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastro.cs" />
+    <Compile Include="Conexao.cs" />
     <Compile Include="Entities\Acordo.cs" />
     <Compile Include="Entities\Enums\Situacao.cs" />
     <Compile Include="Entities\Enums\TipoDeAcordo.cs" />

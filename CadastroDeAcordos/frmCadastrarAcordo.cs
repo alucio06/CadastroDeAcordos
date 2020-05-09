@@ -42,7 +42,10 @@ namespace CadastroDeAcordos
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            try
+            Cadastro cad = new Cadastro(txtNomeInteressado.Text, txtTelefone.Text);
+            MessageBox.Show(cad.mensagem);
+
+            /*try
             {
 
                 conexao = new SqlConnection(@"Data Source=DESKTOP-KVLIDHN;Initial Catalog=CadastroDeAcordos;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
@@ -67,7 +70,9 @@ namespace CadastroDeAcordos
                 conexao.Close();
                 conexao = null;
                 comando = null;
-            }
+            }*/
+
+
         }
 
         private void btnExibir_Click(object sender, EventArgs e)
@@ -121,7 +126,7 @@ namespace CadastroDeAcordos
                 while (dr.Read())
                 {
                     txtNomeInstituicao.Text = (string)dr["nome"];
-                    txtTelefone.Text = (string)(dr["numero"]);
+                    lblTelefone.Text = (string)(dr["numero"]);
                 }
             }
             catch (Exception ex)
@@ -149,7 +154,7 @@ namespace CadastroDeAcordos
 
                 comando.Parameters.AddWithValue("@NUMEROPROCESSUAL", txtNumeroProcessual.Text);
                 comando.Parameters.AddWithValue("@NOME", txtNomeInstituicao.Text);
-                comando.Parameters.AddWithValue("@NUMEROTELEFONE", txtTelefone.Text);
+                comando.Parameters.AddWithValue("@NUMEROTELEFONE", lblTelefone.Text);
 
                 conexao.Open();
                 comando.ExecuteNonQuery();

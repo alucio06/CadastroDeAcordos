@@ -56,9 +56,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.Label();
+            this.lblTelefone = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNomeInteressado = new System.Windows.Forms.TextBox();
@@ -118,7 +118,7 @@
             // dgvDados
             // 
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDados.Location = new System.Drawing.Point(487, 77);
+            this.dgvDados.Location = new System.Drawing.Point(505, 78);
             this.dgvDados.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.Size = new System.Drawing.Size(239, 141);
@@ -609,9 +609,9 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.txtEmail);
             this.panel4.Controls.Add(this.txtTelefone);
+            this.panel4.Controls.Add(this.txtEmail);
+            this.panel4.Controls.Add(this.lblTelefone);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.txtNomeInteressado);
@@ -621,12 +621,12 @@
             this.panel4.Size = new System.Drawing.Size(438, 113);
             this.panel4.TabIndex = 28;
             // 
-            // textBox2
+            // txtTelefone
             // 
-            this.textBox2.Location = new System.Drawing.Point(263, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 20);
-            this.textBox2.TabIndex = 28;
+            this.txtTelefone.Location = new System.Drawing.Point(263, 82);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(156, 20);
+            this.txtTelefone.TabIndex = 28;
             // 
             // txtEmail
             // 
@@ -635,14 +635,14 @@
             this.txtEmail.Size = new System.Drawing.Size(246, 20);
             this.txtEmail.TabIndex = 27;
             // 
-            // txtTelefone
+            // lblTelefone
             // 
-            this.txtTelefone.AutoSize = true;
-            this.txtTelefone.Location = new System.Drawing.Point(260, 66);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(49, 13);
-            this.txtTelefone.TabIndex = 26;
-            this.txtTelefone.Text = "Telefone";
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.Location = new System.Drawing.Point(260, 66);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefone.TabIndex = 26;
+            this.lblTelefone.Text = "Telefone";
             // 
             // label8
             // 
@@ -702,7 +702,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastrarAcordo";
             this.Text = "frmCadastrarAcordo";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -742,9 +741,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpDataPublicacao;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label txtTelefone;
+        private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNomeInteressado;
