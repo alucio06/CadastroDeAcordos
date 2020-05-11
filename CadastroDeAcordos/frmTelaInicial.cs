@@ -23,7 +23,7 @@ namespace CadastroDeAcordos
         }
 
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if (activeForm != null)
             {

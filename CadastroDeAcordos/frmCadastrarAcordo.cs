@@ -58,6 +58,8 @@ namespace CadastroDeAcordos
             }
 
             MessageBox.Show(cad.mensagem);
+            this.Close();
+            
 
             /*try
             {
@@ -89,6 +91,7 @@ namespace CadastroDeAcordos
 
         }
 
+        /*
         private void btnExibir_Click(object sender, EventArgs e)
         {
             try
@@ -214,6 +217,7 @@ namespace CadastroDeAcordos
                 comando = null;
             }
         }
+        */
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -234,5 +238,12 @@ namespace CadastroDeAcordos
                 dtpDataFinal.Checked = true;
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
     }
 }
