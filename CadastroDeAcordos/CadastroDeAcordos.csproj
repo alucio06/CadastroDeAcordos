@@ -50,6 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cadastro.cs" />
+    <Compile Include="CadastroDeAcordosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CadastroDeAcordosDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Conexao.cs" />
     <Compile Include="Entities\Acordo.cs" />
     <Compile Include="Entities\Enums\Situacao.cs" />
@@ -103,7 +108,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="CadastroDeAcordosDataSet.xsc">
+      <DependentUpon>CadastroDeAcordosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CadastroDeAcordosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CadastroDeAcordosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CadastroDeAcordosDataSet.xss">
+      <DependentUpon>CadastroDeAcordosDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\Logo PROINTER - Transparente.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

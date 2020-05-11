@@ -48,7 +48,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(167)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
             this.panelMenu.Controls.Add(this.label1);
             this.panelMenu.Controls.Add(this.panel3);
             this.panelMenu.Controls.Add(this.btnAtualizarStatus);
@@ -127,7 +127,7 @@
             this.btnAtualizarStatus.IconColor = System.Drawing.Color.White;
             this.btnAtualizarStatus.IconSize = 22;
             this.btnAtualizarStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizarStatus.Location = new System.Drawing.Point(0, 152);
+            this.btnAtualizarStatus.Location = new System.Drawing.Point(0, 143);
             this.btnAtualizarStatus.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnAtualizarStatus.Name = "btnAtualizarStatus";
             this.btnAtualizarStatus.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
@@ -152,7 +152,7 @@
             this.btnCadastrarAcordo.IconColor = System.Drawing.Color.White;
             this.btnCadastrarAcordo.IconSize = 22;
             this.btnCadastrarAcordo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarAcordo.Location = new System.Drawing.Point(0, 103);
+            this.btnCadastrarAcordo.Location = new System.Drawing.Point(0, 94);
             this.btnCadastrarAcordo.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnCadastrarAcordo.Name = "btnCadastrarAcordo";
             this.btnCadastrarAcordo.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
@@ -177,7 +177,7 @@
             this.btnVisualizarAcordos.IconColor = System.Drawing.Color.White;
             this.btnVisualizarAcordos.IconSize = 22;
             this.btnVisualizarAcordos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizarAcordos.Location = new System.Drawing.Point(0, 54);
+            this.btnVisualizarAcordos.Location = new System.Drawing.Point(0, 45);
             this.btnVisualizarAcordos.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnVisualizarAcordos.Name = "btnVisualizarAcordos";
             this.btnVisualizarAcordos.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
@@ -192,10 +192,11 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(64)))), ((int)(((byte)(152)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(182, 54);
+            this.panel2.Size = new System.Drawing.Size(182, 45);
             this.panel2.TabIndex = 1;
             // 
             // panelChildForm
@@ -210,16 +211,14 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::CadastroDeAcordos.Properties.Resources.Logo_PROINTER___Transparente;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(89, 143);
+            this.pictureBox1.Location = new System.Drawing.Point(197, 173);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(625, 228);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.Size = new System.Drawing.Size(431, 136);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -230,7 +229,6 @@
             this.ClientSize = new System.Drawing.Size(948, 539);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmTelaInicial";
             this.Text = "Acordos Internacionais";
             this.panelMenu.ResumeLayout(false);

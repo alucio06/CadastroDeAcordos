@@ -42,12 +42,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbTipoDeAcordo = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbSituacao = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dtpDataPublicacao = new System.Windows.Forms.DateTimePicker();
             this.dtpDataInicio = new System.Windows.Forms.DateTimePicker();
             this.dtpDataFinal = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dtpDataPublicacao = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbPais = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,10 +66,8 @@
             this.txtNomeInteressado = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cbSituacao = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,7 +82,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(309, 9);
+            this.label1.Location = new System.Drawing.Point(318, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 24);
             this.label1.TabIndex = 0;
@@ -141,7 +141,7 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadastrar.Location = new System.Drawing.Point(149, 545);
+            this.btnCadastrar.Location = new System.Drawing.Point(155, 544);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(179, 43);
             this.btnCadastrar.TabIndex = 14;
@@ -191,12 +191,12 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(185)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(749, 46);
+            this.panel1.Size = new System.Drawing.Size(766, 45);
             this.panel1.TabIndex = 19;
             // 
             // cbTipoDeAcordo
@@ -235,16 +235,56 @@
             this.panel2.Controls.Add(this.txtNumeroProcessual);
             this.panel2.Controls.Add(this.lblNumeroProcessual);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel2.Location = new System.Drawing.Point(164, 62);
+            this.panel2.Location = new System.Drawing.Point(11, 8);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(435, 112);
+            this.panel2.Size = new System.Drawing.Size(438, 112);
             this.panel2.TabIndex = 21;
+            // 
+            // cbSituacao
+            // 
+            this.cbSituacao.BackColor = System.Drawing.SystemColors.Window;
+            this.cbSituacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSituacao.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbSituacao.FormattingEnabled = true;
+            this.cbSituacao.Items.AddRange(new object[] {
+            "Aguardando",
+            "Em análise",
+            "Concluído"});
+            this.cbSituacao.Location = new System.Drawing.Point(299, 24);
+            this.cbSituacao.Name = "cbSituacao";
+            this.cbSituacao.Size = new System.Drawing.Size(131, 21);
+            this.cbSituacao.TabIndex = 37;
+            this.cbSituacao.SelectedIndexChanged += new System.EventHandler(this.cbSituacao_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(297, 8);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(49, 13);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "Situação";
+            // 
+            // dtpDataPublicacao
+            // 
+            this.dtpDataPublicacao.Checked = false;
+            this.dtpDataPublicacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpDataPublicacao.CustomFormat = "";
+            this.dtpDataPublicacao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataPublicacao.Location = new System.Drawing.Point(11, 80);
+            this.dtpDataPublicacao.Name = "dtpDataPublicacao";
+            this.dtpDataPublicacao.ShowCheckBox = true;
+            this.dtpDataPublicacao.Size = new System.Drawing.Size(126, 20);
+            this.dtpDataPublicacao.TabIndex = 31;
+            this.dtpDataPublicacao.Value = new System.DateTime(2020, 5, 7, 19, 25, 50, 0);
+            this.dtpDataPublicacao.ValueChanged += new System.EventHandler(this.dtpDataPublicacao_ValueChanged);
             // 
             // dtpDataInicio
             // 
             this.dtpDataInicio.Checked = false;
             this.dtpDataInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpDataInicio.CustomFormat = " ";
+            this.dtpDataInicio.CustomFormat = "";
             this.dtpDataInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDataInicio.Location = new System.Drawing.Point(152, 80);
             this.dtpDataInicio.Name = "dtpDataInicio";
@@ -257,7 +297,7 @@
             // 
             this.dtpDataFinal.Checked = false;
             this.dtpDataFinal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpDataFinal.CustomFormat = " ";
+            this.dtpDataFinal.CustomFormat = "";
             this.dtpDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDataFinal.Location = new System.Drawing.Point(294, 80);
             this.dtpDataFinal.Name = "dtpDataFinal";
@@ -293,20 +333,6 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "Data de Publicação";
             // 
-            // dtpDataPublicacao
-            // 
-            this.dtpDataPublicacao.Checked = false;
-            this.dtpDataPublicacao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpDataPublicacao.CustomFormat = " ";
-            this.dtpDataPublicacao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataPublicacao.Location = new System.Drawing.Point(11, 80);
-            this.dtpDataPublicacao.Name = "dtpDataPublicacao";
-            this.dtpDataPublicacao.ShowCheckBox = true;
-            this.dtpDataPublicacao.Size = new System.Drawing.Size(126, 20);
-            this.dtpDataPublicacao.TabIndex = 31;
-            this.dtpDataPublicacao.Value = new System.DateTime(2020, 5, 7, 19, 25, 50, 0);
-            this.dtpDataPublicacao.ValueChanged += new System.EventHandler(this.dtpDataPublicacao_ValueChanged);
-            // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -318,7 +344,7 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.txtNomeInstituicao);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel3.Location = new System.Drawing.Point(164, 204);
+            this.panel3.Location = new System.Drawing.Point(155, 195);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(438, 113);
             this.panel3.TabIndex = 22;
@@ -643,7 +669,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(161, 185);
+            this.label2.Location = new System.Drawing.Point(152, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 23;
@@ -659,8 +685,8 @@
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.txtNomeInteressado);
-            this.panel4.Cursor = System.Windows.Forms.Cursors.No;
-            this.panel4.Location = new System.Drawing.Point(164, 348);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel4.Location = new System.Drawing.Point(11, 294);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(438, 113);
             this.panel4.TabIndex = 28;
@@ -721,7 +747,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(161, 329);
+            this.label6.Location = new System.Drawing.Point(152, 320);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 16);
             this.label6.TabIndex = 29;
@@ -731,14 +757,27 @@
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.lblDescricao);
+            this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.txtDescricao);
             this.panel5.Controls.Add(this.btnCadastrar);
-            this.panel5.Location = new System.Drawing.Point(151, 52);
+            this.panel5.Controls.Add(this.panel4);
+            this.panel5.Controls.Add(this.panel2);
+            this.panel5.Location = new System.Drawing.Point(142, 51);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 1000);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(466, 602);
+            this.panel5.Size = new System.Drawing.Size(466, 594);
             this.panel5.TabIndex = 30;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(8, 423);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 16);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Descrição";
             // 
             // txtDescricao
             // 
@@ -749,48 +788,13 @@
             this.txtDescricao.Size = new System.Drawing.Size(438, 88);
             this.txtDescricao.TabIndex = 15;
             // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(8, 426);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(55, 13);
-            this.lblDescricao.TabIndex = 29;
-            this.lblDescricao.Text = "Descrição";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(297, 8);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 13);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "Situação";
-            // 
-            // cbSituacao
-            // 
-            this.cbSituacao.BackColor = System.Drawing.SystemColors.Window;
-            this.cbSituacao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSituacao.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cbSituacao.FormattingEnabled = true;
-            this.cbSituacao.Items.AddRange(new object[] {
-            "Aguardando",
-            "Em análise",
-            "Concluído"});
-            this.cbSituacao.Location = new System.Drawing.Point(299, 24);
-            this.cbSituacao.Name = "cbSituacao";
-            this.cbSituacao.Size = new System.Drawing.Size(131, 21);
-            this.cbSituacao.TabIndex = 37;
-            this.cbSituacao.SelectedIndexChanged += new System.EventHandler(this.cbSituacao_SelectedIndexChanged);
-            // 
             // frmCadastrarAcordo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(766, 539);
+            this.ClientSize = new System.Drawing.Size(783, 539);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -799,9 +803,7 @@
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dgvDados);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastrarAcordo";
@@ -860,9 +862,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.ComboBox cbSituacao;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
