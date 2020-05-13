@@ -8,58 +8,53 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CadastroDeAcordos.Classes;
 
 namespace CadastroDeAcordos
 {
     public partial class frmCadastrarAcordo : Form
     {
-        SqlConnection conexao;
+        /*SqlConnection conexao;
         SqlCommand comando;
         SqlDataAdapter da;
         SqlDataReader dr;
 
-        string strSQL;
+        string strSQL;*/
 
         public frmCadastrarAcordo()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //Cadastrando novo acordo
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            Cadastro cad = new Cadastro();
-            if(cbSituacao.Text == "Concluído")
+            if (camposObrigatoriosPreenchidos() == true)
             {
-                dtpDataPublicacao.Checked = true;
-                dtpDataInicio.Checked = true;
-                dtpDataFinal.Checked = true;
-                cad = new Cadastro(txtNumeroProcessual.Text, cbTipoDeAcordo.Text, cbContinente.Text, cbPais.Text, txtNomeInstituicao.Text, dtpDataPublicacao.Value, dtpDataInicio.Value, dtpDataFinal.Value, cbSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
-            } else
+                Cadastro cad = new Cadastro();
+                if (cbSituacao.Text == "Concluído")
+                {
+                    dtpDataPublicacao.Checked = true;
+                    dtpDataInicio.Checked = true;
+                    dtpDataFinal.Checked = true;
+                    cad = new Cadastro(txtNumeroProcessual.Text, cbTipoDeAcordo.Text, cbContinente.Text, cbPais.Text, txtNomeInstituicao.Text, dtpDataPublicacao.Value, dtpDataInicio.Value, dtpDataFinal.Value, cbSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
+                }
+                else
+                {
+                    dtpDataPublicacao.Checked = false;
+                    dtpDataInicio.Checked = false;
+                    dtpDataFinal.Checked = false;
+                    cad = new Cadastro(txtNumeroProcessual.Text, cbTipoDeAcordo.Text, cbContinente.Text, cbPais.Text, txtNomeInstituicao.Text, cbSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
+                }
+
+                MessageBox.Show(cad.mensagem);
+                this.Close();
+            }
+            else
             {
-                dtpDataPublicacao.Checked = false;
-                dtpDataInicio.Checked = false;
-                dtpDataFinal.Checked = false;
-                cad = new Cadastro(txtNumeroProcessual.Text, cbTipoDeAcordo.Text, cbContinente.Text, cbPais.Text, txtNomeInstituicao.Text, cbSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
+                MessageBox.Show("Preencha todos os campos obrigatórios");
             }
 
-            MessageBox.Show(cad.mensagem);
-            this.Close();
-            
 
             /*try
             {
@@ -219,16 +214,7 @@ namespace CadastroDeAcordos
         }
         */
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpDataPublicacao_ValueChanged(object sender, EventArgs e)
-        {
-           
-        }
-
+        //Marca as datas como obrigatórias caso a situacao do acordo seja "Concluído"
         private void cbSituacao_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbSituacao.Text == "Concluído")
@@ -239,11 +225,59 @@ namespace CadastroDeAcordos
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        //Validação de dados
+        private void txtNomeInteressado_TextChanged(object sender, EventArgs e)
         {
-            this.Close();
+            isValid isValid = new isValid();
+            isValid.textBoxTemApenasLetras(txtNomeInteressado);
         }
 
-        
+        private void txtNomeInstituicao_TextChanged(object sender, EventArgs e)
+        {
+            isValid isValid = new isValid();
+            isValid.textBoxTemApenasLetras(txtNomeInstituicao);
+        }
+
+        private void txtEmail_Leaved(object sender, EventArgs e)
+        {
+            isValid isValid = new isValid();
+            isValid.emailEValido(txtEmail);
+        }
+
+        private bool camposObrigatoriosPreenchidos()
+        {
+            List<Control> camposObrigatorios = new List<Control>();
+            isValid isValid = new isValid();
+            bool validacao = true;
+
+            foreach (Control control in this.Controls)
+            {
+                if (control is Panel)
+                {
+                    foreach (Control campo in control.Controls)
+                    {
+                        if ((string)campo.Tag == "campoObrigatorio")
+                        {
+                            if (campo.Name != "txtNumeroProcessual" && !isValid.campoEstaPreenchido(campo))
+                            {
+                                camposObrigatorios.Add(campo);
+                                validacao = false;
+                            }
+                            else if (campo.Name == "txtNumeroProcessual" && !isValid.numProcessualEValido(campo))
+                            {
+                                camposObrigatorios.Add(campo);
+                                validacao = false;
+                            }
+                        }
+                    }
+                }
+            }
+            return validacao;
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            camposObrigatoriosPreenchidos();
+        }
     }
 }

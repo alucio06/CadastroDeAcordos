@@ -35,5 +35,9 @@ namespace CadastroDeAcordos
             new frmCadastrarAcordo().Show();
         }
 
+        private void btnAtualizarLista_Click(object sender, EventArgs e)
+        {
+            this.acordossTableAdapter.Fill(this.cadastroDeAcordosDataSet.Acordoss);
+        }
     }
 }

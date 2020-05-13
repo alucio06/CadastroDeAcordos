@@ -49,55 +49,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastro.cs" />
+    <Compile Include="Classes\Cadastro.cs" />
     <Compile Include="CadastroDeAcordosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CadastroDeAcordosDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Conexao.cs" />
+    <Compile Include="Classes\Conexao.cs" />
+    <Compile Include="Classes\isValid.cs" />
     <Compile Include="Entities\Acordo.cs" />
     <Compile Include="Entities\Enums\Situacao.cs" />
     <Compile Include="Entities\Enums\TipoDeAcordo.cs" />
     <Compile Include="Entities\Instituicao.cs" />
     <Compile Include="Entities\Interessado.cs" />
     <Compile Include="Entities\Status.cs" />
-    <Compile Include="frmAtualizarStatus.cs">
+    <Compile Include="Formularios\frmAtualizarStatus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAtualizarStatus.Designer.cs">
+    <Compile Include="Formularios\frmAtualizarStatus.Designer.cs">
       <DependentUpon>frmAtualizarStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastrarAcordo.cs">
+    <Compile Include="Formularios\frmCadastrarAcordo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastrarAcordo.Designer.cs">
+    <Compile Include="Formularios\frmCadastrarAcordo.Designer.cs">
       <DependentUpon>frmCadastrarAcordo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTelaInicial.cs">
+    <Compile Include="Formularios\frmTelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTelaInicial.Designer.cs">
+    <Compile Include="Formularios\frmTelaInicial.Designer.cs">
       <DependentUpon>frmTelaInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVisualizarAcordos.cs">
+    <Compile Include="Formularios\frmVisualizarAcordos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVisualizarAcordos.Designer.cs">
+    <Compile Include="Formularios\frmVisualizarAcordos.Designer.cs">
       <DependentUpon>frmVisualizarAcordos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAtualizarStatus.resx">
+    <EmbeddedResource Include="Formularios\frmAtualizarStatus.resx">
       <DependentUpon>frmAtualizarStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastrarAcordo.resx">
+    <EmbeddedResource Include="Formularios\frmCadastrarAcordo.resx">
       <DependentUpon>frmCadastrarAcordo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTelaInicial.resx">
+    <EmbeddedResource Include="Formularios\frmTelaInicial.resx">
       <DependentUpon>frmTelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVisualizarAcordos.resx">
+    <EmbeddedResource Include="Formularios\frmVisualizarAcordos.resx">
       <DependentUpon>frmVisualizarAcordos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

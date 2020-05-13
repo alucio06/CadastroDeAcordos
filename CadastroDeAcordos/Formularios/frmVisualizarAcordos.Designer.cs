@@ -29,18 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dtvListaAcordos = new System.Windows.Forms.DataGridView();
-            this.acordossBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cadastroDeAcordosDataSet = new CadastroDeAcordos.CadastroDeAcordosDataSet();
-            this.acordossTableAdapter = new CadastroDeAcordos.CadastroDeAcordosDataSetTableAdapters.AcordossTableAdapter();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.numeroProcessualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoAcordoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.situacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +51,10 @@
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataUltStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.acordossBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cadastroDeAcordosDataSet = new CadastroDeAcordos.CadastroDeAcordosDataSet();
+            this.acordossTableAdapter = new CadastroDeAcordos.CadastroDeAcordosDataSetTableAdapters.AcordossTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnNovoAcordo = new FontAwesome.Sharp.IconButton();
             this.btnAtualizarLista = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
@@ -105,15 +105,15 @@
             this.dtvListaAcordos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtvListaAcordos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dtvListaAcordos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtvListaAcordos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtvListaAcordos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtvListaAcordos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtvListaAcordos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numeroProcessualDataGridViewTextBoxColumn,
@@ -131,65 +131,40 @@
             this.statusDataGridViewTextBoxColumn,
             this.dataUltStatusDataGridViewTextBoxColumn});
             this.dtvListaAcordos.DataSource = this.acordossBindingSource;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtvListaAcordos.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtvListaAcordos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtvListaAcordos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtvListaAcordos.EnableHeadersVisualStyles = false;
             this.dtvListaAcordos.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtvListaAcordos.Location = new System.Drawing.Point(0, 0);
             this.dtvListaAcordos.Name = "dtvListaAcordos";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtvListaAcordos.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtvListaAcordos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtvListaAcordos.RowHeadersVisible = false;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.NullValue = "            - ";
-            dataGridViewCellStyle16.Padding = new System.Windows.Forms.Padding(1, 1, 1, 3);
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtvListaAcordos.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.NullValue = "            - ";
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1, 1, 1, 3);
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtvListaAcordos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtvListaAcordos.RowTemplate.Height = 28;
             this.dtvListaAcordos.RowTemplate.ReadOnly = true;
             this.dtvListaAcordos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dtvListaAcordos.Size = new System.Drawing.Size(692, 399);
             this.dtvListaAcordos.TabIndex = 21;
             this.dtvListaAcordos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvListaAcordos_CellContentClick);
-            // 
-            // acordossBindingSource
-            // 
-            this.acordossBindingSource.DataMember = "Acordoss";
-            this.acordossBindingSource.DataSource = this.cadastroDeAcordosDataSet;
-            // 
-            // cadastroDeAcordosDataSet
-            // 
-            this.cadastroDeAcordosDataSet.DataSetName = "CadastroDeAcordosDataSet";
-            this.cadastroDeAcordosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // acordossTableAdapter
-            // 
-            this.acordossTableAdapter.ClearBeforeFill = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dtvListaAcordos);
-            this.panel2.Location = new System.Drawing.Point(15, 128);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(692, 399);
-            this.panel2.TabIndex = 22;
             // 
             // numeroProcessualDataGridViewTextBoxColumn
             // 
@@ -289,6 +264,31 @@
             this.dataUltStatusDataGridViewTextBoxColumn.Name = "dataUltStatusDataGridViewTextBoxColumn";
             this.dataUltStatusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // acordossBindingSource
+            // 
+            this.acordossBindingSource.DataMember = "Acordoss";
+            this.acordossBindingSource.DataSource = this.cadastroDeAcordosDataSet;
+            // 
+            // cadastroDeAcordosDataSet
+            // 
+            this.cadastroDeAcordosDataSet.DataSetName = "CadastroDeAcordosDataSet";
+            this.cadastroDeAcordosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // acordossTableAdapter
+            // 
+            this.acordossTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.dtvListaAcordos);
+            this.panel2.Location = new System.Drawing.Point(15, 128);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(692, 399);
+            this.panel2.TabIndex = 22;
+            // 
             // btnNovoAcordo
             // 
             this.btnNovoAcordo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -336,6 +336,7 @@
             this.btnAtualizarLista.Size = new System.Drawing.Size(39, 36);
             this.btnAtualizarLista.TabIndex = 24;
             this.btnAtualizarLista.UseVisualStyleBackColor = false;
+            this.btnAtualizarLista.Click += new System.EventHandler(this.btnAtualizarLista_Click);
             // 
             // frmVisualizarAcordos
             // 
