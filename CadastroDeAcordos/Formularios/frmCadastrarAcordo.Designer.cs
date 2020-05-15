@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnTest = new System.Windows.Forms.Button();
             this.txtNumeroProcessual = new System.Windows.Forms.MaskedTextBox();
             this.lblNumeroProcessual = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.cbTipoDeAcordo = new System.Windows.Forms.ComboBox();
+            this.cbxTipoDeAcordo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -40,7 +39,7 @@
             this.dtpDataInicio = new System.Windows.Forms.DateTimePicker();
             this.dtpDataPublicacao = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
-            this.cbSituacao = new System.Windows.Forms.ComboBox();
+            this.cbxSituacao = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblTelefone = new System.Windows.Forms.Label();
@@ -51,10 +50,10 @@
             this.txtNomeInteressado = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbContinente = new System.Windows.Forms.ComboBox();
+            this.cbxContinente = new System.Windows.Forms.ComboBox();
             this.txtNomeInstituicao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cbPais = new System.Windows.Forms.ComboBox();
+            this.cbxPais = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -69,22 +68,12 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(12, 508);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(61, 46);
-            this.btnTest.TabIndex = 31;
-            this.btnTest.Text = "button1";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
-            // 
             // txtNumeroProcessual
             // 
             this.txtNumeroProcessual.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtNumeroProcessual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumeroProcessual.Location = new System.Drawing.Point(11, 25);
-            this.txtNumeroProcessual.Mask = "00000.000000/0000-9999";
+            this.txtNumeroProcessual.Mask = "00000.000000/0000-0999";
             this.txtNumeroProcessual.Name = "txtNumeroProcessual";
             this.txtNumeroProcessual.PromptChar = ' ';
             this.txtNumeroProcessual.Size = new System.Drawing.Size(135, 20);
@@ -110,25 +99,25 @@
             this.lblNome.TabIndex = 9;
             this.lblNome.Text = "Tipo de Acordo*";
             // 
-            // cbTipoDeAcordo
+            // cbxTipoDeAcordo
             // 
-            this.cbTipoDeAcordo.BackColor = System.Drawing.SystemColors.Window;
-            this.cbTipoDeAcordo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbTipoDeAcordo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTipoDeAcordo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cbTipoDeAcordo.FormattingEnabled = true;
-            this.cbTipoDeAcordo.Items.AddRange(new object[] {
+            this.cbxTipoDeAcordo.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxTipoDeAcordo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxTipoDeAcordo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTipoDeAcordo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbxTipoDeAcordo.FormattingEnabled = true;
+            this.cbxTipoDeAcordo.Items.AddRange(new object[] {
             "Acordo Geral",
             "Cotutela",
             "Consórcio",
             "Mobilidade",
             "Memorando de Entendimento",
             "Outros"});
-            this.cbTipoDeAcordo.Location = new System.Drawing.Point(152, 24);
-            this.cbTipoDeAcordo.Name = "cbTipoDeAcordo";
-            this.cbTipoDeAcordo.Size = new System.Drawing.Size(141, 21);
-            this.cbTipoDeAcordo.TabIndex = 20;
-            this.cbTipoDeAcordo.Tag = "campoObrigatorio";
+            this.cbxTipoDeAcordo.Location = new System.Drawing.Point(152, 24);
+            this.cbxTipoDeAcordo.Name = "cbxTipoDeAcordo";
+            this.cbxTipoDeAcordo.Size = new System.Drawing.Size(141, 21);
+            this.cbxTipoDeAcordo.TabIndex = 20;
+            this.cbxTipoDeAcordo.Tag = "campoObrigatorio";
             // 
             // label7
             // 
@@ -205,23 +194,23 @@
             this.label12.TabIndex = 36;
             this.label12.Text = "Situação*";
             // 
-            // cbSituacao
+            // cbxSituacao
             // 
-            this.cbSituacao.BackColor = System.Drawing.SystemColors.Window;
-            this.cbSituacao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSituacao.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cbSituacao.FormattingEnabled = true;
-            this.cbSituacao.Items.AddRange(new object[] {
+            this.cbxSituacao.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxSituacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSituacao.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbxSituacao.FormattingEnabled = true;
+            this.cbxSituacao.Items.AddRange(new object[] {
             "Aguardando",
             "Em análise",
             "Concluído"});
-            this.cbSituacao.Location = new System.Drawing.Point(299, 24);
-            this.cbSituacao.Name = "cbSituacao";
-            this.cbSituacao.Size = new System.Drawing.Size(131, 21);
-            this.cbSituacao.TabIndex = 37;
-            this.cbSituacao.Tag = "campoObrigatorio";
-            this.cbSituacao.SelectedIndexChanged += new System.EventHandler(this.cbSituacao_SelectedIndexChanged);
+            this.cbxSituacao.Location = new System.Drawing.Point(299, 24);
+            this.cbxSituacao.Name = "cbxSituacao";
+            this.cbxSituacao.Size = new System.Drawing.Size(131, 21);
+            this.cbxSituacao.TabIndex = 37;
+            this.cbxSituacao.Tag = "campoObrigatorio";
+            this.cbxSituacao.SelectedIndexChanged += new System.EventHandler(this.cbSituacao_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -317,12 +306,12 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "Continente*";
             // 
-            // cbContinente
+            // cbxContinente
             // 
-            this.cbContinente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbContinente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbContinente.FormattingEnabled = true;
-            this.cbContinente.Items.AddRange(new object[] {
+            this.cbxContinente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxContinente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxContinente.FormattingEnabled = true;
+            this.cbxContinente.Items.AddRange(new object[] {
             "África",
             "América Central",
             "América do Norte",
@@ -330,16 +319,16 @@
             "Ásia",
             "Europa",
             "Oceania"});
-            this.cbContinente.Location = new System.Drawing.Point(11, 74);
-            this.cbContinente.Name = "cbContinente";
-            this.cbContinente.Size = new System.Drawing.Size(175, 21);
-            this.cbContinente.TabIndex = 24;
-            this.cbContinente.Tag = "campoObrigatorio";
+            this.cbxContinente.Location = new System.Drawing.Point(11, 74);
+            this.cbxContinente.Name = "cbxContinente";
+            this.cbxContinente.Size = new System.Drawing.Size(175, 21);
+            this.cbxContinente.TabIndex = 24;
+            this.cbxContinente.Tag = "campoObrigatorio";
             // 
             // txtNomeInstituicao
             // 
             this.txtNomeInstituicao.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNomeInstituicao.Location = new System.Drawing.Point(11, 35);
+            this.txtNomeInstituicao.Location = new System.Drawing.Point(10, 27);
             this.txtNomeInstituicao.Name = "txtNomeInstituicao";
             this.txtNomeInstituicao.Size = new System.Drawing.Size(408, 20);
             this.txtNomeInstituicao.TabIndex = 10;
@@ -355,12 +344,12 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "País*";
             // 
-            // cbPais
+            // cbxPais
             // 
-            this.cbPais.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPais.FormattingEnabled = true;
-            this.cbPais.Items.AddRange(new object[] {
+            this.cbxPais.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPais.FormattingEnabled = true;
+            this.cbxPais.Items.AddRange(new object[] {
             "Afeganistão",
             "África do Sul",
             "Akrotiri",
@@ -620,15 +609,17 @@
             "West Bank",
             "Zâmbia",
             "Zimbabué"});
-            this.cbPais.Location = new System.Drawing.Point(204, 74);
-            this.cbPais.Name = "cbPais";
-            this.cbPais.Size = new System.Drawing.Size(215, 21);
-            this.cbPais.TabIndex = 27;
-            this.cbPais.Tag = "campoObrigatorio";
+            this.cbxPais.Location = new System.Drawing.Point(204, 74);
+            this.cbxPais.Name = "cbxPais";
+            this.cbxPais.Size = new System.Drawing.Size(214, 21);
+            this.cbxPais.TabIndex = 27;
+            this.cbxPais.Tag = "campoObrigatorio";
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(83, 140);
@@ -650,6 +641,9 @@
             // 
             // txtDescricao
             // 
+            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescricao.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescricao.Location = new System.Drawing.Point(86, 421);
             this.txtDescricao.Multiline = true;
@@ -659,7 +653,9 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -675,7 +671,9 @@
             // 
             // label13
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(83, 402);
@@ -686,7 +684,9 @@
             // 
             // panel4
             // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.txtNomeInteressado);
             this.panel4.Controls.Add(this.txtTelefone);
@@ -704,12 +704,14 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.cbPais);
+            this.panel3.Controls.Add(this.cbxPais);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.txtNomeInstituicao);
-            this.panel3.Controls.Add(this.cbContinente);
+            this.panel3.Controls.Add(this.cbxContinente);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -720,9 +722,11 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.cbSituacao);
+            this.panel2.Controls.Add(this.cbxSituacao);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.dtpDataPublicacao);
             this.panel2.Controls.Add(this.dtpDataInicio);
@@ -730,7 +734,7 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.cbTipoDeAcordo);
+            this.panel2.Controls.Add(this.cbxTipoDeAcordo);
             this.panel2.Controls.Add(this.lblNome);
             this.panel2.Controls.Add(this.lblNumeroProcessual);
             this.panel2.Controls.Add(this.txtNumeroProcessual);
@@ -759,7 +763,6 @@
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
@@ -781,11 +784,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.MaskedTextBox txtNumeroProcessual;
         private System.Windows.Forms.Label lblNumeroProcessual;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.ComboBox cbTipoDeAcordo;
+        private System.Windows.Forms.ComboBox cbxTipoDeAcordo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -793,7 +795,7 @@
         private System.Windows.Forms.DateTimePicker dtpDataInicio;
         private System.Windows.Forms.DateTimePicker dtpDataPublicacao;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cbSituacao;
+        private System.Windows.Forms.ComboBox cbxSituacao;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblTelefone;
@@ -804,18 +806,18 @@
         private System.Windows.Forms.MaskedTextBox txtNomeInteressado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbContinente;
+        private System.Windows.Forms.ComboBox cbxContinente;
         private System.Windows.Forms.TextBox txtNomeInstituicao;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbPais;
+        private System.Windows.Forms.ComboBox cbxPais;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
     }
 }

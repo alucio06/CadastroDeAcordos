@@ -14,6 +14,9 @@ namespace CadastroDeAcordos
 {
     public partial class frmCadastrarAcordo : Form
     {
+        List<Control> camposObrigatorios = new List<Control>();
+        isValid isValid = new isValid();
+
         /*SqlConnection conexao;
         SqlCommand comando;
         SqlDataAdapter da;
@@ -29,22 +32,22 @@ namespace CadastroDeAcordos
         //Cadastrando novo acordo
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            if (camposObrigatoriosPreenchidos() == true)
+            if (isValid.camposObrigatoriosSaoValidos(retornaCamposObrigatorios()) == true)
             {
                 Cadastro cad = new Cadastro();
-                if (cbSituacao.Text == "Concluído")
+                if (cbxSituacao.Text == "Concluído")
                 {
                     dtpDataPublicacao.Checked = true;
                     dtpDataInicio.Checked = true;
                     dtpDataFinal.Checked = true;
-                    cad = new Cadastro(txtNumeroProcessual.Text, cbTipoDeAcordo.Text, cbContinente.Text, cbPais.Text, txtNomeInstituicao.Text, dtpDataPublicacao.Value, dtpDataInicio.Value, dtpDataFinal.Value, cbSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
+                    cad = new Cadastro(txtNumeroProcessual.Text, cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, dtpDataPublicacao.Value, dtpDataInicio.Value, dtpDataFinal.Value, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
                 }
                 else
                 {
                     dtpDataPublicacao.Checked = false;
                     dtpDataInicio.Checked = false;
                     dtpDataFinal.Checked = false;
-                    cad = new Cadastro(txtNumeroProcessual.Text, cbTipoDeAcordo.Text, cbContinente.Text, cbPais.Text, txtNomeInstituicao.Text, cbSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
+                    cad = new Cadastro(txtNumeroProcessual.Text, cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
                 }
 
                 MessageBox.Show(cad.mensagem);
@@ -52,38 +55,9 @@ namespace CadastroDeAcordos
             }
             else
             {
-                MessageBox.Show("Preencha todos os campos obrigatórios");
+                string camposObrigatoriosNaoPreenchidos = isValid.camposObrigatoriosNaoPreenchidos(retornaCamposObrigatorios());
+                MessageBox.Show("Para completar o cadastro é necessário preencher todos os campos obrigatórios.\nPreencha corretamente os seguintes campos: " + camposObrigatoriosNaoPreenchidos);
             }
-
-
-            /*try
-            {
-
-                conexao = new SqlConnection(@"Data Source=DESKTOP-KVLIDHN;Initial Catalog=CadastroDeAcordos;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
-
-                strSQL = "INSERT INTO CAD_ACORDO (numeroProcessual, nome, numeroTelefone) VALUES (@NUMEROPROCESSUAL, @NOME, @NUMEROTELEFONE)";
-
-                comando = new SqlCommand(strSQL, conexao);
-
-                comando.Parameters.AddWithValue("@NUMEROPROCESSUAL", txtNumeroProcessual.Text);
-                comando.Parameters.AddWithValue("@NOME", txtNomeInstituicao.Text);
-                comando.Parameters.AddWithValue("@NUMEROTELEFONE", txtTelefone.Text);
-
-                conexao.Open();
-                comando.ExecuteNonQuery();
-
-            } catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.Close();
-                conexao = null;
-                comando = null;
-            }*/
-
-
         }
 
         /*
@@ -217,7 +191,7 @@ namespace CadastroDeAcordos
         //Marca as datas como obrigatórias caso a situacao do acordo seja "Concluído"
         private void cbSituacao_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbSituacao.Text == "Concluído")
+            if (cbxSituacao.Text == "Concluído")
             {
                 dtpDataPublicacao.Checked = true;
                 dtpDataInicio.Checked = true;
@@ -228,28 +202,23 @@ namespace CadastroDeAcordos
         //Validação de dados
         private void txtNomeInteressado_TextChanged(object sender, EventArgs e)
         {
-            isValid isValid = new isValid();
             isValid.textBoxTemApenasLetras(txtNomeInteressado);
         }
 
         private void txtNomeInstituicao_TextChanged(object sender, EventArgs e)
-        {
-            isValid isValid = new isValid();
+        {        
             isValid.textBoxTemApenasLetras(txtNomeInstituicao);
         }
 
         private void txtEmail_Leaved(object sender, EventArgs e)
         {
-            isValid isValid = new isValid();
             isValid.emailEValido(txtEmail);
         }
 
-        private bool camposObrigatoriosPreenchidos()
+        //retorna lista com os campos obrigatórios do formulário de cadastro
+        public List<Control> retornaCamposObrigatorios()
         {
-            List<Control> camposObrigatorios = new List<Control>();
-            isValid isValid = new isValid();
-            bool validacao = true;
-
+            camposObrigatorios.Clear();
             foreach (Control control in this.Controls)
             {
                 if (control is Panel)
@@ -258,26 +227,19 @@ namespace CadastroDeAcordos
                     {
                         if ((string)campo.Tag == "campoObrigatorio")
                         {
-                            if (campo.Name != "txtNumeroProcessual" && !isValid.campoEstaPreenchido(campo))
-                            {
-                                camposObrigatorios.Add(campo);
-                                validacao = false;
-                            }
-                            else if (campo.Name == "txtNumeroProcessual" && !isValid.numProcessualEValido(campo))
-                            {
-                                camposObrigatorios.Add(campo);
-                                validacao = false;
-                            }
+                            camposObrigatorios.Add(campo);
                         }
                     }
                 }
             }
-            return validacao;
+            if (cbxSituacao.Text == "Concluído")
+            {
+                camposObrigatorios.Add(dtpDataFinal);
+                camposObrigatorios.Add(dtpDataInicio);
+                camposObrigatorios.Add(dtpDataPublicacao);
+            }
+            return camposObrigatorios;
         }
 
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-            camposObrigatoriosPreenchidos();
-        }
     }
 }

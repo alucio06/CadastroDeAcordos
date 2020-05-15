@@ -12,7 +12,6 @@ namespace CadastroDeAcordos.Classes
     //Classe para validar informações repassadas nos formulários
     public class isValid
     {
-
         //verifica se textBox contém apenas letras 
         public Control textBoxTemApenasLetras(Control TextBox)
         { 
@@ -55,12 +54,48 @@ namespace CadastroDeAcordos.Classes
         public bool numProcessualEValido(Control textBox)
         {
             bool validacao = true;
-            if (textBox.Text.Length < 15)
-            {
-                validacao = false;
+
+            foreach (char num in textBox.Text) {
+                if (textBox.Text.IndexOf(num) < 19 && num != ',' && num != '/' && num != '-')
+                {
+                    if (!char.IsNumber(num))
+                    {
+                        validacao = false;
+                        break;
+                    }
+                }
             }
             return validacao;
         }
 
+        //verifica se todos os campos obrigatórios estão preenchidos
+        public bool camposObrigatoriosSaoValidos(List<Control> camposObrigatorios)
+        {
+            bool validacao = true;
+
+            foreach(Control campo in camposObrigatorios)
+            {
+                if (campo.Name != "txtNumeroProcessual" && !campoEstaPreenchido(campo))
+                    validacao = false;
+                else if (campo.Name == "txtNumeroProcessual" && !numProcessualEValido(campo))
+                    validacao = false;
+            }
+            return validacao;
+        }
+
+        //retorna campos obrigatórios não preenchidos
+        public string camposObrigatoriosNaoPreenchidos(List<Control> camposObrigatorios)
+        {
+            string camposNaoPreenchidos = "";
+
+            foreach (Control campo in camposObrigatorios)
+            {
+                if(campo.Name != "txtNumeroProcessual" && !campoEstaPreenchido(campo))
+                    camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";
+                else if (campo.Name == "txtNumeroProcessual" && !numProcessualEValido(campo))
+                    camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";
+            }
+            return camposNaoPreenchidos;
+        }
     }
 }
