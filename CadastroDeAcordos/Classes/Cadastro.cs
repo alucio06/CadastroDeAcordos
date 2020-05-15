@@ -18,10 +18,10 @@ namespace CadastroDeAcordos
         }
 
         //Cadastro para acordo concluído
-        public Cadastro(string numeroProcessual, string tipoAcordo, string continente, string pais, string instituicao, DateTime dataPublicacao, DateTime dataInicio, DateTime dataFinal, string situacao, string interessado, string email, string telefone, string status, DateTime dataUltStatus)
+        public Cadastro(string numeroProcessual, string tipoAcordo, string continente, string pais, string instituicao, DateTime dataPublicacao, DateTime dataInicio, DateTime dataFinal, string situacao, string interessado, string email, string telefone, string celular, string descricao, string status, DateTime dataUltStatus, DateTime dataCadastro)
         {
             //Comando SQL --SqlCommand
-            cmd.CommandText = "insert into Acordoss (numeroProcessual, tipoAcordo, continente, pais, instituicao, dataPublicacao, dataInicio, dataFinal, situacao, interessado, email, telefone, status, dataUltStatus ) values (@NUMEROPROCESSUAL, @TIPOACORDO, @CONTINENTE, @PAIS, @INSTITUICAO, @DATAPUBLICACAO, @DATAINICIO, @DATAFINAL, @SITUACAO, @INTERESSADO, @EMAIL, @TELEFONE, @STATUS, @DATAULTSTATUS)";
+            cmd.CommandText = "insert into Acordoss (numeroProcessual, tipoAcordo, continente, pais, instituicao, dataPublicacao, dataInicio, dataFinal, situacao, interessado, email, telefone, celular, descricao, status, dataUltStatus, dataCadastro ) values (@NUMEROPROCESSUAL, @TIPOACORDO, @CONTINENTE, @PAIS, @INSTITUICAO, @DATAPUBLICACAO, @DATAINICIO, @DATAFINAL, @SITUACAO, @INTERESSADO, @EMAIL, @TELEFONE, @CELULAR, @DESCRICAO, @STATUS, @DATAULTSTATUS, @DATACADASTRO)";
 
             //Parametros
             cmd.Parameters.AddWithValue("@NUMEROPROCESSUAL", numeroProcessual);
@@ -36,8 +36,11 @@ namespace CadastroDeAcordos
             cmd.Parameters.AddWithValue("@INTERESSADO", interessado);
             cmd.Parameters.AddWithValue("@EMAIL", email);
             cmd.Parameters.AddWithValue("@TELEFONE", telefone);
+            cmd.Parameters.AddWithValue("@CELULAR", celular);
+            cmd.Parameters.AddWithValue("@DESCRICAO", descricao);
             cmd.Parameters.AddWithValue("@STATUS", status);
             cmd.Parameters.AddWithValue("@DATAULTSTATUS", dataUltStatus);
+            cmd.Parameters.AddWithValue("@DATACADASTRO", dataCadastro);
 
             try
             {
@@ -58,10 +61,10 @@ namespace CadastroDeAcordos
         }
 
         //Cadastro se o acordo não estiver concluído (sem data de publicacao, inicio e fim)
-        public Cadastro(string numeroProcessual, string tipoAcordo, string continente, string pais, string instituicao, string situacao, string interessado, string email, string telefone, string status, DateTime dataUltStatus)
+        public Cadastro(string numeroProcessual, string tipoAcordo, string continente, string pais, string instituicao, string situacao, string interessado, string email, string telefone, string celular, string descricao, string status, DateTime dataUltStatus, DateTime dataCadastro)
         {
             //Comando SQL --SqlCommand
-            cmd.CommandText = "insert into Acordoss (numeroProcessual, tipoAcordo, continente, pais, instituicao, situacao, interessado, email, telefone, status, dataUltStatus) values (@NUMEROPROCESSUAL, @TIPOACORDO, @CONTINENTE, @PAIS, @INSTITUICAO, @SITUACAO, @INTERESSADO, @EMAIL, @TELEFONE, @STATUS, @DATAULTSTATUS)";
+            cmd.CommandText = "insert into Acordoss (numeroProcessual, tipoAcordo, continente, pais, instituicao, situacao, interessado, email, telefone, celular, descricao, status, dataUltStatus, dataCadastro) values (@NUMEROPROCESSUAL, @TIPOACORDO, @CONTINENTE, @PAIS, @INSTITUICAO, @SITUACAO, @INTERESSADO, @EMAIL, @TELEFONE, @CELULAR, @DESCRICAO, @STATUS, @DATAULTSTATUS, @DATACADASTRO)";
 
             //Parametros
             cmd.Parameters.AddWithValue("@NUMEROPROCESSUAL", numeroProcessual);
@@ -73,8 +76,11 @@ namespace CadastroDeAcordos
             cmd.Parameters.AddWithValue("@INTERESSADO", interessado);
             cmd.Parameters.AddWithValue("@EMAIL", email);
             cmd.Parameters.AddWithValue("@TELEFONE", telefone);
+            cmd.Parameters.AddWithValue("@CELULAR", celular);
+            cmd.Parameters.AddWithValue("@DESCRICAO", descricao);
             cmd.Parameters.AddWithValue("@STATUS", status);
             cmd.Parameters.AddWithValue("@DATAULTSTATUS", dataUltStatus);
+            cmd.Parameters.AddWithValue("@DATACADASTRO", dataCadastro);
 
             try
             {

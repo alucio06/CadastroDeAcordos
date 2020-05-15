@@ -63,9 +63,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNumeroProcessual
@@ -622,7 +626,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 140);
+            this.label2.Location = new System.Drawing.Point(8, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 23;
@@ -633,7 +637,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(83, 276);
+            this.label6.Location = new System.Drawing.Point(8, 244);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 16);
             this.label6.TabIndex = 29;
@@ -645,10 +649,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescricao.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescricao.Location = new System.Drawing.Point(86, 421);
+            this.txtDescricao.Location = new System.Drawing.Point(11, 395);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(438, 88);
+            this.txtDescricao.Size = new System.Drawing.Size(438, 43);
             this.txtDescricao.TabIndex = 32;
             // 
             // btnCadastrar
@@ -661,9 +665,9 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(240, 516);
+            this.btnCadastrar.Location = new System.Drawing.Point(165, 513);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(179, 38);
+            this.btnCadastrar.Size = new System.Drawing.Size(165, 36);
             this.btnCadastrar.TabIndex = 33;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -675,10 +679,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(83, 402);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(8, 377);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 16);
+            this.label13.Size = new System.Drawing.Size(62, 15);
             this.label13.TabIndex = 34;
             this.label13.Text = "Descrição";
             // 
@@ -697,9 +701,9 @@
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel4.Location = new System.Drawing.Point(86, 295);
+            this.panel4.Location = new System.Drawing.Point(11, 263);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(438, 100);
+            this.panel4.Size = new System.Drawing.Size(438, 111);
             this.panel4.TabIndex = 28;
             // 
             // panel3
@@ -715,9 +719,9 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel3.Location = new System.Drawing.Point(86, 159);
+            this.panel3.Location = new System.Drawing.Point(11, 128);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(438, 102);
+            this.panel3.Size = new System.Drawing.Size(438, 113);
             this.panel3.TabIndex = 22;
             // 
             // panel2
@@ -739,7 +743,7 @@
             this.panel2.Controls.Add(this.lblNumeroProcessual);
             this.panel2.Controls.Add(this.txtNumeroProcessual);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel2.Location = new System.Drawing.Point(86, 21);
+            this.panel2.Location = new System.Drawing.Point(11, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(438, 103);
             this.panel2.TabIndex = 21;
@@ -747,10 +751,65 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Location = new System.Drawing.Point(73, 12);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.txtStatus);
+            this.panel1.Controls.Add(this.btnCadastrar);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.txtDescricao);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Location = new System.Drawing.Point(73, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(465, 550);
+            this.panel1.Size = new System.Drawing.Size(465, 561);
             this.panel1.TabIndex = 35;
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStatus.Location = new System.Drawing.Point(11, 459);
+            this.txtStatus.Multiline = true;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(438, 43);
+            this.txtStatus.TabIndex = 36;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(8, 441);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 15);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Status";
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.ForeColor = System.Drawing.Color.Transparent;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconButton1.IconColor = System.Drawing.Color.DarkRed;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(544, 2);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(40, 37);
+            this.iconButton1.TabIndex = 36;
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // frmCadastrarAcordo
             // 
@@ -758,16 +817,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(585, 565);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.txtDescricao);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastrarAcordo";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -778,8 +830,9 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -819,5 +872,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Label label14;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

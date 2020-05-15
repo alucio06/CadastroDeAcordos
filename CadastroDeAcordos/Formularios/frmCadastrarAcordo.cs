@@ -40,14 +40,14 @@ namespace CadastroDeAcordos
                     dtpDataPublicacao.Checked = true;
                     dtpDataInicio.Checked = true;
                     dtpDataFinal.Checked = true;
-                    cad = new Cadastro(txtNumeroProcessual.Text, cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, dtpDataPublicacao.Value, dtpDataInicio.Value, dtpDataFinal.Value, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
+                    cad = new Cadastro(txtNumeroProcessual.Text, cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, dtpDataPublicacao.Value, dtpDataInicio.Value, dtpDataFinal.Value, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
                 }
                 else
                 {
                     dtpDataPublicacao.Checked = false;
                     dtpDataInicio.Checked = false;
                     dtpDataFinal.Checked = false;
-                    cad = new Cadastro(txtNumeroProcessual.Text, cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtDescricao.Text, DateTime.Now.Date);
+                    cad = new Cadastro(txtNumeroProcessual.Text, cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
                 }
 
                 MessageBox.Show(cad.mensagem);
@@ -223,11 +223,17 @@ namespace CadastroDeAcordos
             {
                 if (control is Panel)
                 {
-                    foreach (Control campo in control.Controls)
+                    foreach (Control panel in control.Controls)
                     {
-                        if ((string)campo.Tag == "campoObrigatorio")
+                        if(panel is Panel)
                         {
-                            camposObrigatorios.Add(campo);
+                            foreach (Control campo in panel.Controls)
+                            {
+                                if ((string)campo.Tag == "campoObrigatorio")
+                                {
+                                    camposObrigatorios.Add(campo);
+                                }
+                            }
                         }
                     }
                 }
@@ -240,6 +246,12 @@ namespace CadastroDeAcordos
             }
             return camposObrigatorios;
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
     }
 }

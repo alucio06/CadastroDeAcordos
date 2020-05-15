@@ -49,6 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroDeAcordosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CadastroDeAcordosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroDeAcordosDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CadastroDeAcordosDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroDeAcordosDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CadastroDeAcordosDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Cadastro.cs" />
     <Compile Include="CadastroDeAcordosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,6 +136,39 @@
     </None>
     <None Include="CadastroDeAcordosDataSet.xss">
       <DependentUpon>CadastroDeAcordosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CadastroDeAcordosDataSet1.xsc">
+      <DependentUpon>CadastroDeAcordosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CadastroDeAcordosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CadastroDeAcordosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CadastroDeAcordosDataSet1.xss">
+      <DependentUpon>CadastroDeAcordosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CadastroDeAcordosDataSet2.xsc">
+      <DependentUpon>CadastroDeAcordosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CadastroDeAcordosDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CadastroDeAcordosDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CadastroDeAcordosDataSet2.xss">
+      <DependentUpon>CadastroDeAcordosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CadastroDeAcordosDataSet3.xsc">
+      <DependentUpon>CadastroDeAcordosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CadastroDeAcordosDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CadastroDeAcordosDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CadastroDeAcordosDataSet3.xss">
+      <DependentUpon>CadastroDeAcordosDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
