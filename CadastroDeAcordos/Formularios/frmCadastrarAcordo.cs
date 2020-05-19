@@ -15,14 +15,7 @@ namespace CadastroDeAcordos
     public partial class frmCadastrarAcordo : Form
     {
         List<Control> camposObrigatorios = new List<Control>();
-        isValid isValid = new isValid();
-
-        /*SqlConnection conexao;
-        SqlCommand comando;
-        SqlDataAdapter da;
-        SqlDataReader dr;
-
-        string strSQL;*/
+        Validacao isValid = new Validacao();
 
         public frmCadastrarAcordo()
         {
@@ -40,14 +33,14 @@ namespace CadastroDeAcordos
                     dtpDataPublicacao.Checked = true;
                     dtpDataInicio.Checked = true;
                     dtpDataFinal.Checked = true;
-                    cad = new Cadastro(txtNumeroProcessual.Text, cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, dtpDataPublicacao.Value, dtpDataInicio.Value, dtpDataFinal.Value, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
+                    cad = new Cadastro(txtNumeroProcessual.Text.Replace(',', '.'), cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, dtpDataPublicacao.Value, dtpDataInicio.Value, dtpDataFinal.Value, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
                 }
                 else
                 {
                     dtpDataPublicacao.Checked = false;
                     dtpDataInicio.Checked = false;
                     dtpDataFinal.Checked = false;
-                    cad = new Cadastro(txtNumeroProcessual.Text, cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
+                    cad = new Cadastro(txtNumeroProcessual.Text.Replace(',', '.'), cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
                 }
 
                 MessageBox.Show(cad.mensagem);
@@ -59,6 +52,85 @@ namespace CadastroDeAcordos
                 MessageBox.Show("Para completar o cadastro é necessário preencher todos os campos obrigatórios.\nPreencha corretamente os seguintes campos: " + camposObrigatoriosNaoPreenchidos);
             }
         }
+
+        //Marca as datas como obrigatórias caso a situacao do acordo seja "Concluído"
+        private void cbSituacao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxSituacao.Text == "Concluído")
+            {
+                dtpDataPublicacao.Checked = true;
+                dtpDataInicio.Checked = true;
+                dtpDataFinal.Checked = true;
+            } else
+            {
+                dtpDataPublicacao.Checked = false;
+                dtpDataInicio.Checked = false;
+                dtpDataFinal.Checked = false;
+            }
+        }
+
+        //Validação de dados
+        private void txtNomeInteressado_TextChanged(object sender, EventArgs e)
+        {
+            isValid.textBoxTemApenasLetras(txtNomeInteressado);
+        }
+
+        private void txtNomeInstituicao_TextChanged(object sender, EventArgs e)
+        {        
+            isValid.textBoxTemApenasLetras(txtNomeInstituicao);
+        }
+
+        private void txtEmail_Leaved(object sender, EventArgs e)
+        {
+            isValid.emailEValido(txtEmail);
+        }
+
+        //retorna lista com os campos obrigatórios do formulário de cadastro
+        public List<Control> retornaCamposObrigatorios()
+        {
+            camposObrigatorios.Clear();
+            foreach (Control control in this.Controls)
+            {
+                if (control is Panel)
+                {
+                    foreach (Control panel in control.Controls)
+                    {
+                        if(panel is Panel)
+                        {
+                            foreach (Control campo in panel.Controls)
+                            {
+                                if ((string)campo.Tag == "campoObrigatorio")
+                                {
+                                    camposObrigatorios.Add(campo);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if (cbxSituacao.Text == "Concluído")
+            {
+                camposObrigatorios.Add(dtpDataFinal);
+                camposObrigatorios.Add(dtpDataInicio);
+                camposObrigatorios.Add(dtpDataPublicacao);
+            }
+            return camposObrigatorios;
+        }
+
+        //botao fechar
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
+        /*SqlConnection conexao;
+        SqlCommand comando;
+        SqlDataAdapter da;
+        SqlDataReader dr;
+
+        string strSQL;*/
 
         /*
         private void btnExibir_Click(object sender, EventArgs e)
@@ -187,71 +259,6 @@ namespace CadastroDeAcordos
             }
         }
         */
-
-        //Marca as datas como obrigatórias caso a situacao do acordo seja "Concluído"
-        private void cbSituacao_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbxSituacao.Text == "Concluído")
-            {
-                dtpDataPublicacao.Checked = true;
-                dtpDataInicio.Checked = true;
-                dtpDataFinal.Checked = true;
-            }
-        }
-
-        //Validação de dados
-        private void txtNomeInteressado_TextChanged(object sender, EventArgs e)
-        {
-            isValid.textBoxTemApenasLetras(txtNomeInteressado);
-        }
-
-        private void txtNomeInstituicao_TextChanged(object sender, EventArgs e)
-        {        
-            isValid.textBoxTemApenasLetras(txtNomeInstituicao);
-        }
-
-        private void txtEmail_Leaved(object sender, EventArgs e)
-        {
-            isValid.emailEValido(txtEmail);
-        }
-
-        //retorna lista com os campos obrigatórios do formulário de cadastro
-        public List<Control> retornaCamposObrigatorios()
-        {
-            camposObrigatorios.Clear();
-            foreach (Control control in this.Controls)
-            {
-                if (control is Panel)
-                {
-                    foreach (Control panel in control.Controls)
-                    {
-                        if(panel is Panel)
-                        {
-                            foreach (Control campo in panel.Controls)
-                            {
-                                if ((string)campo.Tag == "campoObrigatorio")
-                                {
-                                    camposObrigatorios.Add(campo);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            if (cbxSituacao.Text == "Concluído")
-            {
-                camposObrigatorios.Add(dtpDataFinal);
-                camposObrigatorios.Add(dtpDataInicio);
-                camposObrigatorios.Add(dtpDataPublicacao);
-            }
-            return camposObrigatorios;
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
 
     }
 }

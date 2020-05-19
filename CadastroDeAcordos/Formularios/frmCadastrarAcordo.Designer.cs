@@ -761,7 +761,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Location = new System.Drawing.Point(73, 2);
+            this.panel1.Location = new System.Drawing.Point(71, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(465, 561);
             this.panel1.TabIndex = 35;
@@ -800,7 +800,7 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconButton1.IconColor = System.Drawing.Color.DarkRed;
             this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(544, 2);
+            this.iconButton1.Location = new System.Drawing.Point(536, 9);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
@@ -816,7 +816,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(585, 565);
+            this.ClientSize = new System.Drawing.Size(585, 663);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

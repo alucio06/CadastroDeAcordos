@@ -138,7 +138,17 @@ SELECT numeroProcessual, tipoAcordo, continente, pais, instituicao, dataPublicac
               <Mapping SourceColumn="dataUltStatus" DataSetColumn="dataUltStatus" />
               <Mapping SourceColumn="dataCadastro" DataSetColumn="dataCadastro" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="CadastroDeAcordosConnectionString (Settings)" DbObjectName="CadastroDeAcordos.dbo.Acordoss" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="returnConcluidos" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="returnConcluidos" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="returnConcluidos">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT numeroProcessual, tipoAcordo, continente, pais, instituicao, dataPublicacao, dataInicio, dataFinal, situacao, interessado, email, telefone, celular, descricao, status, dataUltStatus, dataCadastro FROM dbo.Acordoss WHERE situacao = 'Concluído'
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -148,7 +158,7 @@ SELECT numeroProcessual, tipoAcordo, continente, pais, instituicao, dataPublicac
   <xs:element name="CadastroDeAcordosDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CadastroDeAcordosDataSet3" msprop:Generator_UserDSName="CadastroDeAcordosDataSet3">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Acordoss" msprop:Generator_TableClassName="AcordossDataTable" msprop:Generator_TableVarName="tableAcordoss" msprop:Generator_TablePropName="Acordoss" msprop:Generator_RowDeletingName="AcordossRowDeleting" msprop:Generator_RowChangingName="AcordossRowChanging" msprop:Generator_RowEvHandlerName="AcordossRowChangeEventHandler" msprop:Generator_RowDeletedName="AcordossRowDeleted" msprop:Generator_UserTableName="Acordoss" msprop:Generator_RowChangedName="AcordossRowChanged" msprop:Generator_RowEvArgName="AcordossRowChangeEvent" msprop:Generator_RowClassName="AcordossRow">
+        <xs:element name="Acordoss" msprop:Generator_TableClassName="AcordossDataTable" msprop:Generator_TableVarName="tableAcordoss" msprop:Generator_RowChangedName="AcordossRowChanged" msprop:Generator_TablePropName="Acordoss" msprop:Generator_RowDeletingName="AcordossRowDeleting" msprop:Generator_RowChangingName="AcordossRowChanging" msprop:Generator_RowEvHandlerName="AcordossRowChangeEventHandler" msprop:Generator_RowDeletedName="AcordossRowDeleted" msprop:Generator_RowClassName="AcordossRow" msprop:Generator_UserTableName="Acordoss" msprop:Generator_RowEvArgName="AcordossRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="numeroProcessual" msprop:Generator_ColumnVarNameInTable="columnnumeroProcessual" msprop:Generator_ColumnPropNameInRow="numeroProcessual" msprop:Generator_ColumnPropNameInTable="numeroProcessualColumn" msprop:Generator_UserColumnName="numeroProcessual">

@@ -33,11 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net47\MahApps.Metro.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net462\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,29 +58,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroDeAcordosDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CadastroDeAcordosDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="CadastroDeAcordosDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CadastroDeAcordosDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="CadastroDeAcordosDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CadastroDeAcordosDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="Classes\Cadastro.cs" />
-    <Compile Include="CadastroDeAcordosDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CadastroDeAcordosDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Classes\Conexao.cs" />
-    <Compile Include="Classes\isValid.cs" />
+    <Compile Include="Classes\Validacao.cs" />
     <Compile Include="Entities\Acordo.cs" />
     <Compile Include="Entities\Enums\Situacao.cs" />
     <Compile Include="Entities\Enums\TipoDeAcordo.cs" />
@@ -126,39 +120,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="CadastroDeAcordosDataSet.xsc">
-      <DependentUpon>CadastroDeAcordosDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CadastroDeAcordosDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CadastroDeAcordosDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CadastroDeAcordosDataSet.xss">
-      <DependentUpon>CadastroDeAcordosDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CadastroDeAcordosDataSet1.xsc">
-      <DependentUpon>CadastroDeAcordosDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="CadastroDeAcordosDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CadastroDeAcordosDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CadastroDeAcordosDataSet1.xss">
-      <DependentUpon>CadastroDeAcordosDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="CadastroDeAcordosDataSet2.xsc">
-      <DependentUpon>CadastroDeAcordosDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="CadastroDeAcordosDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CadastroDeAcordosDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CadastroDeAcordosDataSet2.xss">
-      <DependentUpon>CadastroDeAcordosDataSet2.xsd</DependentUpon>
-    </None>
     <None Include="CadastroDeAcordosDataSet3.xsc">
       <DependentUpon>CadastroDeAcordosDataSet3.xsd</DependentUpon>
     </None>

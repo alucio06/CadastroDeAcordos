@@ -11,7 +11,6 @@ namespace CadastroDeAcordos
     {
         SqlConnection con = new SqlConnection();
 
-
         //Construtor
         public Conexao()
         {

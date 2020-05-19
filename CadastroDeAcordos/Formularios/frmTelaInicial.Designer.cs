@@ -58,7 +58,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(182, 539);
+            this.panelMenu.Size = new System.Drawing.Size(182, 749);
             this.panelMenu.TabIndex = 0;
             // 
             // label1
@@ -66,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 482);
+            this.label1.Location = new System.Drawing.Point(0, 692);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 13);
             this.label1.TabIndex = 6;
@@ -77,7 +77,7 @@
             this.panel3.Controls.Add(this.btnSair);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 495);
+            this.panel3.Location = new System.Drawing.Point(0, 705);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(182, 44);
             this.panel3.TabIndex = 5;
@@ -159,7 +159,7 @@
             this.btnCadastrarAcordo.Rotation = 0D;
             this.btnCadastrarAcordo.Size = new System.Drawing.Size(182, 49);
             this.btnCadastrarAcordo.TabIndex = 3;
-            this.btnCadastrarAcordo.Text = "Cadastrar Acordo";
+            this.btnCadastrarAcordo.Text = "Acordos Vigentes";
             this.btnCadastrarAcordo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarAcordo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrarAcordo.UseVisualStyleBackColor = true;
@@ -173,9 +173,9 @@
             this.btnVisualizarAcordos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnVisualizarAcordos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisualizarAcordos.ForeColor = System.Drawing.Color.White;
-            this.btnVisualizarAcordos.IconChar = FontAwesome.Sharp.IconChar.List;
+            this.btnVisualizarAcordos.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
             this.btnVisualizarAcordos.IconColor = System.Drawing.Color.White;
-            this.btnVisualizarAcordos.IconSize = 22;
+            this.btnVisualizarAcordos.IconSize = 25;
             this.btnVisualizarAcordos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVisualizarAcordos.Location = new System.Drawing.Point(0, 45);
             this.btnVisualizarAcordos.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
@@ -184,7 +184,7 @@
             this.btnVisualizarAcordos.Rotation = 0D;
             this.btnVisualizarAcordos.Size = new System.Drawing.Size(182, 49);
             this.btnVisualizarAcordos.TabIndex = 2;
-            this.btnVisualizarAcordos.Text = "Visualizar Acordos";
+            this.btnVisualizarAcordos.Text = "Lista de Acordos";
             this.btnVisualizarAcordos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVisualizarAcordos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVisualizarAcordos.UseVisualStyleBackColor = true;
@@ -206,7 +206,7 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(182, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(766, 539);
+            this.panelChildForm.Size = new System.Drawing.Size(1082, 749);
             this.panelChildForm.TabIndex = 1;
             // 
             // pictureBox1
@@ -215,7 +215,7 @@
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = global::CadastroDeAcordos.Properties.Resources.Logo_PROINTER___Transparente;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(197, 173);
+            this.pictureBox1.Location = new System.Drawing.Point(355, 278);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(431, 136);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -226,7 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 539);
+            this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelMenu);
             this.Name = "frmTelaInicial";

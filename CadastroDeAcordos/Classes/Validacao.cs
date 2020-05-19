@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace CadastroDeAcordos.Classes
 {
     //Classe para validar informações repassadas nos formulários
-    public class isValid
+    public class Validacao
     {
         //verifica se textBox contém apenas letras 
         public Control textBoxTemApenasLetras(Control TextBox)
