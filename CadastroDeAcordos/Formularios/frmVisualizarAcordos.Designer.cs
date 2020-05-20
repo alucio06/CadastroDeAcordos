@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,32 +35,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtvListaAcordos = new System.Windows.Forms.DataGridView();
-            this.numeroProcessualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.situacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoAcordoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.continenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.instituicaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.interessadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataPublicacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataUltStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bsAcordos = new System.Windows.Forms.BindingSource(this.components);
-            this.cadastroDeAcordosDataSet = new CadastroDeAcordos.CadastroDeAcordosDataSet3();
+            this.dataGriedViewListaAcordos = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnNovoAcordo = new FontAwesome.Sharp.IconButton();
             this.btnAtualizarLista = new FontAwesome.Sharp.IconButton();
             this.btnTeste = new System.Windows.Forms.Button();
-            this.adapterAcordos = new CadastroDeAcordos.CadastroDeAcordosDataSet3TableAdapters.AcordossTableAdapter();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.rbNumeroProcessual = new System.Windows.Forms.RadioButton();
@@ -69,9 +47,7 @@
             this.rbInteressado = new System.Windows.Forms.RadioButton();
             this.txtCampoDeBusca = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtvListaAcordos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsAcordos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cadastroDeAcordosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGriedViewListaAcordos)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,15 +82,14 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Visualizar Acordos";
             // 
-            // dtvListaAcordos
+            // dataGriedViewListaAcordos
             // 
-            this.dtvListaAcordos.AllowUserToOrderColumns = true;
-            this.dtvListaAcordos.AutoGenerateColumns = false;
-            this.dtvListaAcordos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dtvListaAcordos.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dtvListaAcordos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtvListaAcordos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dtvListaAcordos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGriedViewListaAcordos.AllowUserToOrderColumns = true;
+            this.dataGriedViewListaAcordos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGriedViewListaAcordos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGriedViewListaAcordos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGriedViewListaAcordos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dataGriedViewListaAcordos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,28 +98,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtvListaAcordos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtvListaAcordos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvListaAcordos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numeroProcessualDataGridViewTextBoxColumn,
-            this.situacaoDataGridViewTextBoxColumn,
-            this.tipoAcordoDataGridViewTextBoxColumn,
-            this.continenteDataGridViewTextBoxColumn,
-            this.paisDataGridViewTextBoxColumn,
-            this.instituicaoDataGridViewTextBoxColumn,
-            this.interessadoDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.telefoneDataGridViewTextBoxColumn,
-            this.celularDataGridViewTextBoxColumn,
-            this.dataCadastro,
-            this.dataPublicacaoDataGridViewTextBoxColumn,
-            this.dataInicioDataGridViewTextBoxColumn,
-            this.dataFinalDataGridViewTextBoxColumn,
-            this.descricaoDataGridViewTextBoxColumn1,
-            this.statusDataGridViewTextBoxColumn,
-            this.dataUltStatusDataGridViewTextBoxColumn,
-            this.dataCadastroDataGridViewTextBoxColumn});
-            this.dtvListaAcordos.DataSource = this.bsAcordos;
+            this.dataGriedViewListaAcordos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGriedViewListaAcordos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,12 +107,12 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtvListaAcordos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtvListaAcordos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtvListaAcordos.EnableHeadersVisualStyles = false;
-            this.dtvListaAcordos.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtvListaAcordos.Location = new System.Drawing.Point(0, 0);
-            this.dtvListaAcordos.Name = "dtvListaAcordos";
+            this.dataGriedViewListaAcordos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGriedViewListaAcordos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGriedViewListaAcordos.EnableHeadersVisualStyles = false;
+            this.dataGriedViewListaAcordos.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGriedViewListaAcordos.Location = new System.Drawing.Point(0, 0);
+            this.dataGriedViewListaAcordos.Name = "dataGriedViewListaAcordos";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,147 +120,26 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtvListaAcordos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtvListaAcordos.RowHeadersVisible = false;
+            this.dataGriedViewListaAcordos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGriedViewListaAcordos.RowHeadersVisible = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.NullValue = "            - ";
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1, 1, 1, 3);
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtvListaAcordos.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtvListaAcordos.RowTemplate.Height = 28;
-            this.dtvListaAcordos.RowTemplate.ReadOnly = true;
-            this.dtvListaAcordos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtvListaAcordos.Size = new System.Drawing.Size(1008, 524);
-            this.dtvListaAcordos.TabIndex = 21;
-            // 
-            // numeroProcessualDataGridViewTextBoxColumn
-            // 
-            this.numeroProcessualDataGridViewTextBoxColumn.DataPropertyName = "numeroProcessual";
-            this.numeroProcessualDataGridViewTextBoxColumn.HeaderText = "Número Processual";
-            this.numeroProcessualDataGridViewTextBoxColumn.Name = "numeroProcessualDataGridViewTextBoxColumn";
-            // 
-            // situacaoDataGridViewTextBoxColumn
-            // 
-            this.situacaoDataGridViewTextBoxColumn.DataPropertyName = "situacao";
-            this.situacaoDataGridViewTextBoxColumn.HeaderText = "Situação";
-            this.situacaoDataGridViewTextBoxColumn.Name = "situacaoDataGridViewTextBoxColumn";
-            // 
-            // tipoAcordoDataGridViewTextBoxColumn
-            // 
-            this.tipoAcordoDataGridViewTextBoxColumn.DataPropertyName = "tipoAcordo";
-            this.tipoAcordoDataGridViewTextBoxColumn.HeaderText = "Tipo de Acordo";
-            this.tipoAcordoDataGridViewTextBoxColumn.Name = "tipoAcordoDataGridViewTextBoxColumn";
-            // 
-            // continenteDataGridViewTextBoxColumn
-            // 
-            this.continenteDataGridViewTextBoxColumn.DataPropertyName = "continente";
-            this.continenteDataGridViewTextBoxColumn.HeaderText = "Continente";
-            this.continenteDataGridViewTextBoxColumn.Name = "continenteDataGridViewTextBoxColumn";
-            // 
-            // paisDataGridViewTextBoxColumn
-            // 
-            this.paisDataGridViewTextBoxColumn.DataPropertyName = "pais";
-            this.paisDataGridViewTextBoxColumn.HeaderText = "País";
-            this.paisDataGridViewTextBoxColumn.Name = "paisDataGridViewTextBoxColumn";
-            // 
-            // instituicaoDataGridViewTextBoxColumn
-            // 
-            this.instituicaoDataGridViewTextBoxColumn.DataPropertyName = "instituicao";
-            this.instituicaoDataGridViewTextBoxColumn.HeaderText = "Instituição";
-            this.instituicaoDataGridViewTextBoxColumn.Name = "instituicaoDataGridViewTextBoxColumn";
-            // 
-            // interessadoDataGridViewTextBoxColumn
-            // 
-            this.interessadoDataGridViewTextBoxColumn.DataPropertyName = "interessado";
-            this.interessadoDataGridViewTextBoxColumn.HeaderText = "Interessado";
-            this.interessadoDataGridViewTextBoxColumn.Name = "interessadoDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // telefoneDataGridViewTextBoxColumn
-            // 
-            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "telefone";
-            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
-            // 
-            // celularDataGridViewTextBoxColumn
-            // 
-            this.celularDataGridViewTextBoxColumn.DataPropertyName = "celular";
-            this.celularDataGridViewTextBoxColumn.HeaderText = "Celular";
-            this.celularDataGridViewTextBoxColumn.Name = "celularDataGridViewTextBoxColumn";
-            this.celularDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataCadastro
-            // 
-            this.dataCadastro.DataPropertyName = "dataCadastro";
-            this.dataCadastro.HeaderText = "Data de Cadastro";
-            this.dataCadastro.Name = "dataCadastro";
-            // 
-            // dataPublicacaoDataGridViewTextBoxColumn
-            // 
-            this.dataPublicacaoDataGridViewTextBoxColumn.DataPropertyName = "dataPublicacao";
-            this.dataPublicacaoDataGridViewTextBoxColumn.HeaderText = "Data de Publicação";
-            this.dataPublicacaoDataGridViewTextBoxColumn.Name = "dataPublicacaoDataGridViewTextBoxColumn";
-            // 
-            // dataInicioDataGridViewTextBoxColumn
-            // 
-            this.dataInicioDataGridViewTextBoxColumn.DataPropertyName = "dataInicio";
-            this.dataInicioDataGridViewTextBoxColumn.HeaderText = "Data de Início";
-            this.dataInicioDataGridViewTextBoxColumn.Name = "dataInicioDataGridViewTextBoxColumn";
-            // 
-            // dataFinalDataGridViewTextBoxColumn
-            // 
-            this.dataFinalDataGridViewTextBoxColumn.DataPropertyName = "dataFinal";
-            this.dataFinalDataGridViewTextBoxColumn.HeaderText = "Data Final";
-            this.dataFinalDataGridViewTextBoxColumn.Name = "dataFinalDataGridViewTextBoxColumn";
-            // 
-            // descricaoDataGridViewTextBoxColumn1
-            // 
-            this.descricaoDataGridViewTextBoxColumn1.DataPropertyName = "descricao";
-            this.descricaoDataGridViewTextBoxColumn1.HeaderText = "Descrição";
-            this.descricaoDataGridViewTextBoxColumn1.Name = "descricaoDataGridViewTextBoxColumn1";
-            this.descricaoDataGridViewTextBoxColumn1.Width = 300;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // dataUltStatusDataGridViewTextBoxColumn
-            // 
-            this.dataUltStatusDataGridViewTextBoxColumn.DataPropertyName = "dataUltStatus";
-            this.dataUltStatusDataGridViewTextBoxColumn.HeaderText = "Última Atualização";
-            this.dataUltStatusDataGridViewTextBoxColumn.Name = "dataUltStatusDataGridViewTextBoxColumn";
-            // 
-            // dataCadastroDataGridViewTextBoxColumn
-            // 
-            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "dataCadastro";
-            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "Cadastrado em";
-            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
-            // 
-            // bsAcordos
-            // 
-            this.bsAcordos.DataMember = "Acordoss";
-            this.bsAcordos.DataSource = this.cadastroDeAcordosDataSet;
-            // 
-            // cadastroDeAcordosDataSet
-            // 
-            this.cadastroDeAcordosDataSet.DataSetName = "cadastroDeAcordosDataSet";
-            this.cadastroDeAcordosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGriedViewListaAcordos.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGriedViewListaAcordos.RowTemplate.Height = 28;
+            this.dataGriedViewListaAcordos.RowTemplate.ReadOnly = true;
+            this.dataGriedViewListaAcordos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewListaAcordos.Size = new System.Drawing.Size(1008, 524);
+            this.dataGriedViewListaAcordos.TabIndex = 21;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dtvListaAcordos);
+            this.panel2.Controls.Add(this.dataGriedViewListaAcordos);
             this.panel2.Location = new System.Drawing.Point(15, 169);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1008, 524);
@@ -368,11 +202,6 @@
             this.btnTeste.TabIndex = 25;
             this.btnTeste.Text = "teste";
             this.btnTeste.UseVisualStyleBackColor = true;
-            this.btnTeste.Click += new System.EventHandler(this.btnTeste_Click);
-            // 
-            // adapterAcordos
-            // 
-            this.adapterAcordos.ClearBeforeFill = true;
             // 
             // btnBuscar
             // 
@@ -468,9 +297,7 @@
             this.Load += new System.EventHandler(this.frmVisualizarAcordos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtvListaAcordos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsAcordos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cadastroDeAcordosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGriedViewListaAcordos)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -482,32 +309,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dtvListaAcordos;
+        private System.Windows.Forms.DataGridView dataGriedViewListaAcordos;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnNovoAcordo;
         private FontAwesome.Sharp.IconButton btnAtualizarLista;
-        private CadastroDeAcordosDataSet3 cadastroDeAcordosDataSet;
-        private System.Windows.Forms.BindingSource bsAcordos;
-        private CadastroDeAcordosDataSet3TableAdapters.AcordossTableAdapter adapterAcordos;
         private System.Windows.Forms.Button btnTeste;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroProcessualDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn situacaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoAcordoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn continenteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paisDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn instituicaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn interessadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn celularDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataPublicacaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataInicioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataFinalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataUltStatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rbNumeroProcessual;

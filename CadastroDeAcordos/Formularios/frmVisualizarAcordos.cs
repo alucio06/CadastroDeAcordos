@@ -15,6 +15,7 @@ namespace CadastroDeAcordos
 {
     public partial class frmVisualizarAcordos : Form
     {
+        RetornaDados lerDados = new RetornaDados();
         Validacao validacao = new Validacao();
 
         public frmVisualizarAcordos()
@@ -25,8 +26,7 @@ namespace CadastroDeAcordos
         //alimenta a tabela com dados do banco
         public void frmVisualizarAcordos_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'cadastroDeAcordosDataSet3.Acordoss'. Você pode movê-la ou removê-la conforme necessário.
-            this.adapterAcordos.Fill(this.cadastroDeAcordosDataSet.Acordoss);
+            dataGriedViewListaAcordos.DataSource = lerDados.MostrarDados();
         }
 
         //botao cadastrar acordo abre a tela de cadastro
@@ -35,37 +35,14 @@ namespace CadastroDeAcordos
             new frmCadastrarAcordo().Show();
         }
 
-        //atualiza a lista da tabela
+        //botao para atualizar a lista da tabela
         private void btnAtualizarLista_Click(object sender, EventArgs e)
         {
-            this.adapterAcordos.Fill(this.cadastroDeAcordosDataSet.Acordoss);
+            RetornaDados lerDados1 = new RetornaDados();
+            dataGriedViewListaAcordos.DataSource = lerDados1.MostrarDados();
         }
 
-        private void btnTeste_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.adapterAcordos.returnConcluidos(this.cadastroDeAcordosDataSet.Acordoss);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void returnConcluidosToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.adapterAcordos.returnConcluidos(this.cadastroDeAcordosDataSet.Acordoss);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-        }
-
-        //formata o campo de busca para a máscara de número de processo
+        //formata o campo de busca para a máscara de número de processo quando botao do numeroProcessual é criado
         private void rbNumeroProcessual_CheckedChanged(object sender, EventArgs e)
         {
             if (rbNumeroProcessual.Checked == true)
@@ -89,14 +66,6 @@ namespace CadastroDeAcordos
             txtCampoDeBusca.Text = "";
         }
 
-        private DataSet buscarPorNumeroProcessual(DataSet dataSet)
-        {
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            adapter.SelectCommand = new SqlCommand("Select * from Acordoss where situacao = 'Concluído'", new Conexao().conectar());
-            adapter.Fill(dataSet);
-            return dataSet;
-        }  
-
         //botao buscar
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -105,7 +74,34 @@ namespace CadastroDeAcordos
             {
                 try
                 {
-                    
+                    RetornaDados lerDados1 = new RetornaDados();
+                    dataGriedViewListaAcordos.DataSource = lerDados1.BuscarPorNumeroProcessual(txtCampoDeBusca.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            if (rbInstituicao.Checked == true)
+            {
+                try
+                {
+                    RetornaDados lerDados1 = new RetornaDados();
+                    dataGriedViewListaAcordos.DataSource = lerDados1.BuscarPorInstituicao(txtCampoDeBusca.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            if (rbInteressado.Checked == true)
+            {
+                try
+                {
+                    RetornaDados lerDados1 = new RetornaDados();
+                    dataGriedViewListaAcordos.DataSource = lerDados1.BuscarPorInteressado(txtCampoDeBusca.Text);
                 }
                 catch (Exception ex)
                 {
