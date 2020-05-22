@@ -61,5 +61,16 @@ namespace CadastroDeAcordos.Classes
             conexao.desconectar();
             return tabela;
         }
+
+        //retorna dados filtrados por tipo de acordo
+        public DataTable FiltrarPorTipoDeAcordo(string text)
+        {
+            comando.Connection = conexao.conectar();
+            comando.CommandText = $"select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', situacao as 'Situação', interessado as 'Interessado', email as 'Email', telefone as 'Telefone', celular as 'Celular', descricao as 'Descrição', [status] as 'Status', dataUltStatus as 'Data Último Status', dataCadastro as 'Data de Cadastro' From Acordoss where tipoAcordo like '%{text}%' ";
+            lerDados = comando.ExecuteReader();
+            tabela.Load(lerDados);
+            conexao.desconectar();
+            return tabela;
+        }
     }
 }

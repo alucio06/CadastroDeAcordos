@@ -16,7 +16,7 @@ namespace CadastroDeAcordos
     public partial class frmVisualizarAcordos : Form
     {
         RetornaDados lerDados = new RetornaDados();
-        Validacao validacao = new Validacao();
+        DataTable tabAuxiliar = new DataTable();
 
         public frmVisualizarAcordos()
         {
@@ -40,6 +40,7 @@ namespace CadastroDeAcordos
         {
             RetornaDados lerDados1 = new RetornaDados();
             dataGriedViewListaAcordos.DataSource = lerDados1.MostrarDados();
+            limparFiltros();
         }
 
         //formata o campo de busca para a máscara de número de processo quando botao do numeroProcessual é criado
@@ -110,6 +111,35 @@ namespace CadastroDeAcordos
             }
         }
 
+        //quando é aplicado filtro por tipo de acordo
+        private void cbTipoDeAcordo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbTipoDeAcordo.Text != "Todos")
+            {
+                try
+                {
+                    RetornaDados lerDados1 = new RetornaDados();
+                    dataGriedViewListaAcordos.DataSource = lerDados1.FiltrarPorTipoDeAcordo(cbTipoDeAcordo.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            } else
+            {
+                RetornaDados lerDados1 = new RetornaDados();
+                dataGriedViewListaAcordos.DataSource = lerDados1.MostrarDados();
+            }
+        }
 
+        //limpar todos os filtros
+        private void limparFiltros()
+        {
+            rbNumeroProcessual.Checked = false;
+            rbInstituicao.Checked = false;
+            rbInteressado.Checked = false;
+            txtCampoDeBusca.Text = "";
+
+        }
     }
 }
