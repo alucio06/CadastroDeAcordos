@@ -22,7 +22,7 @@ namespace CadastroDeAcordos.Classes
         public DataTable MostrarDados()
         {
             comando.Connection = conexao.conectar();
-            comando.CommandText = "select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', situacao as 'Situação', interessado as 'Interessado', email as 'Email', telefone as 'Telefone', celular as 'Celular', descricao as 'Descrição', [status] as 'Status', dataUltStatus as 'Data Último Status', dataCadastro as 'Data de Cadastro' From Acordoss";
+            comando.CommandText = "select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', situacao as 'Situação', interessado as 'Interessado', email as 'Email', telefone as 'Telefone', celular as 'Celular', descricao as 'Descrição', [status] as 'Status', dataUltStatus as 'Data Último Status', dataCadastro as 'Data de Cadastro' From Acordoss order by dataCadastro desc";
             lerDados = comando.ExecuteReader();
             tabela.Load(lerDados);
             conexao.desconectar();
@@ -30,47 +30,60 @@ namespace CadastroDeAcordos.Classes
         }
 
         //retorna dados filtrados por número processual
-        public DataTable BuscarPorNumeroProcessual(string text)
+        public DataTable BuscarPorNumeroProcessual(string text, DataTable table)
         {
-            comando.Connection = conexao.conectar();
-            comando.CommandText = $"select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', situacao as 'Situação', interessado as 'Interessado', email as 'Email', telefone as 'Telefone', celular as 'Celular', descricao as 'Descrição', [status] as 'Status', dataUltStatus as 'Data Último Status', dataCadastro as 'Data de Cadastro' From Acordoss where numeroProcessual = '{text}'";
-            lerDados = comando.ExecuteReader();
-            tabela.Load(lerDados);
-            conexao.desconectar();
-            return tabela;
+            var obj = (from m in table.AsEnumerable() where m.Field<string>("Número Processual") == text select m);
+            DataTable dt = obj.CopyToDataTable();
+            return dt;
         }
 
         //retorna dados filtrados por nome da instituição
-        public DataTable BuscarPorInstituicao(string text)
+        public DataTable BuscarPorInstituicao(string text, DataTable table)
         {
-            comando.Connection = conexao.conectar();
-            comando.CommandText = $"select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', situacao as 'Situação', interessado as 'Interessado', email as 'Email', telefone as 'Telefone', celular as 'Celular', descricao as 'Descrição', [status] as 'Status', dataUltStatus as 'Data Último Status', dataCadastro as 'Data de Cadastro' From Acordoss where instituicao like '%{text}%' ";
-            lerDados = comando.ExecuteReader();
-            tabela.Load(lerDados);
-            conexao.desconectar();
-            return tabela;
+            var obj = (from m in table.AsEnumerable() where m.Field<string>("Instituição").ToLower().Contains(text.ToLower()) select m);
+            DataTable dt = obj.CopyToDataTable();
+            return dt;
         }
 
         //retorna dados filtrados por nome do interessado
-        public DataTable BuscarPorInteressado(string text)
+        public DataTable BuscarPorInteressado(string text, DataTable table)
         {
-            comando.Connection = conexao.conectar();
-            comando.CommandText = $"select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', situacao as 'Situação', interessado as 'Interessado', email as 'Email', telefone as 'Telefone', celular as 'Celular', descricao as 'Descrição', [status] as 'Status', dataUltStatus as 'Data Último Status', dataCadastro as 'Data de Cadastro' From Acordoss where interessado like '%{text}%' ";
-            lerDados = comando.ExecuteReader();
-            tabela.Load(lerDados);
-            conexao.desconectar();
-            return tabela;
+            var obj = (from m in table.AsEnumerable() where m.Field<string>("Interessado").ToLower().Contains(text.ToLower()) select m);
+            DataTable dt = obj.CopyToDataTable();
+            return dt;
         }
 
         //retorna dados filtrados por tipo de acordo
-        public DataTable FiltrarPorTipoDeAcordo(string text)
+        public DataTable FiltrarPorTipoDeAcordo(string text, DataTable table)
         {
-            comando.Connection = conexao.conectar();
-            comando.CommandText = $"select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', situacao as 'Situação', interessado as 'Interessado', email as 'Email', telefone as 'Telefone', celular as 'Celular', descricao as 'Descrição', [status] as 'Status', dataUltStatus as 'Data Último Status', dataCadastro as 'Data de Cadastro' From Acordoss where tipoAcordo like '%{text}%' ";
-            lerDados = comando.ExecuteReader();
-            tabela.Load(lerDados);
-            conexao.desconectar();
-            return tabela;
+            var obj = (from m in table.AsEnumerable() where m.Field<string>("Tipo de Acordo") == text select m);
+            DataTable dt = obj.CopyToDataTable();
+            return dt;
         }
+
+        //retorna dados filtrados por situacao
+        public DataTable FiltrarPorSituacao(string text, DataTable table)
+        {
+            var obj = (from m in table.AsEnumerable() where m.Field<string>("Situação") == text select m);
+            DataTable dt = obj.CopyToDataTable();
+            return dt;
+        }
+
+        //retorna dados filtrados por continente
+        public DataTable FiltrarPorContinente(string text, DataTable table)
+        {
+            var obj = (from m in table.AsEnumerable() where m.Field<string>("Continente") == text select m);
+            DataTable dt = obj.CopyToDataTable();
+            return dt;
+        }
+
+        //retorna dados filtrados por país
+        public DataTable FiltrarPorPais(string text, DataTable table)
+        {
+            var obj = (from m in table.AsEnumerable() where m.Field<string>("País") == text select m);
+            DataTable dt = obj.CopyToDataTable();
+            return dt;
+        }
+
     }
 }

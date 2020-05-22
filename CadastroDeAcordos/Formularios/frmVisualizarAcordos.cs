@@ -26,7 +26,9 @@ namespace CadastroDeAcordos
         //alimenta a tabela com dados do banco
         public void frmVisualizarAcordos_Load(object sender, EventArgs e)
         {
+            RetornaDados lerDados1 = new RetornaDados();
             dataGriedViewListaAcordos.DataSource = lerDados.MostrarDados();
+            tabAuxiliar = lerDados1.MostrarDados();
         }
 
         //botao cadastrar acordo abre a tela de cadastro
@@ -39,7 +41,9 @@ namespace CadastroDeAcordos
         private void btnAtualizarLista_Click(object sender, EventArgs e)
         {
             RetornaDados lerDados1 = new RetornaDados();
+            RetornaDados lerDados2 = new RetornaDados();
             dataGriedViewListaAcordos.DataSource = lerDados1.MostrarDados();
+            tabAuxiliar = lerDados2.MostrarDados();
             limparFiltros();
         }
 
@@ -76,7 +80,9 @@ namespace CadastroDeAcordos
                 try
                 {
                     RetornaDados lerDados1 = new RetornaDados();
-                    dataGriedViewListaAcordos.DataSource = lerDados1.BuscarPorNumeroProcessual(txtCampoDeBusca.Text);
+                    tabAuxiliar = lerDados1.BuscarPorNumeroProcessual(txtCampoDeBusca.Text, tabAuxiliar);
+                    dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+
                 }
                 catch (Exception ex)
                 {
@@ -89,7 +95,8 @@ namespace CadastroDeAcordos
                 try
                 {
                     RetornaDados lerDados1 = new RetornaDados();
-                    dataGriedViewListaAcordos.DataSource = lerDados1.BuscarPorInstituicao(txtCampoDeBusca.Text);
+                    tabAuxiliar = lerDados1.BuscarPorInstituicao(txtCampoDeBusca.Text, tabAuxiliar);
+                    dataGriedViewListaAcordos.DataSource = tabAuxiliar;
                 }
                 catch (Exception ex)
                 {
@@ -102,33 +109,13 @@ namespace CadastroDeAcordos
                 try
                 {
                     RetornaDados lerDados1 = new RetornaDados();
-                    dataGriedViewListaAcordos.DataSource = lerDados1.BuscarPorInteressado(txtCampoDeBusca.Text);
+                    tabAuxiliar = lerDados1.BuscarPorInteressado(txtCampoDeBusca.Text, tabAuxiliar);
+                    dataGriedViewListaAcordos.DataSource = tabAuxiliar;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
-        }
-
-        //quando é aplicado filtro por tipo de acordo
-        private void cbTipoDeAcordo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(cbTipoDeAcordo.Text != "Todos")
-            {
-                try
-                {
-                    RetornaDados lerDados1 = new RetornaDados();
-                    dataGriedViewListaAcordos.DataSource = lerDados1.FiltrarPorTipoDeAcordo(cbTipoDeAcordo.Text);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            } else
-            {
-                RetornaDados lerDados1 = new RetornaDados();
-                dataGriedViewListaAcordos.DataSource = lerDados1.MostrarDados();
             }
         }
 
@@ -138,8 +125,92 @@ namespace CadastroDeAcordos
             rbNumeroProcessual.Checked = false;
             rbInstituicao.Checked = false;
             rbInteressado.Checked = false;
+            txtCampoDeBusca.Mask = null;
             txtCampoDeBusca.Text = "";
+            cbTipoDeAcordo.SelectedItem = "Todos";
+            cbSituacao.SelectedItem = "Todos";
+            cbContinente.SelectedItem = "Todos";
+            cbPais.SelectedItem = "Todos";
+        }
 
+        //executa os filtros a partir dos comboBox (tipo de acordo, continente, país e situação)
+      
+
+        private void cbTipoDeAcordo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbTipoDeAcordo.Text != "Todos")
+                {
+                    RetornaDados lerDados1 = new RetornaDados();
+                    tabAuxiliar = lerDados1.FiltrarPorTipoDeAcordo(cbTipoDeAcordo.Text, tabAuxiliar);
+                    dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não foram encontrados valores com o filtro desejado.");
+            }
+        }
+
+        private void cbSituacao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbSituacao.Text != "Todos")
+                {
+                    RetornaDados lerDados1 = new RetornaDados();
+                    tabAuxiliar = lerDados1.FiltrarPorSituacao(cbSituacao.Text, tabAuxiliar);
+                    dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não foram encontrados valores com o filtro desejado.");
+            }
+        }
+
+        private void cbContinente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbContinente.Text != "Todos")
+                {
+                    RetornaDados lerDados1 = new RetornaDados();
+                    tabAuxiliar = lerDados1.FiltrarPorContinente(cbContinente.Text, tabAuxiliar);
+                    dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não foram encontrados valores com o filtro desejado.");
+            }
+        }
+
+        private void cbPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbPais.Text != "Todos")
+                {
+                    RetornaDados lerDados1 = new RetornaDados();
+                    tabAuxiliar = lerDados1.FiltrarPorPais(cbPais.Text, tabAuxiliar);
+                    dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não foram encontrados valores com o filtro desejado.");
+            }
+        }
+
+        private void btnLimparFiltros_Click(object sender, EventArgs e)
+        {
+            limparFiltros();
+            RetornaDados lerDados1 = new RetornaDados();
+            RetornaDados lerDados2 = new RetornaDados();
+            dataGriedViewListaAcordos.DataSource = lerDados1.MostrarDados();
+            tabAuxiliar = lerDados2.MostrarDados();
         }
     }
 }

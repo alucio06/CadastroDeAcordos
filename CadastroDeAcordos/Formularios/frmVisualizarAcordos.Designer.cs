@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,6 +54,7 @@
             this.cbContinente = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbPais = new System.Windows.Forms.ComboBox();
+            this.btnLimparFiltros = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGriedViewListaAcordos)).BeginInit();
             this.panel2.SuspendLayout();
@@ -98,44 +99,44 @@
             this.dataGriedViewListaAcordos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGriedViewListaAcordos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dataGriedViewListaAcordos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewListaAcordos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewListaAcordos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGriedViewListaAcordos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewListaAcordos.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewListaAcordos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGriedViewListaAcordos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGriedViewListaAcordos.EnableHeadersVisualStyles = false;
             this.dataGriedViewListaAcordos.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGriedViewListaAcordos.Location = new System.Drawing.Point(0, 0);
             this.dataGriedViewListaAcordos.Name = "dataGriedViewListaAcordos";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewListaAcordos.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewListaAcordos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGriedViewListaAcordos.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.NullValue = "            - ";
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(1, 1, 1, 3);
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewListaAcordos.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.NullValue = "            - ";
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1, 1, 1, 3);
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewListaAcordos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGriedViewListaAcordos.RowTemplate.Height = 28;
             this.dataGriedViewListaAcordos.RowTemplate.ReadOnly = true;
             this.dataGriedViewListaAcordos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -275,7 +276,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 148);
+            this.label4.Location = new System.Drawing.Point(12, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 15);
             this.label4.TabIndex = 33;
@@ -295,7 +296,7 @@
             "Mobilidade",
             "Memorando de Entendimento",
             "Outros"});
-            this.cbTipoDeAcordo.Location = new System.Drawing.Point(12, 192);
+            this.cbTipoDeAcordo.Location = new System.Drawing.Point(15, 213);
             this.cbTipoDeAcordo.Name = "cbTipoDeAcordo";
             this.cbTipoDeAcordo.Size = new System.Drawing.Size(150, 21);
             this.cbTipoDeAcordo.TabIndex = 34;
@@ -304,7 +305,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 176);
+            this.label5.Location = new System.Drawing.Point(12, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 13);
             this.label5.TabIndex = 35;
@@ -313,7 +314,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 227);
+            this.label6.Location = new System.Drawing.Point(12, 237);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 37;
@@ -327,21 +328,19 @@
             this.cbSituacao.FormattingEnabled = true;
             this.cbSituacao.Items.AddRange(new object[] {
             "Todos",
-            "Acordo Geral",
-            "Cotutela",
-            "Consórcio",
-            "Mobilidade",
-            "Memorando de Entendimento",
-            "Outros"});
-            this.cbSituacao.Location = new System.Drawing.Point(12, 243);
+            "Aguardando",
+            "Em análise",
+            "Concluído"});
+            this.cbSituacao.Location = new System.Drawing.Point(15, 253);
             this.cbSituacao.Name = "cbSituacao";
             this.cbSituacao.Size = new System.Drawing.Size(150, 21);
             this.cbSituacao.TabIndex = 36;
+            this.cbSituacao.SelectedIndexChanged += new System.EventHandler(this.cbSituacao_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 277);
+            this.label7.Location = new System.Drawing.Point(12, 277);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 39;
@@ -355,21 +354,23 @@
             this.cbContinente.FormattingEnabled = true;
             this.cbContinente.Items.AddRange(new object[] {
             "Todos",
-            "Acordo Geral",
-            "Cotutela",
-            "Consórcio",
-            "Mobilidade",
-            "Memorando de Entendimento",
-            "Outros"});
-            this.cbContinente.Location = new System.Drawing.Point(12, 293);
+            "África",
+            "América Central",
+            "América do Norte",
+            "América do Sul",
+            "Ásia",
+            "Europa",
+            "Oceania"});
+            this.cbContinente.Location = new System.Drawing.Point(15, 293);
             this.cbContinente.Name = "cbContinente";
             this.cbContinente.Size = new System.Drawing.Size(150, 21);
             this.cbContinente.TabIndex = 38;
+            this.cbContinente.SelectedIndexChanged += new System.EventHandler(this.cbContinente_SelectedIndexChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 325);
+            this.label8.Location = new System.Drawing.Point(12, 317);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 13);
             this.label8.TabIndex = 41;
@@ -383,16 +384,288 @@
             this.cbPais.FormattingEnabled = true;
             this.cbPais.Items.AddRange(new object[] {
             "Todos",
-            "Acordo Geral",
-            "Cotutela",
-            "Consórcio",
-            "Mobilidade",
-            "Memorando de Entendimento",
-            "Outros"});
-            this.cbPais.Location = new System.Drawing.Point(12, 341);
+            "Afeganistão",
+            "África do Sul",
+            "Akrotiri",
+            "Albânia",
+            "Alemanha",
+            "Andorra",
+            "Angola",
+            "Anguila",
+            "Antárctida",
+            "Antígua e Barbuda",
+            "Arábia Saudita",
+            "Arctic Ocean",
+            "Argélia",
+            "Argentina",
+            "Arménia",
+            "Aruba",
+            "Ashmore and Cartier Islands",
+            "Atlantic Ocean",
+            "Austrália",
+            "Áustria",
+            "Azerbaijão",
+            "Baamas",
+            "Bangladeche",
+            "Barbados",
+            "Barém",
+            "Bélgica",
+            "Belize",
+            "Benim",
+            "Bermudas",
+            "Bielorrússia",
+            "Birmânia",
+            "Bolívia",
+            "Bósnia e Herzegovina",
+            "Botsuana",
+            "Brasil",
+            "Brunei",
+            "Bulgária",
+            "Burquina Faso",
+            "Burúndi",
+            "Butão",
+            "Cabo Verde",
+            "Camarões",
+            "Camboja",
+            "Canadá",
+            "Catar",
+            "Cazaquistão",
+            "Chade",
+            "Chile",
+            "China",
+            "Chipre",
+            "Clipperton Island",
+            "Colômbia",
+            "Comores",
+            "Congo-Brazzaville",
+            "Congo-Kinshasa",
+            "Coral Sea Islands",
+            "Coreia do Norte",
+            "Coreia do Sul",
+            "Costa do Marfim",
+            "Costa Rica",
+            "Croácia",
+            "Cuba",
+            "Curacao",
+            "Dhekelia",
+            "Dinamarca",
+            "Domínica",
+            "Egipto",
+            "Emiratos Árabes Unidos",
+            "Equador",
+            "Eritreia",
+            "Eslováquia",
+            "Eslovénia",
+            "Espanha",
+            "Estados Unidos",
+            "Estónia",
+            "Etiópia",
+            "Faroé",
+            "Fiji",
+            "Filipinas",
+            "Finlândia",
+            "França",
+            "Gabão",
+            "Gâmbia",
+            "Gana",
+            "Gaza Strip",
+            "Geórgia",
+            "Geórgia do Sul e Sandwich do Sul",
+            "Gibraltar",
+            "Granada",
+            "Grécia",
+            "Gronelândia",
+            "Guame",
+            "Guatemala",
+            "Guernsey",
+            "Guiana",
+            "Guiné",
+            "Guiné Equatorial",
+            "Guiné-Bissau",
+            "Haiti",
+            "Honduras",
+            "Hong Kong",
+            "Hungria",
+            "Iémen",
+            "Ilha Bouvet",
+            "Ilha do Natal",
+            "Ilha Norfolk",
+            "Ilhas Caimão",
+            "Ilhas Cook",
+            "Ilhas dos Cocos",
+            "Ilhas Falkland",
+            "Ilhas Heard e McDonald",
+            "Ilhas Marshall",
+            "Ilhas Salomão",
+            "Ilhas Turcas e Caicos",
+            "Ilhas Virgens Americanas",
+            "Ilhas Virgens Britânicas",
+            "Índia",
+            "Indian Ocean",
+            "Indonésia",
+            "Irão",
+            "Iraque",
+            "Irlanda",
+            "Islândia",
+            "Israel",
+            "Itália",
+            "Jamaica",
+            "Jan Mayen",
+            "Japão",
+            "Jersey",
+            "Jibuti",
+            "Jordânia",
+            "Kosovo",
+            "Kuwait",
+            "Laos",
+            "Lesoto",
+            "Letónia",
+            "Líbano",
+            "Libéria",
+            "Líbia",
+            "Listenstaine",
+            "Lituânia",
+            "Luxemburgo",
+            "Macau",
+            "Macedónia",
+            "Madagáscar",
+            "Malásia",
+            "Malávi",
+            "Maldivas",
+            "Mali",
+            "Malta",
+            "Man, Isle of",
+            "Marianas do Norte",
+            "Marrocos",
+            "Maurícia",
+            "Mauritânia",
+            "México",
+            "Micronésia",
+            "Moçambique",
+            "Moldávia",
+            "Mónaco",
+            "Mongólia",
+            "Monserrate",
+            "Montenegro",
+            "Mundo",
+            "Namíbia",
+            "Nauru",
+            "Navassa Island",
+            "Nepal",
+            "Nicarágua",
+            "Níger",
+            "Nigéria",
+            "Niue",
+            "Noruega",
+            "Nova Caledónia",
+            "Nova Zelândia",
+            "Omã",
+            "Pacific Ocean",
+            "Países Baixos",
+            "Palau",
+            "Panamá",
+            "Papua-Nova Guiné",
+            "Paquistão",
+            "Paracel Islands",
+            "Paraguai",
+            "Peru",
+            "Pitcairn",
+            "Polinésia Francesa",
+            "Polónia",
+            "Porto Rico",
+            "Portugal",
+            "Quénia",
+            "Quirguizistão",
+            "Quiribáti",
+            "Reino Unido",
+            "República Centro-Africana",
+            "República Dominicana",
+            "Roménia",
+            "Ruanda",
+            "Rússia",
+            "Salvador",
+            "Samoa",
+            "Samoa Americana",
+            "Santa Helena",
+            "Santa Lúcia",
+            "São Bartolomeu",
+            "São Cristóvão e Neves",
+            "São Marinho",
+            "São Martinho",
+            "São Pedro e Miquelon",
+            "São Tomé e Príncipe",
+            "São Vicente e Granadinas",
+            "Sara Ocidental",
+            "Seicheles",
+            "Senegal",
+            "Serra Leoa",
+            "Sérvia",
+            "Singapura",
+            "Sint Maarten",
+            "Síria",
+            "Somália",
+            "Southern Ocean",
+            "Spratly Islands",
+            "Sri Lanca",
+            "Suazilândia",
+            "Sudão",
+            "Sudão do Sul",
+            "Suécia",
+            "Suíça",
+            "Suriname",
+            "Svalbard e Jan Mayen",
+            "Tailândia",
+            "Taiwan",
+            "Tajiquistão",
+            "Tanzânia",
+            "Território Britânico do Oceano Índico",
+            "Territórios Austrais Franceses",
+            "Timor Leste",
+            "Togo",
+            "Tokelau",
+            "Tonga",
+            "Trindade e Tobago",
+            "Tunísia",
+            "Turquemenistão",
+            "Turquia",
+            "Tuvalu",
+            "Ucrânia",
+            "Uganda",
+            "União Europeia",
+            "Uruguai",
+            "Usbequistão",
+            "Vanuatu",
+            "Vaticano",
+            "Venezuela",
+            "Vietname",
+            "Wake Island",
+            "Wallis e Futuna",
+            "West Bank",
+            "Zâmbia",
+            "Zimbabué"});
+            this.cbPais.Location = new System.Drawing.Point(15, 333);
             this.cbPais.Name = "cbPais";
             this.cbPais.Size = new System.Drawing.Size(150, 21);
             this.cbPais.TabIndex = 40;
+            this.cbPais.SelectedIndexChanged += new System.EventHandler(this.cbPais_SelectedIndexChanged);
+            // 
+            // btnLimparFiltros
+            // 
+            this.btnLimparFiltros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimparFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimparFiltros.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnLimparFiltros.IconChar = FontAwesome.Sharp.IconChar.Filter;
+            this.btnLimparFiltros.IconColor = System.Drawing.Color.Black;
+            this.btnLimparFiltros.IconSize = 18;
+            this.btnLimparFiltros.Location = new System.Drawing.Point(51, 369);
+            this.btnLimparFiltros.Name = "btnLimparFiltros";
+            this.btnLimparFiltros.Rotation = 0D;
+            this.btnLimparFiltros.Size = new System.Drawing.Size(72, 26);
+            this.btnLimparFiltros.TabIndex = 42;
+            this.btnLimparFiltros.Text = "Limpar Filtros";
+            this.btnLimparFiltros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimparFiltros.UseVisualStyleBackColor = true;
+            this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
             // 
             // frmVisualizarAcordos
             // 
@@ -401,6 +674,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1082, 749);
+            this.Controls.Add(this.btnLimparFiltros);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbPais);
             this.Controls.Add(this.label7);
@@ -458,5 +732,6 @@
         private System.Windows.Forms.ComboBox cbContinente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbPais;
+        private FontAwesome.Sharp.IconButton btnLimparFiltros;
     }
 }
