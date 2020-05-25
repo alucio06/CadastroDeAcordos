@@ -35,9 +35,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.dtpDataFinal = new System.Windows.Forms.DateTimePicker();
-            this.dtpDataInicio = new System.Windows.Forms.DateTimePicker();
-            this.dtpDataPublicacao = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.cbxSituacao = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -66,6 +63,9 @@
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.dtpDataFinal = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataInicio = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataPublicacao = new System.Windows.Forms.DateTimePicker();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -149,45 +149,6 @@
             this.label11.Size = new System.Drawing.Size(55, 13);
             this.label11.TabIndex = 33;
             this.label11.Text = "Data Final";
-            // 
-            // dtpDataFinal
-            // 
-            this.dtpDataFinal.Checked = false;
-            this.dtpDataFinal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpDataFinal.CustomFormat = "";
-            this.dtpDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataFinal.Location = new System.Drawing.Point(289, 73);
-            this.dtpDataFinal.Name = "dtpDataFinal";
-            this.dtpDataFinal.ShowCheckBox = true;
-            this.dtpDataFinal.Size = new System.Drawing.Size(141, 20);
-            this.dtpDataFinal.TabIndex = 34;
-            this.dtpDataFinal.Value = new System.DateTime(2020, 5, 7, 19, 25, 50, 0);
-            // 
-            // dtpDataInicio
-            // 
-            this.dtpDataInicio.Checked = false;
-            this.dtpDataInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpDataInicio.CustomFormat = "";
-            this.dtpDataInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataInicio.Location = new System.Drawing.Point(152, 73);
-            this.dtpDataInicio.Name = "dtpDataInicio";
-            this.dtpDataInicio.ShowCheckBox = true;
-            this.dtpDataInicio.Size = new System.Drawing.Size(131, 20);
-            this.dtpDataInicio.TabIndex = 35;
-            this.dtpDataInicio.Value = new System.DateTime(2020, 5, 7, 19, 25, 50, 0);
-            // 
-            // dtpDataPublicacao
-            // 
-            this.dtpDataPublicacao.Checked = false;
-            this.dtpDataPublicacao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpDataPublicacao.CustomFormat = "";
-            this.dtpDataPublicacao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataPublicacao.Location = new System.Drawing.Point(11, 73);
-            this.dtpDataPublicacao.Name = "dtpDataPublicacao";
-            this.dtpDataPublicacao.ShowCheckBox = true;
-            this.dtpDataPublicacao.Size = new System.Drawing.Size(135, 20);
-            this.dtpDataPublicacao.TabIndex = 31;
-            this.dtpDataPublicacao.Value = new System.DateTime(2020, 5, 7, 19, 25, 50, 0);
             // 
             // label12
             // 
@@ -811,6 +772,45 @@
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
+            // dtpDataFinal
+            // 
+            this.dtpDataFinal.Checked = false;
+            this.dtpDataFinal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpDataFinal.CustomFormat = "";
+            this.dtpDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataFinal.Location = new System.Drawing.Point(289, 73);
+            this.dtpDataFinal.Name = "dtpDataFinal";
+            this.dtpDataFinal.ShowCheckBox = true;
+            this.dtpDataFinal.Size = new System.Drawing.Size(141, 20);
+            this.dtpDataFinal.TabIndex = 34;
+            this.dtpDataFinal.Value = new System.DateTime(2020, 5, 7, 19, 25, 50, 0);
+            // 
+            // dtpDataInicio
+            // 
+            this.dtpDataInicio.Checked = false;
+            this.dtpDataInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpDataInicio.CustomFormat = "";
+            this.dtpDataInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataInicio.Location = new System.Drawing.Point(152, 73);
+            this.dtpDataInicio.Name = "dtpDataInicio";
+            this.dtpDataInicio.ShowCheckBox = true;
+            this.dtpDataInicio.Size = new System.Drawing.Size(131, 20);
+            this.dtpDataInicio.TabIndex = 35;
+            this.dtpDataInicio.Value = new System.DateTime(2020, 5, 7, 19, 25, 50, 0);
+            // 
+            // dtpDataPublicacao
+            // 
+            this.dtpDataPublicacao.Checked = false;
+            this.dtpDataPublicacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpDataPublicacao.CustomFormat = "";
+            this.dtpDataPublicacao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataPublicacao.Location = new System.Drawing.Point(11, 73);
+            this.dtpDataPublicacao.Name = "dtpDataPublicacao";
+            this.dtpDataPublicacao.ShowCheckBox = true;
+            this.dtpDataPublicacao.Size = new System.Drawing.Size(135, 20);
+            this.dtpDataPublicacao.TabIndex = 31;
+            this.dtpDataPublicacao.Value = new System.DateTime(2020, 5, 7, 19, 25, 50, 0);
+            // 
             // frmCadastrarAcordo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -824,6 +824,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Acordo";
+            this.Load += new System.EventHandler(this.frmCadastrarAcordo_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -844,9 +845,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dtpDataFinal;
-        private System.Windows.Forms.DateTimePicker dtpDataInicio;
-        private System.Windows.Forms.DateTimePicker dtpDataPublicacao;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbxSituacao;
         private System.Windows.Forms.Label label9;
@@ -875,5 +873,8 @@
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label14;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.DateTimePicker dtpDataPublicacao;
+        private System.Windows.Forms.DateTimePicker dtpDataInicio;
+        private System.Windows.Forms.DateTimePicker dtpDataFinal;
     }
 }

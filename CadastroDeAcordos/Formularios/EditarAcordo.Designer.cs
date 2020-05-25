@@ -1,0 +1,875 @@
+﻿namespace CadastroDeAcordos.Formularios
+{
+    partial class frmEditarAcordo
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.cbxPais = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNomeInteressado = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblTelefone = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtNomeInstituicao = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbxContinente = new System.Windows.Forms.ComboBox();
+            this.cbxSituacao = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dtpDataPublicacao = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataInicio = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataFinal = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbxTipoDeAcordo = new System.Windows.Forms.ComboBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblNumeroProcessual = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtNumeroProcessual = new System.Windows.Forms.MaskedTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStatus.Location = new System.Drawing.Point(11, 459);
+            this.txtStatus.Multiline = true;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(438, 43);
+            this.txtStatus.TabIndex = 36;
+            // 
+            // cbxPais
+            // 
+            this.cbxPais.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPais.FormattingEnabled = true;
+            this.cbxPais.Items.AddRange(new object[] {
+            "Afeganistão",
+            "África do Sul",
+            "Akrotiri",
+            "Albânia",
+            "Alemanha",
+            "Andorra",
+            "Angola",
+            "Anguila",
+            "Antárctida",
+            "Antígua e Barbuda",
+            "Arábia Saudita",
+            "Arctic Ocean",
+            "Argélia",
+            "Argentina",
+            "Arménia",
+            "Aruba",
+            "Ashmore and Cartier Islands",
+            "Atlantic Ocean",
+            "Austrália",
+            "Áustria",
+            "Azerbaijão",
+            "Baamas",
+            "Bangladeche",
+            "Barbados",
+            "Barém",
+            "Bélgica",
+            "Belize",
+            "Benim",
+            "Bermudas",
+            "Bielorrússia",
+            "Birmânia",
+            "Bolívia",
+            "Bósnia e Herzegovina",
+            "Botsuana",
+            "Brasil",
+            "Brunei",
+            "Bulgária",
+            "Burquina Faso",
+            "Burúndi",
+            "Butão",
+            "Cabo Verde",
+            "Camarões",
+            "Camboja",
+            "Canadá",
+            "Catar",
+            "Cazaquistão",
+            "Chade",
+            "Chile",
+            "China",
+            "Chipre",
+            "Clipperton Island",
+            "Colômbia",
+            "Comores",
+            "Congo-Brazzaville",
+            "Congo-Kinshasa",
+            "Coral Sea Islands",
+            "Coreia do Norte",
+            "Coreia do Sul",
+            "Costa do Marfim",
+            "Costa Rica",
+            "Croácia",
+            "Cuba",
+            "Curacao",
+            "Dhekelia",
+            "Dinamarca",
+            "Domínica",
+            "Egipto",
+            "Emiratos Árabes Unidos",
+            "Equador",
+            "Eritreia",
+            "Eslováquia",
+            "Eslovénia",
+            "Espanha",
+            "Estados Unidos",
+            "Estónia",
+            "Etiópia",
+            "Faroé",
+            "Fiji",
+            "Filipinas",
+            "Finlândia",
+            "França",
+            "Gabão",
+            "Gâmbia",
+            "Gana",
+            "Gaza Strip",
+            "Geórgia",
+            "Geórgia do Sul e Sandwich do Sul",
+            "Gibraltar",
+            "Granada",
+            "Grécia",
+            "Gronelândia",
+            "Guame",
+            "Guatemala",
+            "Guernsey",
+            "Guiana",
+            "Guiné",
+            "Guiné Equatorial",
+            "Guiné-Bissau",
+            "Haiti",
+            "Honduras",
+            "Hong Kong",
+            "Hungria",
+            "Iémen",
+            "Ilha Bouvet",
+            "Ilha do Natal",
+            "Ilha Norfolk",
+            "Ilhas Caimão",
+            "Ilhas Cook",
+            "Ilhas dos Cocos",
+            "Ilhas Falkland",
+            "Ilhas Heard e McDonald",
+            "Ilhas Marshall",
+            "Ilhas Salomão",
+            "Ilhas Turcas e Caicos",
+            "Ilhas Virgens Americanas",
+            "Ilhas Virgens Britânicas",
+            "Índia",
+            "Indian Ocean",
+            "Indonésia",
+            "Irão",
+            "Iraque",
+            "Irlanda",
+            "Islândia",
+            "Israel",
+            "Itália",
+            "Jamaica",
+            "Jan Mayen",
+            "Japão",
+            "Jersey",
+            "Jibuti",
+            "Jordânia",
+            "Kosovo",
+            "Kuwait",
+            "Laos",
+            "Lesoto",
+            "Letónia",
+            "Líbano",
+            "Libéria",
+            "Líbia",
+            "Listenstaine",
+            "Lituânia",
+            "Luxemburgo",
+            "Macau",
+            "Macedónia",
+            "Madagáscar",
+            "Malásia",
+            "Malávi",
+            "Maldivas",
+            "Mali",
+            "Malta",
+            "Man, Isle of",
+            "Marianas do Norte",
+            "Marrocos",
+            "Maurícia",
+            "Mauritânia",
+            "México",
+            "Micronésia",
+            "Moçambique",
+            "Moldávia",
+            "Mónaco",
+            "Mongólia",
+            "Monserrate",
+            "Montenegro",
+            "Mundo",
+            "Namíbia",
+            "Nauru",
+            "Navassa Island",
+            "Nepal",
+            "Nicarágua",
+            "Níger",
+            "Nigéria",
+            "Niue",
+            "Noruega",
+            "Nova Caledónia",
+            "Nova Zelândia",
+            "Omã",
+            "Pacific Ocean",
+            "Países Baixos",
+            "Palau",
+            "Panamá",
+            "Papua-Nova Guiné",
+            "Paquistão",
+            "Paracel Islands",
+            "Paraguai",
+            "Peru",
+            "Pitcairn",
+            "Polinésia Francesa",
+            "Polónia",
+            "Porto Rico",
+            "Portugal",
+            "Quénia",
+            "Quirguizistão",
+            "Quiribáti",
+            "Reino Unido",
+            "República Centro-Africana",
+            "República Dominicana",
+            "Roménia",
+            "Ruanda",
+            "Rússia",
+            "Salvador",
+            "Samoa",
+            "Samoa Americana",
+            "Santa Helena",
+            "Santa Lúcia",
+            "São Bartolomeu",
+            "São Cristóvão e Neves",
+            "São Marinho",
+            "São Martinho",
+            "São Pedro e Miquelon",
+            "São Tomé e Príncipe",
+            "São Vicente e Granadinas",
+            "Sara Ocidental",
+            "Seicheles",
+            "Senegal",
+            "Serra Leoa",
+            "Sérvia",
+            "Singapura",
+            "Sint Maarten",
+            "Síria",
+            "Somália",
+            "Southern Ocean",
+            "Spratly Islands",
+            "Sri Lanca",
+            "Suazilândia",
+            "Sudão",
+            "Sudão do Sul",
+            "Suécia",
+            "Suíça",
+            "Suriname",
+            "Svalbard e Jan Mayen",
+            "Tailândia",
+            "Taiwan",
+            "Tajiquistão",
+            "Tanzânia",
+            "Território Britânico do Oceano Índico",
+            "Territórios Austrais Franceses",
+            "Timor Leste",
+            "Togo",
+            "Tokelau",
+            "Tonga",
+            "Trindade e Tobago",
+            "Tunísia",
+            "Turquemenistão",
+            "Turquia",
+            "Tuvalu",
+            "Ucrânia",
+            "Uganda",
+            "União Europeia",
+            "Uruguai",
+            "Usbequistão",
+            "Vanuatu",
+            "Vaticano",
+            "Venezuela",
+            "Vietname",
+            "Wake Island",
+            "Wallis e Futuna",
+            "West Bank",
+            "Zâmbia",
+            "Zimbabué"});
+            this.cbxPais.Location = new System.Drawing.Point(204, 74);
+            this.cbxPais.Name = "cbxPais";
+            this.cbxPais.Size = new System.Drawing.Size(214, 21);
+            this.cbxPais.TabIndex = 27;
+            this.cbxPais.Tag = "campoObrigatorio";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(201, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "País*";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(8, 244);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 16);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Interessado";
+            // 
+            // txtNomeInteressado
+            // 
+            this.txtNomeInteressado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNomeInteressado.Location = new System.Drawing.Point(10, 25);
+            this.txtNomeInteressado.Name = "txtNomeInteressado";
+            this.txtNomeInteressado.PromptChar = ' ';
+            this.txtNomeInteressado.Size = new System.Drawing.Size(246, 20);
+            this.txtNomeInteressado.TabIndex = 34;
+            this.txtNomeInteressado.Tag = "campoObrigatorio";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTelefone.Location = new System.Drawing.Point(263, 25);
+            this.txtTelefone.Mask = "(00) 0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(156, 20);
+            this.txtTelefone.TabIndex = 33;
+            this.txtTelefone.Text = "91";
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtCelular.Location = new System.Drawing.Point(263, 70);
+            this.txtCelular.Mask = "(00) 00000-0000";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(156, 20);
+            this.txtCelular.TabIndex = 32;
+            this.txtCelular.Text = "919";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(260, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Telefone";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Control;
+            this.txtEmail.Location = new System.Drawing.Point(11, 70);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(246, 20);
+            this.txtEmail.TabIndex = 27;
+            // 
+            // lblTelefone
+            // 
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.Location = new System.Drawing.Point(260, 54);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(39, 13);
+            this.lblTelefone.TabIndex = 26;
+            this.lblTelefone.Text = "Celular";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 54);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Email";
+            // 
+            // txtNomeInstituicao
+            // 
+            this.txtNomeInstituicao.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNomeInstituicao.Location = new System.Drawing.Point(10, 27);
+            this.txtNomeInstituicao.Name = "txtNomeInstituicao";
+            this.txtNomeInstituicao.Size = new System.Drawing.Size(408, 20);
+            this.txtNomeInstituicao.TabIndex = 10;
+            this.txtNomeInstituicao.Tag = "campoObrigatorio";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Nome*";
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(165, 513);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(165, 36);
+            this.btnCadastrar.TabIndex = 33;
+            this.btnCadastrar.Text = "EDITAR";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(8, 377);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 15);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Descrição";
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescricao.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescricao.Location = new System.Drawing.Point(11, 395);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(438, 43);
+            this.txtDescricao.TabIndex = 32;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.txtNomeInteressado);
+            this.panel4.Controls.Add(this.txtTelefone);
+            this.panel4.Controls.Add(this.txtCelular);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.txtEmail);
+            this.panel4.Controls.Add(this.lblTelefone);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel4.Location = new System.Drawing.Point(11, 263);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(438, 111);
+            this.panel4.TabIndex = 28;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(8, 441);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 15);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Status";
+            // 
+            // cbxContinente
+            // 
+            this.cbxContinente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxContinente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxContinente.FormattingEnabled = true;
+            this.cbxContinente.Items.AddRange(new object[] {
+            "África",
+            "América Central",
+            "América do Norte",
+            "América do Sul",
+            "Ásia",
+            "Europa",
+            "Oceania"});
+            this.cbxContinente.Location = new System.Drawing.Point(11, 74);
+            this.cbxContinente.Name = "cbxContinente";
+            this.cbxContinente.Size = new System.Drawing.Size(175, 21);
+            this.cbxContinente.TabIndex = 24;
+            this.cbxContinente.Tag = "campoObrigatorio";
+            // 
+            // cbxSituacao
+            // 
+            this.cbxSituacao.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxSituacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSituacao.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbxSituacao.FormattingEnabled = true;
+            this.cbxSituacao.Items.AddRange(new object[] {
+            "Aguardando",
+            "Em análise",
+            "Concluído"});
+            this.cbxSituacao.Location = new System.Drawing.Point(299, 24);
+            this.cbxSituacao.Name = "cbxSituacao";
+            this.cbxSituacao.Size = new System.Drawing.Size(131, 21);
+            this.cbxSituacao.TabIndex = 37;
+            this.cbxSituacao.Tag = "campoObrigatorio";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(297, 8);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 13);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "Situação*";
+            // 
+            // dtpDataPublicacao
+            // 
+            this.dtpDataPublicacao.Checked = false;
+            this.dtpDataPublicacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpDataPublicacao.CustomFormat = "";
+            this.dtpDataPublicacao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataPublicacao.Location = new System.Drawing.Point(11, 73);
+            this.dtpDataPublicacao.Name = "dtpDataPublicacao";
+            this.dtpDataPublicacao.ShowCheckBox = true;
+            this.dtpDataPublicacao.Size = new System.Drawing.Size(135, 20);
+            this.dtpDataPublicacao.TabIndex = 31;
+            this.dtpDataPublicacao.Value = new System.DateTime(2020, 5, 7, 19, 25, 50, 0);
+            // 
+            // dtpDataInicio
+            // 
+            this.dtpDataInicio.Checked = false;
+            this.dtpDataInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpDataInicio.CustomFormat = "";
+            this.dtpDataInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataInicio.Location = new System.Drawing.Point(152, 73);
+            this.dtpDataInicio.Name = "dtpDataInicio";
+            this.dtpDataInicio.ShowCheckBox = true;
+            this.dtpDataInicio.Size = new System.Drawing.Size(131, 20);
+            this.dtpDataInicio.TabIndex = 35;
+            this.dtpDataInicio.Value = new System.DateTime(2020, 5, 7, 19, 25, 50, 0);
+            // 
+            // dtpDataFinal
+            // 
+            this.dtpDataFinal.Checked = false;
+            this.dtpDataFinal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpDataFinal.CustomFormat = "";
+            this.dtpDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataFinal.Location = new System.Drawing.Point(289, 73);
+            this.dtpDataFinal.Name = "dtpDataFinal";
+            this.dtpDataFinal.ShowCheckBox = true;
+            this.dtpDataFinal.Size = new System.Drawing.Size(141, 20);
+            this.dtpDataFinal.TabIndex = 34;
+            this.dtpDataFinal.Value = new System.DateTime(2020, 5, 7, 19, 25, 50, 0);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(286, 57);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 13);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Data Final";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(149, 57);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Data Início";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 57);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(101, 13);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Data de Publicação";
+            // 
+            // cbxTipoDeAcordo
+            // 
+            this.cbxTipoDeAcordo.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxTipoDeAcordo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxTipoDeAcordo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTipoDeAcordo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbxTipoDeAcordo.FormattingEnabled = true;
+            this.cbxTipoDeAcordo.Items.AddRange(new object[] {
+            "Acordo Geral",
+            "Cotutela",
+            "Consórcio",
+            "Mobilidade",
+            "Memorando de Entendimento",
+            "Outros"});
+            this.cbxTipoDeAcordo.Location = new System.Drawing.Point(152, 24);
+            this.cbxTipoDeAcordo.Name = "cbxTipoDeAcordo";
+            this.cbxTipoDeAcordo.Size = new System.Drawing.Size(141, 21);
+            this.cbxTipoDeAcordo.TabIndex = 20;
+            this.cbxTipoDeAcordo.Tag = "campoObrigatorio";
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(150, 8);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(84, 13);
+            this.lblNome.TabIndex = 9;
+            this.lblNome.Text = "Tipo de Acordo*";
+            // 
+            // lblNumeroProcessual
+            // 
+            this.lblNumeroProcessual.AutoSize = true;
+            this.lblNumeroProcessual.Location = new System.Drawing.Point(8, 9);
+            this.lblNumeroProcessual.Name = "lblNumeroProcessual";
+            this.lblNumeroProcessual.Size = new System.Drawing.Size(103, 13);
+            this.lblNumeroProcessual.TabIndex = 1;
+            this.lblNumeroProcessual.Text = "Numero Processual*";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.cbxSituacao);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.dtpDataPublicacao);
+            this.panel2.Controls.Add(this.dtpDataInicio);
+            this.panel2.Controls.Add(this.dtpDataFinal);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.cbxTipoDeAcordo);
+            this.panel2.Controls.Add(this.lblNome);
+            this.panel2.Controls.Add(this.lblNumeroProcessual);
+            this.panel2.Controls.Add(this.txtNumeroProcessual);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel2.Location = new System.Drawing.Point(11, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(438, 103);
+            this.panel2.TabIndex = 21;
+            // 
+            // txtNumeroProcessual
+            // 
+            this.txtNumeroProcessual.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNumeroProcessual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNumeroProcessual.Location = new System.Drawing.Point(11, 25);
+            this.txtNumeroProcessual.Mask = "00000.000000/0000-0999";
+            this.txtNumeroProcessual.Name = "txtNumeroProcessual";
+            this.txtNumeroProcessual.PromptChar = ' ';
+            this.txtNumeroProcessual.Size = new System.Drawing.Size(135, 20);
+            this.txtNumeroProcessual.TabIndex = 32;
+            this.txtNumeroProcessual.Tag = "campoObrigatorio";
+            this.txtNumeroProcessual.Text = "23073";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.txtStatus);
+            this.panel1.Controls.Add(this.btnCadastrar);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.txtDescricao);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Location = new System.Drawing.Point(60, 51);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(465, 561);
+            this.panel1.TabIndex = 36;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Instituição";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.cbxPais);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.txtNomeInstituicao);
+            this.panel3.Controls.Add(this.cbxContinente);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel3.Location = new System.Drawing.Point(11, 128);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(438, 113);
+            this.panel3.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Continente*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Nome*";
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.ForeColor = System.Drawing.Color.Transparent;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconButton1.IconColor = System.Drawing.Color.DarkRed;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(536, 9);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(40, 37);
+            this.iconButton1.TabIndex = 37;
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // frmEditarAcordo
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(585, 663);
+            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "frmEditarAcordo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "EditarAcordo";
+            this.Load += new System.EventHandler(this.frmEditarAcordo_Load);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.ComboBox cbxPais;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox txtNomeInteressado;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblTelefone;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtNomeInstituicao;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbxContinente;
+        private System.Windows.Forms.ComboBox cbxSituacao;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker dtpDataPublicacao;
+        private System.Windows.Forms.DateTimePicker dtpDataInicio;
+        private System.Windows.Forms.DateTimePicker dtpDataFinal;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbxTipoDeAcordo;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblNumeroProcessual;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.MaskedTextBox txtNumeroProcessual;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconButton iconButton1;
+    }
+}

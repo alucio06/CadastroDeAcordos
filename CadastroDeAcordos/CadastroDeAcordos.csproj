@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Classes\Cadastro.cs" />
     <Compile Include="Classes\Conexao.cs" />
+    <Compile Include="Classes\Editar.cs" />
     <Compile Include="Classes\RetornaDados.cs" />
     <Compile Include="Classes\Validacao.cs" />
     <Compile Include="Entities\Acordo.cs" />
@@ -73,6 +74,12 @@
     <Compile Include="Entities\Instituicao.cs" />
     <Compile Include="Entities\Interessado.cs" />
     <Compile Include="Entities\Status.cs" />
+    <Compile Include="Formularios\EditarAcordo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarAcordo.Designer.cs">
+      <DependentUpon>EditarAcordo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmAtualizarStatus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +106,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\EditarAcordo.resx">
+      <DependentUpon>EditarAcordo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAtualizarStatus.resx">
       <DependentUpon>frmAtualizarStatus.cs</DependentUpon>
     </EmbeddedResource>

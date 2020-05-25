@@ -45,7 +45,6 @@
             this.rbInstituicao = new System.Windows.Forms.RadioButton();
             this.rbInteressado = new System.Windows.Forms.RadioButton();
             this.txtCampoDeBusca = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.cbTipoDeAcordo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbPais = new System.Windows.Forms.ComboBox();
             this.btnLimparFiltros = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGriedViewListaAcordos)).BeginInit();
             this.panel2.SuspendLayout();
@@ -130,7 +130,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGriedViewListaAcordos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGriedViewListaAcordos.RowHeadersVisible = false;
+            this.dataGriedViewListaAcordos.RowHeadersWidth = 25;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.NullValue = "            - ";
@@ -140,7 +140,7 @@
             this.dataGriedViewListaAcordos.RowTemplate.Height = 28;
             this.dataGriedViewListaAcordos.RowTemplate.ReadOnly = true;
             this.dataGriedViewListaAcordos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewListaAcordos.Size = new System.Drawing.Size(848, 524);
+            this.dataGriedViewListaAcordos.Size = new System.Drawing.Size(900, 487);
             this.dataGriedViewListaAcordos.TabIndex = 21;
             // 
             // panel2
@@ -149,9 +149,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.dataGriedViewListaAcordos);
-            this.panel2.Location = new System.Drawing.Point(175, 169);
+            this.panel2.Location = new System.Drawing.Point(153, 140);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(848, 524);
+            this.panel2.Size = new System.Drawing.Size(900, 487);
             this.panel2.TabIndex = 22;
             // 
             // btnNovoAcordo
@@ -169,7 +169,7 @@
             this.btnNovoAcordo.IconColor = System.Drawing.Color.White;
             this.btnNovoAcordo.IconSize = 16;
             this.btnNovoAcordo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovoAcordo.Location = new System.Drawing.Point(867, 127);
+            this.btnNovoAcordo.Location = new System.Drawing.Point(893, 98);
             this.btnNovoAcordo.Name = "btnNovoAcordo";
             this.btnNovoAcordo.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNovoAcordo.Rotation = 0D;
@@ -194,7 +194,7 @@
             this.btnAtualizarLista.IconColor = System.Drawing.Color.White;
             this.btnAtualizarLista.IconSize = 22;
             this.btnAtualizarLista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizarLista.Location = new System.Drawing.Point(822, 127);
+            this.btnAtualizarLista.Location = new System.Drawing.Point(848, 98);
             this.btnAtualizarLista.Name = "btnAtualizarLista";
             this.btnAtualizarLista.Padding = new System.Windows.Forms.Padding(2, 3, 2, 0);
             this.btnAtualizarLista.Rotation = 0D;
@@ -211,7 +211,7 @@
             this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnBuscar.IconColor = System.Drawing.Color.Black;
             this.btnBuscar.IconSize = 16;
-            this.btnBuscar.Location = new System.Drawing.Point(578, 130);
+            this.btnBuscar.Location = new System.Drawing.Point(560, 110);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Rotation = 0D;
             this.btnBuscar.Size = new System.Drawing.Size(72, 26);
@@ -224,7 +224,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(172, 91);
+            this.label3.Location = new System.Drawing.Point(150, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 28;
@@ -233,7 +233,7 @@
             // rbNumeroProcessual
             // 
             this.rbNumeroProcessual.AutoSize = true;
-            this.rbNumeroProcessual.Location = new System.Drawing.Point(175, 107);
+            this.rbNumeroProcessual.Location = new System.Drawing.Point(152, 87);
             this.rbNumeroProcessual.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.rbNumeroProcessual.Name = "rbNumeroProcessual";
             this.rbNumeroProcessual.Size = new System.Drawing.Size(117, 17);
@@ -245,7 +245,7 @@
             // rbInstituicao
             // 
             this.rbInstituicao.AutoSize = true;
-            this.rbInstituicao.Location = new System.Drawing.Point(298, 107);
+            this.rbInstituicao.Location = new System.Drawing.Point(275, 87);
             this.rbInstituicao.Name = "rbInstituicao";
             this.rbInstituicao.Size = new System.Drawing.Size(73, 17);
             this.rbInstituicao.TabIndex = 30;
@@ -256,7 +256,7 @@
             // rbInteressado
             // 
             this.rbInteressado.AutoSize = true;
-            this.rbInteressado.Location = new System.Drawing.Point(377, 107);
+            this.rbInteressado.Location = new System.Drawing.Point(354, 87);
             this.rbInteressado.Name = "rbInteressado";
             this.rbInteressado.Size = new System.Drawing.Size(80, 17);
             this.rbInteressado.TabIndex = 31;
@@ -267,20 +267,10 @@
             // txtCampoDeBusca
             // 
             this.txtCampoDeBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCampoDeBusca.Location = new System.Drawing.Point(175, 130);
+            this.txtCampoDeBusca.Location = new System.Drawing.Point(153, 110);
             this.txtCampoDeBusca.Name = "txtCampoDeBusca";
-            this.txtCampoDeBusca.Size = new System.Drawing.Size(397, 26);
+            this.txtCampoDeBusca.Size = new System.Drawing.Size(401, 26);
             this.txtCampoDeBusca.TabIndex = 32;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 15);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Filtrar por:";
             // 
             // cbTipoDeAcordo
             // 
@@ -296,16 +286,16 @@
             "Mobilidade",
             "Memorando de Entendimento",
             "Outros"});
-            this.cbTipoDeAcordo.Location = new System.Drawing.Point(15, 213);
+            this.cbTipoDeAcordo.Location = new System.Drawing.Point(15, 172);
             this.cbTipoDeAcordo.Name = "cbTipoDeAcordo";
-            this.cbTipoDeAcordo.Size = new System.Drawing.Size(150, 21);
+            this.cbTipoDeAcordo.Size = new System.Drawing.Size(132, 21);
             this.cbTipoDeAcordo.TabIndex = 34;
             this.cbTipoDeAcordo.SelectedIndexChanged += new System.EventHandler(this.cbTipoDeAcordo_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 197);
+            this.label5.Location = new System.Drawing.Point(12, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 13);
             this.label5.TabIndex = 35;
@@ -314,7 +304,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 237);
+            this.label6.Location = new System.Drawing.Point(12, 243);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 37;
@@ -331,16 +321,16 @@
             "Aguardando",
             "Em análise",
             "Concluído"});
-            this.cbSituacao.Location = new System.Drawing.Point(15, 253);
+            this.cbSituacao.Location = new System.Drawing.Point(15, 259);
             this.cbSituacao.Name = "cbSituacao";
-            this.cbSituacao.Size = new System.Drawing.Size(150, 21);
+            this.cbSituacao.Size = new System.Drawing.Size(132, 21);
             this.cbSituacao.TabIndex = 36;
             this.cbSituacao.SelectedIndexChanged += new System.EventHandler(this.cbSituacao_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 277);
+            this.label7.Location = new System.Drawing.Point(12, 200);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 39;
@@ -361,16 +351,16 @@
             "Ásia",
             "Europa",
             "Oceania"});
-            this.cbContinente.Location = new System.Drawing.Point(15, 293);
+            this.cbContinente.Location = new System.Drawing.Point(15, 216);
             this.cbContinente.Name = "cbContinente";
-            this.cbContinente.Size = new System.Drawing.Size(150, 21);
+            this.cbContinente.Size = new System.Drawing.Size(132, 21);
             this.cbContinente.TabIndex = 38;
             this.cbContinente.SelectedIndexChanged += new System.EventHandler(this.cbContinente_SelectedIndexChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 317);
+            this.label8.Location = new System.Drawing.Point(12, 285);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 13);
             this.label8.TabIndex = 41;
@@ -643,9 +633,9 @@
             "West Bank",
             "Zâmbia",
             "Zimbabué"});
-            this.cbPais.Location = new System.Drawing.Point(15, 333);
+            this.cbPais.Location = new System.Drawing.Point(15, 300);
             this.cbPais.Name = "cbPais";
-            this.cbPais.Size = new System.Drawing.Size(150, 21);
+            this.cbPais.Size = new System.Drawing.Size(132, 21);
             this.cbPais.TabIndex = 40;
             this.cbPais.SelectedIndexChanged += new System.EventHandler(this.cbPais_SelectedIndexChanged);
             // 
@@ -657,15 +647,35 @@
             this.btnLimparFiltros.IconChar = FontAwesome.Sharp.IconChar.Filter;
             this.btnLimparFiltros.IconColor = System.Drawing.Color.Black;
             this.btnLimparFiltros.IconSize = 18;
-            this.btnLimparFiltros.Location = new System.Drawing.Point(51, 369);
+            this.btnLimparFiltros.Location = new System.Drawing.Point(33, 336);
             this.btnLimparFiltros.Name = "btnLimparFiltros";
             this.btnLimparFiltros.Rotation = 0D;
-            this.btnLimparFiltros.Size = new System.Drawing.Size(72, 26);
+            this.btnLimparFiltros.Size = new System.Drawing.Size(96, 29);
             this.btnLimparFiltros.TabIndex = 42;
             this.btnLimparFiltros.Text = "Limpar Filtros";
             this.btnLimparFiltros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimparFiltros.UseVisualStyleBackColor = true;
             this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconSize = 16;
+            this.iconButton1.Location = new System.Drawing.Point(922, 633);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(114, 36);
+            this.iconButton1.TabIndex = 43;
+            this.iconButton1.Text = "EDITAR ACORDO";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // frmVisualizarAcordos
             // 
@@ -674,6 +684,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1082, 749);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.btnLimparFiltros);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbPais);
@@ -683,7 +694,6 @@
             this.Controls.Add(this.cbSituacao);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbTipoDeAcordo);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCampoDeBusca);
             this.Controls.Add(this.rbInteressado);
             this.Controls.Add(this.rbInstituicao);
@@ -723,7 +733,6 @@
         private System.Windows.Forms.RadioButton rbInstituicao;
         private System.Windows.Forms.RadioButton rbInteressado;
         private System.Windows.Forms.MaskedTextBox txtCampoDeBusca;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbTipoDeAcordo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -733,5 +742,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbPais;
         private FontAwesome.Sharp.IconButton btnLimparFiltros;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using CadastroDeAcordos.Classes;
 using System.Data.SqlClient;
+using CadastroDeAcordos.Formularios;
 
 namespace CadastroDeAcordos
 {
@@ -90,6 +91,7 @@ namespace CadastroDeAcordos
                 }
             }
 
+            //se busca for feita pela instituição
             if (rbInstituicao.Checked == true)
             {
                 try
@@ -104,6 +106,7 @@ namespace CadastroDeAcordos
                 }
             }
 
+            //se busca for feita pelo nome do interessado
             if (rbInteressado.Checked == true)
             {
                 try
@@ -133,9 +136,7 @@ namespace CadastroDeAcordos
             cbPais.SelectedItem = "Todos";
         }
 
-        //executa os filtros a partir dos comboBox (tipo de acordo, continente, país e situação)
-      
-
+        //executa o filtro por tipo de acordo
         private void cbTipoDeAcordo_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -153,6 +154,7 @@ namespace CadastroDeAcordos
             }
         }
 
+        //executa o filtro por situação
         private void cbSituacao_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -170,6 +172,7 @@ namespace CadastroDeAcordos
             }
         }
 
+        //executa o filtro por continente
         private void cbContinente_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -187,6 +190,7 @@ namespace CadastroDeAcordos
             }
         }
 
+        //executa o filtro por país
         private void cbPais_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -204,6 +208,7 @@ namespace CadastroDeAcordos
             }
         }
 
+        //botao limpar filtro
         private void btnLimparFiltros_Click(object sender, EventArgs e)
         {
             limparFiltros();
@@ -211,6 +216,32 @@ namespace CadastroDeAcordos
             RetornaDados lerDados2 = new RetornaDados();
             dataGriedViewListaAcordos.DataSource = lerDados1.MostrarDados();
             tabAuxiliar = lerDados2.MostrarDados();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if (dataGriedViewListaAcordos.RowCount > 0)
+            {
+                frmEditarAcordo editarAcordo = new frmEditarAcordo();
+                editarAcordo.preencherCampos(
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Número Processual"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Tipo de Acordo"].Value.ToString(), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Continente"].Value.ToString(), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["País"].Value.ToString(), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Instituição"].Value.ToString(),
+                    Convert.ToDateTime(dataGriedViewListaAcordos.CurrentRow.Cells["Data de Publicação"].Value),
+                    Convert.ToDateTime(dataGriedViewListaAcordos.CurrentRow.Cells["Data de Início"].Value),
+                    Convert.ToDateTime(dataGriedViewListaAcordos.CurrentRow.Cells["Data Final"].Value), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Situação"].Value.ToString(), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Interessado"].Value.ToString(), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Email"].Value.ToString(), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Telefone"].Value.ToString(), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Celular"].Value.ToString(), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Descrição"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Status"].Value.ToString()
+                    );
+                editarAcordo.Show();
+            }
         }
     }
 }

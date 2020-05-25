@@ -123,6 +123,11 @@ namespace CadastroDeAcordos
             this.Close();
         }
 
+        private void frmCadastrarAcordo_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         /*SqlConnection conexao;
