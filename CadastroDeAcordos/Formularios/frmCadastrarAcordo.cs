@@ -30,16 +30,10 @@ namespace CadastroDeAcordos
                 Cadastro cad = new Cadastro();
                 if (cbxSituacao.Text == "Concluído")
                 {
-                    dtpDataPublicacao.Checked = true;
-                    dtpDataInicio.Checked = true;
-                    dtpDataFinal.Checked = true;
-                    cad = new Cadastro(txtNumeroProcessual.Text.Replace(',', '.'), cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, dtpDataPublicacao.Value, dtpDataInicio.Value, dtpDataFinal.Value, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
+                    cad = new Cadastro(txtNumeroProcessual.Text.Replace(',', '.'), cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, DateTime.Parse(txtDataPublicacao.Text), DateTime.Parse(txtDataInicio.Text), DateTime.Parse(txtDataInicio.Text), cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
                 }
                 else
                 {
-                    dtpDataPublicacao.Checked = false;
-                    dtpDataInicio.Checked = false;
-                    dtpDataFinal.Checked = false;
                     cad = new Cadastro(txtNumeroProcessual.Text.Replace(',', '.'), cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
                 }
 
@@ -53,22 +47,6 @@ namespace CadastroDeAcordos
             }
         }
 
-        //Marca as datas como obrigatórias caso a situacao do acordo seja "Concluído"
-        private void cbSituacao_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbxSituacao.Text == "Concluído")
-            {
-                dtpDataPublicacao.Checked = true;
-                dtpDataInicio.Checked = true;
-                dtpDataFinal.Checked = true;
-            } else
-            {
-                dtpDataPublicacao.Checked = false;
-                dtpDataInicio.Checked = false;
-                dtpDataFinal.Checked = false;
-            }
-        }
-
         //Validação de dados
         private void txtNomeInteressado_TextChanged(object sender, EventArgs e)
         {
@@ -76,7 +54,7 @@ namespace CadastroDeAcordos
         }
 
         private void txtNomeInstituicao_TextChanged(object sender, EventArgs e)
-        {        
+        {
             isValid.textBoxTemApenasLetras(txtNomeInstituicao);
         }
 
@@ -89,31 +67,31 @@ namespace CadastroDeAcordos
         public List<Control> retornaCamposObrigatorios()
         {
             camposObrigatorios.Clear();
+            txtDataPublicacao.Tag = "";
+            txtDataInicio.Tag = "";
+            txtDataFinal.Tag = "";
+
             foreach (Control control in this.Controls)
             {
-                if (control is Panel)
+                if (control.Tag != null)
                 {
-                    foreach (Control panel in control.Controls)
+                    if (control.Tag.ToString().Contains("*"))
                     {
-                        if(panel is Panel)
-                        {
-                            foreach (Control campo in panel.Controls)
-                            {
-                                if ((string)campo.Tag == "campoObrigatorio")
-                                {
-                                    camposObrigatorios.Add(campo);
-                                }
-                            }
-                        }
+                        camposObrigatorios.Add(control);
                     }
                 }
             }
+
             if (cbxSituacao.Text == "Concluído")
             {
-                camposObrigatorios.Add(dtpDataFinal);
-                camposObrigatorios.Add(dtpDataInicio);
-                camposObrigatorios.Add(dtpDataPublicacao);
+                camposObrigatorios.Add(txtDataPublicacao);
+                camposObrigatorios.Add(txtDataInicio);
+                camposObrigatorios.Add(txtDataFinal);
+                txtDataPublicacao.Tag = "Data de Publicação*";
+                txtDataInicio.Tag = "Data de Início*";
+                txtDataFinal.Tag = "Data Final*";
             }
+
             return camposObrigatorios;
         }
 
@@ -126,6 +104,25 @@ namespace CadastroDeAcordos
         private void frmCadastrarAcordo_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnTeste_Click(object sender, EventArgs e)
+        {
+            retornaCamposObrigatorios();
+            foreach (Control campo in camposObrigatorios)
+            {
+                MessageBox.Show((string)campo.Tag);
+            }
+        }
+
+        private void cbxSituacao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbxSituacao.Text == "Concluído")
+            {
+                lblDataPublicacao.Text = "Data de Publicação*";
+                lblDataInicio.Text = "Data de Início*";
+                lblDataFinal.Text = "Data Final*";
+            }
         }
 
 

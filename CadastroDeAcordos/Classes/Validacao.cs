@@ -39,7 +39,7 @@ namespace CadastroDeAcordos.Classes
             return textBox;
         }
 
-        //verifica se o campo está vazio
+        //verifica se o campo do tipo textBox está vazio
         public bool campoEstaPreenchido(Control textBox)
         {
             bool validacao = true;
@@ -68,6 +68,18 @@ namespace CadastroDeAcordos.Classes
             return validacao;
         }
 
+        //verifica se txtBox de data é válida
+        public bool eUmaData(Control textBox)
+        {
+            bool validacao = true;
+
+            if(textBox.Text.Length != 10)
+            {
+                validacao = false;
+            }
+            return validacao;
+        }
+
         //verifica se todos os campos obrigatórios estão preenchidos
         public bool camposObrigatoriosSaoValidos(List<Control> camposObrigatorios)
         {
@@ -78,6 +90,12 @@ namespace CadastroDeAcordos.Classes
                 if (campo.Name != "txtNumeroProcessual" && !campoEstaPreenchido(campo))
                     validacao = false;
                 else if (campo.Name == "txtNumeroProcessual" && !numProcessualEValido(campo))
+                    validacao = false;
+                else if (campo.Name == "txtDataPublicacao" && !eUmaData(campo))
+                    validacao = false;
+                else if (campo.Name == "txtDataInicial" && !eUmaData(campo))
+                    validacao = false;
+                else if (campo.Name == "txtDataFinal" && !eUmaData(campo))
                     validacao = false;
             }
             return validacao;
@@ -90,10 +108,27 @@ namespace CadastroDeAcordos.Classes
 
             foreach (Control campo in camposObrigatorios)
             {
-                if(campo.Name != "txtNumeroProcessual" && !campoEstaPreenchido(campo))
+                if (campo.Name == "txtNumeroProcessual" && !numProcessualEValido(campo))
+                    camposNaoPreenchidos += $"\n- {(string)campo.Tag.ToString()}";
+                else if (campo.Name != "txtNumeroProcessual" && campo.Name != "txtDataPublicacao" && campo.Name != "txtDataInicio" && campo.Name != "txtDataFinal" && !campoEstaPreenchido(campo))
+                    camposNaoPreenchidos += $"\n- {(string)campo.Tag.ToString()}";
+                else if (campo.Name == "txtDataPublicacao" && !eUmaData(campo))
+                    camposNaoPreenchidos += $"\n- {(string)campo.Tag.ToString()}";
+                else if (campo.Name == "txtDataInicio" && !eUmaData(campo))
+                    camposNaoPreenchidos += $"\n- {(string)campo.Tag.ToString()}";
+                else if (campo.Name == "txtDataFinal" && !eUmaData(campo))
+                    camposNaoPreenchidos += $"\n- {(string)campo.Tag.ToString()}";
+
+                /*if(campo.Name != "txtNumeroProcessual" && !campoEstaPreenchido(campo))
                     camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";
                 else if (campo.Name == "txtNumeroProcessual" && !numProcessualEValido(campo))
                     camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";
+                else if (campo.Name == "txtDataPublicacao" && !eUmaData(campo))
+                    camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";
+                else if (campo.Name == "txtDataInicial" && !eUmaData(campo))
+                    camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";
+                else if (campo.Name == "txtDataFinal" && !eUmaData(campo))
+                    camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";*/
             }
             return camposNaoPreenchidos;
         }
