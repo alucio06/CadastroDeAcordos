@@ -54,7 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbPais = new System.Windows.Forms.ComboBox();
             this.btnLimparFiltros = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGriedViewListaAcordos)).BeginInit();
             this.panel2.SuspendLayout();
@@ -94,6 +94,7 @@
             // dataGriedViewListaAcordos
             // 
             this.dataGriedViewListaAcordos.AllowUserToOrderColumns = true;
+            this.dataGriedViewListaAcordos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             this.dataGriedViewListaAcordos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGriedViewListaAcordos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGriedViewListaAcordos.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -657,25 +658,25 @@
             this.btnLimparFiltros.UseVisualStyleBackColor = true;
             this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
             // 
-            // iconButton1
+            // btnEditar
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(922, 633);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(114, 36);
-            this.iconButton1.TabIndex = 43;
-            this.iconButton1.Text = "EDITAR ACORDO";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnEditar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnEditar.IconColor = System.Drawing.Color.Black;
+            this.btnEditar.IconSize = 16;
+            this.btnEditar.Location = new System.Drawing.Point(922, 633);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Rotation = 0D;
+            this.btnEditar.Size = new System.Drawing.Size(114, 36);
+            this.btnEditar.TabIndex = 43;
+            this.btnEditar.Text = "EDITAR ACORDO";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // frmVisualizarAcordos
             // 
@@ -684,7 +685,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1082, 749);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnLimparFiltros);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbPais);
@@ -742,6 +743,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbPais;
         private FontAwesome.Sharp.IconButton btnLimparFiltros;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnEditar;
     }
 }

@@ -16,6 +16,9 @@ namespace CadastroDeAcordos
     {
         List<Control> camposObrigatorios = new List<Control>();
         Validacao isValid = new Validacao();
+        bool mouseClicked;
+        Point clickedAt;
+
 
         public frmCadastrarAcordo()
         {
@@ -106,15 +109,6 @@ namespace CadastroDeAcordos
 
         }
 
-        private void btnTeste_Click(object sender, EventArgs e)
-        {
-            retornaCamposObrigatorios();
-            foreach (Control campo in camposObrigatorios)
-            {
-                MessageBox.Show((string)campo.Tag);
-            }
-        }
-
         private void cbxSituacao_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cbxSituacao.Text == "Concluído")
@@ -125,7 +119,28 @@ namespace CadastroDeAcordos
             }
         }
 
+        //Comandos para permitir que o usuário arraste a tela com o mouse
+        private void form_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseClicked)
+            {
+                this.Location = new Point(Cursor.Position.X - clickedAt.X, Cursor.Position.Y - clickedAt.Y);
+            }
+        }
 
+        private void form_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+                return;
+
+            mouseClicked = true;
+            clickedAt = e.Location;
+        }
+
+        private void form_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseClicked = false;
+        }
 
         /*SqlConnection conexao;
         SqlCommand comando;

@@ -60,7 +60,6 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.btnTeste = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNumeroProcessual
@@ -686,23 +685,12 @@
             this.txtDescricao.Size = new System.Drawing.Size(437, 62);
             this.txtDescricao.TabIndex = 32;
             // 
-            // btnTeste
-            // 
-            this.btnTeste.Location = new System.Drawing.Point(350, 490);
-            this.btnTeste.Name = "btnTeste";
-            this.btnTeste.Size = new System.Drawing.Size(75, 23);
-            this.btnTeste.TabIndex = 41;
-            this.btnTeste.Text = "button1";
-            this.btnTeste.UseVisualStyleBackColor = true;
-            this.btnTeste.Click += new System.EventHandler(this.btnTeste_Click);
-            // 
             // frmCadastrarAcordo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(473, 540);
-            this.Controls.Add(this.btnTeste);
             this.Controls.Add(this.txtNomeInteressado);
             this.Controls.Add(this.cbxPais);
             this.Controls.Add(this.txtTelefone);
@@ -741,6 +729,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Acordo";
             this.Load += new System.EventHandler(this.frmCadastrarAcordo_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.form_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.form_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.form_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -779,6 +770,5 @@
         private System.Windows.Forms.MaskedTextBox txtDataPublicacao;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.Button btnTeste;
     }
 }

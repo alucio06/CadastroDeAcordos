@@ -229,16 +229,17 @@ namespace CadastroDeAcordos
                     dataGriedViewListaAcordos.CurrentRow.Cells["Continente"].Value.ToString(), 
                     dataGriedViewListaAcordos.CurrentRow.Cells["País"].Value.ToString(), 
                     dataGriedViewListaAcordos.CurrentRow.Cells["Instituição"].Value.ToString(),
-                    Convert.ToDateTime(dataGriedViewListaAcordos.CurrentRow.Cells["Data de Publicação"].Value),
-                    Convert.ToDateTime(dataGriedViewListaAcordos.CurrentRow.Cells["Data de Início"].Value),
-                    Convert.ToDateTime(dataGriedViewListaAcordos.CurrentRow.Cells["Data Final"].Value), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Data de Publicação"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Data de Início"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Data Final"].Value.ToString(), 
                     dataGriedViewListaAcordos.CurrentRow.Cells["Situação"].Value.ToString(), 
                     dataGriedViewListaAcordos.CurrentRow.Cells["Interessado"].Value.ToString(), 
                     dataGriedViewListaAcordos.CurrentRow.Cells["Email"].Value.ToString(), 
                     dataGriedViewListaAcordos.CurrentRow.Cells["Telefone"].Value.ToString(), 
                     dataGriedViewListaAcordos.CurrentRow.Cells["Celular"].Value.ToString(), 
                     dataGriedViewListaAcordos.CurrentRow.Cells["Descrição"].Value.ToString(),
-                    dataGriedViewListaAcordos.CurrentRow.Cells["Status"].Value.ToString()
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Status"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Data Último Status"].Value.ToString()
                     );
                 editarAcordo.Show();
             }
