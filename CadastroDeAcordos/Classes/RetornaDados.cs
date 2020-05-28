@@ -85,5 +85,16 @@ namespace CadastroDeAcordos.Classes
             return dt;
         }
 
+        //retorna somente os acordos vigentes
+        public DataTable RetornaAcordosVigentes()
+        {
+            comando.Connection = conexao.conectar();
+            comando.CommandText = "select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', interessado as 'Interessado', descricao as 'Descrição' from Acordoss where situacao = 'Concluído' AND dataFinal >= convert(date, GETDATE(), 101)";
+            lerDados = comando.ExecuteReader();
+            tabela.Load(lerDados);
+            conexao.desconectar();
+            return tabela;
+        }
+
     }
 }

@@ -33,7 +33,7 @@ namespace CadastroDeAcordos
                 Cadastro cad = new Cadastro();
                 if (cbxSituacao.Text == "Concluído")
                 {
-                    cad = new Cadastro(txtNumeroProcessual.Text.Replace(',', '.'), cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, DateTime.Parse(txtDataPublicacao.Text), DateTime.Parse(txtDataInicio.Text), DateTime.Parse(txtDataInicio.Text), cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
+                    cad = new Cadastro(txtNumeroProcessual.Text.Replace(',', '.'), cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, DateTime.Parse(txtDataPublicacao.Text), DateTime.Parse(txtDataInicio.Text), DateTime.Parse(txtDataFinal.Text), cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
                 }
                 else
                 {

@@ -81,6 +81,12 @@
     <Compile Include="Formularios\EditarAcordo.Designer.cs">
       <DependentUpon>EditarAcordo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAcordosVigentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAcordosVigentes.Designer.cs">
+      <DependentUpon>frmAcordosVigentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmAtualizarStatus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\EditarAcordo.resx">
       <DependentUpon>EditarAcordo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAcordosVigentes.resx">
+      <DependentUpon>frmAcordosVigentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAtualizarStatus.resx">
       <DependentUpon>frmAtualizarStatus.cs</DependentUpon>

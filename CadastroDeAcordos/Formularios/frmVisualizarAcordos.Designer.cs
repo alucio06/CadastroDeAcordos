@@ -28,18 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGriedViewListaAcordos = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnNovoAcordo = new FontAwesome.Sharp.IconButton();
-            this.btnAtualizarLista = new FontAwesome.Sharp.IconButton();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.rbNumeroProcessual = new System.Windows.Forms.RadioButton();
             this.rbInstituicao = new System.Windows.Forms.RadioButton();
@@ -53,9 +50,12 @@
             this.cbContinente = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbPais = new System.Windows.Forms.ComboBox();
-            this.btnLimparFiltros = new FontAwesome.Sharp.IconButton();
-            this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnExcluir = new FontAwesome.Sharp.IconButton();
+            this.btnEditar = new FontAwesome.Sharp.IconButton();
+            this.btnLimparFiltros = new FontAwesome.Sharp.IconButton();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.btnAtualizarLista = new FontAwesome.Sharp.IconButton();
+            this.btnNovoAcordo = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGriedViewListaAcordos)).BeginInit();
             this.panel2.SuspendLayout();
@@ -101,44 +101,44 @@
             this.dataGriedViewListaAcordos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGriedViewListaAcordos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dataGriedViewListaAcordos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewListaAcordos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewListaAcordos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGriedViewListaAcordos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewListaAcordos.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewListaAcordos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGriedViewListaAcordos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGriedViewListaAcordos.EnableHeadersVisualStyles = false;
             this.dataGriedViewListaAcordos.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGriedViewListaAcordos.Location = new System.Drawing.Point(0, 0);
             this.dataGriedViewListaAcordos.Name = "dataGriedViewListaAcordos";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewListaAcordos.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewListaAcordos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGriedViewListaAcordos.RowHeadersWidth = 25;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.NullValue = "            - ";
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(1, 1, 1, 3);
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewListaAcordos.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.NullValue = "            - ";
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1, 1, 1, 3);
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewListaAcordos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGriedViewListaAcordos.RowTemplate.Height = 28;
             this.dataGriedViewListaAcordos.RowTemplate.ReadOnly = true;
             this.dataGriedViewListaAcordos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -155,73 +155,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(900, 487);
             this.panel2.TabIndex = 22;
-            // 
-            // btnNovoAcordo
-            // 
-            this.btnNovoAcordo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNovoAcordo.AutoSize = true;
-            this.btnNovoAcordo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
-            this.btnNovoAcordo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnNovoAcordo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovoAcordo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoAcordo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnNovoAcordo.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovoAcordo.ForeColor = System.Drawing.Color.White;
-            this.btnNovoAcordo.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnNovoAcordo.IconColor = System.Drawing.Color.White;
-            this.btnNovoAcordo.IconSize = 16;
-            this.btnNovoAcordo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovoAcordo.Location = new System.Drawing.Point(893, 98);
-            this.btnNovoAcordo.Name = "btnNovoAcordo";
-            this.btnNovoAcordo.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnNovoAcordo.Rotation = 0D;
-            this.btnNovoAcordo.Size = new System.Drawing.Size(143, 36);
-            this.btnNovoAcordo.TabIndex = 23;
-            this.btnNovoAcordo.Text = "NOVO ACORDO";
-            this.btnNovoAcordo.UseVisualStyleBackColor = false;
-            this.btnNovoAcordo.Click += new System.EventHandler(this.btnNovoAcordo_Click);
-            // 
-            // btnAtualizarLista
-            // 
-            this.btnAtualizarLista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAtualizarLista.AutoSize = true;
-            this.btnAtualizarLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
-            this.btnAtualizarLista.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAtualizarLista.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtualizarLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarLista.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnAtualizarLista.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizarLista.ForeColor = System.Drawing.Color.White;
-            this.btnAtualizarLista.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
-            this.btnAtualizarLista.IconColor = System.Drawing.Color.White;
-            this.btnAtualizarLista.IconSize = 22;
-            this.btnAtualizarLista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizarLista.Location = new System.Drawing.Point(848, 98);
-            this.btnAtualizarLista.Name = "btnAtualizarLista";
-            this.btnAtualizarLista.Padding = new System.Windows.Forms.Padding(2, 3, 2, 0);
-            this.btnAtualizarLista.Rotation = 0D;
-            this.btnAtualizarLista.Size = new System.Drawing.Size(39, 36);
-            this.btnAtualizarLista.TabIndex = 24;
-            this.btnAtualizarLista.UseVisualStyleBackColor = false;
-            this.btnAtualizarLista.Click += new System.EventHandler(this.btnAtualizarLista_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnBuscar.IconColor = System.Drawing.Color.Black;
-            this.btnBuscar.IconSize = 16;
-            this.btnBuscar.Location = new System.Drawing.Point(560, 110);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Rotation = 0D;
-            this.btnBuscar.Size = new System.Drawing.Size(72, 26);
-            this.btnBuscar.TabIndex = 27;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label3
             // 
@@ -645,22 +578,26 @@
             this.cbPais.TabIndex = 40;
             this.cbPais.SelectedIndexChanged += new System.EventHandler(this.cbPais_SelectedIndexChanged);
             // 
-            // btnLimparFiltros
+            // btnExcluir
             // 
-            this.btnLimparFiltros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimparFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLimparFiltros.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnLimparFiltros.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnLimparFiltros.IconColor = System.Drawing.Color.Black;
-            this.btnLimparFiltros.IconSize = 1;
-            this.btnLimparFiltros.Location = new System.Drawing.Point(33, 336);
-            this.btnLimparFiltros.Name = "btnLimparFiltros";
-            this.btnLimparFiltros.Rotation = 0D;
-            this.btnLimparFiltros.Size = new System.Drawing.Size(96, 29);
-            this.btnLimparFiltros.TabIndex = 42;
-            this.btnLimparFiltros.Text = "Limpar Filtros";
-            this.btnLimparFiltros.UseVisualStyleBackColor = true;
-            this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluir.BackColor = System.Drawing.Color.DarkRed;
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnExcluir.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnExcluir.IconColor = System.Drawing.Color.Black;
+            this.btnExcluir.IconSize = 16;
+            this.btnExcluir.Location = new System.Drawing.Point(967, 633);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Rotation = 0D;
+            this.btnExcluir.Size = new System.Drawing.Size(69, 36);
+            this.btnExcluir.TabIndex = 44;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -683,26 +620,89 @@
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // btnExcluir
+            // btnLimparFiltros
             // 
-            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcluir.BackColor = System.Drawing.Color.DarkRed;
-            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnExcluir.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnExcluir.IconColor = System.Drawing.Color.Black;
-            this.btnExcluir.IconSize = 16;
-            this.btnExcluir.Location = new System.Drawing.Point(967, 633);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Rotation = 0D;
-            this.btnExcluir.Size = new System.Drawing.Size(69, 36);
-            this.btnExcluir.TabIndex = 44;
-            this.btnExcluir.Text = "EXCLUIR";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            this.btnLimparFiltros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimparFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimparFiltros.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnLimparFiltros.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnLimparFiltros.IconColor = System.Drawing.Color.Black;
+            this.btnLimparFiltros.IconSize = 1;
+            this.btnLimparFiltros.Location = new System.Drawing.Point(33, 336);
+            this.btnLimparFiltros.Name = "btnLimparFiltros";
+            this.btnLimparFiltros.Rotation = 0D;
+            this.btnLimparFiltros.Size = new System.Drawing.Size(96, 29);
+            this.btnLimparFiltros.TabIndex = 42;
+            this.btnLimparFiltros.Text = "Limpar Filtros";
+            this.btnLimparFiltros.UseVisualStyleBackColor = true;
+            this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnBuscar.IconColor = System.Drawing.Color.Black;
+            this.btnBuscar.IconSize = 16;
+            this.btnBuscar.Location = new System.Drawing.Point(560, 110);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Rotation = 0D;
+            this.btnBuscar.Size = new System.Drawing.Size(72, 26);
+            this.btnBuscar.TabIndex = 27;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnAtualizarLista
+            // 
+            this.btnAtualizarLista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAtualizarLista.AutoSize = true;
+            this.btnAtualizarLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
+            this.btnAtualizarLista.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAtualizarLista.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizarLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizarLista.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnAtualizarLista.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarLista.ForeColor = System.Drawing.Color.White;
+            this.btnAtualizarLista.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
+            this.btnAtualizarLista.IconColor = System.Drawing.Color.White;
+            this.btnAtualizarLista.IconSize = 22;
+            this.btnAtualizarLista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtualizarLista.Location = new System.Drawing.Point(848, 98);
+            this.btnAtualizarLista.Name = "btnAtualizarLista";
+            this.btnAtualizarLista.Padding = new System.Windows.Forms.Padding(2, 3, 2, 0);
+            this.btnAtualizarLista.Rotation = 0D;
+            this.btnAtualizarLista.Size = new System.Drawing.Size(39, 36);
+            this.btnAtualizarLista.TabIndex = 24;
+            this.btnAtualizarLista.UseVisualStyleBackColor = false;
+            this.btnAtualizarLista.Click += new System.EventHandler(this.btnAtualizarLista_Click);
+            // 
+            // btnNovoAcordo
+            // 
+            this.btnNovoAcordo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNovoAcordo.AutoSize = true;
+            this.btnNovoAcordo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
+            this.btnNovoAcordo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNovoAcordo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNovoAcordo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovoAcordo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnNovoAcordo.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoAcordo.ForeColor = System.Drawing.Color.White;
+            this.btnNovoAcordo.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnNovoAcordo.IconColor = System.Drawing.Color.White;
+            this.btnNovoAcordo.IconSize = 16;
+            this.btnNovoAcordo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovoAcordo.Location = new System.Drawing.Point(893, 98);
+            this.btnNovoAcordo.Name = "btnNovoAcordo";
+            this.btnNovoAcordo.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnNovoAcordo.Rotation = 0D;
+            this.btnNovoAcordo.Size = new System.Drawing.Size(143, 36);
+            this.btnNovoAcordo.TabIndex = 23;
+            this.btnNovoAcordo.Text = "NOVO ACORDO";
+            this.btnNovoAcordo.UseVisualStyleBackColor = false;
+            this.btnNovoAcordo.Click += new System.EventHandler(this.btnNovoAcordo_Click);
             // 
             // frmVisualizarAcordos
             // 

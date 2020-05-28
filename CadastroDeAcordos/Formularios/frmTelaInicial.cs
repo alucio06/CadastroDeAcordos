@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CadastroDeAcordos.Formularios;
 
 namespace CadastroDeAcordos
 {
@@ -46,7 +47,7 @@ namespace CadastroDeAcordos
 
         private void btnCadastrarAcordo_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmCadastrarAcordo());
+            openChildForm(new frmAcordosVigentes());
         }
 
         private void btnAtualizarStatus_Click(object sender, EventArgs e)
