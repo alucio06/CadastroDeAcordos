@@ -18,6 +18,7 @@ namespace CadastroDeAcordos
     {
         RetornaDados lerDados = new RetornaDados();
         DataTable tabAuxiliar = new DataTable();
+        Excluir excluir = new Excluir();
 
         public frmVisualizarAcordos()
         {
@@ -244,5 +245,17 @@ namespace CadastroDeAcordos
                 editarAcordo.Show();
             }
         }
+
+        //botão para excluir acordo da tabela
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show($"Você realmente deseja excluir o acordo {dataGriedViewListaAcordos.CurrentRow.Cells["Número Processual"].Value.ToString()}?", "Confirmar Exclusão", MessageBoxButtons.YesNoCancel);
+
+            if (resultado.ToString() == "Yes")
+            {
+                excluir = new Excluir(dataGriedViewListaAcordos.CurrentRow.Cells["Número Processual"].Value.ToString());
+            } 
+        }
+
     }
 }

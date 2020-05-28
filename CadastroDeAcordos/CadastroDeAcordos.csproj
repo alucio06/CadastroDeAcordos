@@ -66,6 +66,7 @@
     <Compile Include="Classes\Cadastro.cs" />
     <Compile Include="Classes\Conexao.cs" />
     <Compile Include="Classes\Editar.cs" />
+    <Compile Include="Classes\Excluir.cs" />
     <Compile Include="Classes\RetornaDados.cs" />
     <Compile Include="Classes\Validacao.cs" />
     <Compile Include="Entities\Acordo.cs" />

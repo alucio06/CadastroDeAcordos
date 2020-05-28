@@ -21,6 +21,7 @@ namespace CadastroDeAcordos.Formularios
         string DataUltimoStatus;
         Editar editarAcordo = new Editar();
         Validacao validacao = new Validacao();
+        Excluir excluir = new Excluir();
 
         public frmEditarAcordo()
         {
@@ -77,7 +78,7 @@ namespace CadastroDeAcordos.Formularios
             {
                 if (cbxSituacao.Text == "Concluído")
                 {
-                    editarAcordo = new Editar(numeroProcessualAtual, txtNumeroProcessual.Text.Replace(',','.'), cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, DateTime.Parse(txtDataPublicacao.Text), DateTime.Parse(txtDataInicio.Text), DateTime.Parse(txtDataFinal.Text), cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Parse(DataUltimoStatus));
+                    editarAcordo = new Editar(numeroProcessualAtual, txtNumeroProcessual.Text.Replace(',', '.'), cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, DateTime.Parse(txtDataPublicacao.Text), DateTime.Parse(txtDataInicio.Text), DateTime.Parse(txtDataFinal.Text), cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Parse(DataUltimoStatus));
                 }
                 else
                 {
@@ -155,5 +156,17 @@ namespace CadastroDeAcordos.Formularios
             return camposObrigatorios;
         }
 
+        //botão para excluir acordo da tabela
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show($"Você realmente deseja excluir o acordo {numeroProcessualAtual}?", "Confirmar Exclusão", MessageBoxButtons.YesNoCancel);
+
+            if (resultado.ToString() == "Yes")
+            {
+                excluir = new Excluir(numeroProcessualAtual);
+                this.Close();
+            }
+
+        }
     }
 }

@@ -117,6 +117,7 @@
             // 
             // btnAtualizarStatus
             // 
+            this.btnAtualizarStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizarStatus.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAtualizarStatus.FlatAppearance.BorderSize = 0;
             this.btnAtualizarStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -142,6 +143,7 @@
             // 
             // btnCadastrarAcordo
             // 
+            this.btnCadastrarAcordo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrarAcordo.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCadastrarAcordo.FlatAppearance.BorderSize = 0;
             this.btnCadastrarAcordo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -167,6 +169,7 @@
             // 
             // btnVisualizarAcordos
             // 
+            this.btnVisualizarAcordos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVisualizarAcordos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVisualizarAcordos.FlatAppearance.BorderSize = 0;
             this.btnVisualizarAcordos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

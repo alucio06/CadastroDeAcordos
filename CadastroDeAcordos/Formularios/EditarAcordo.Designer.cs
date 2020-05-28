@@ -60,6 +60,7 @@
             this.lblNumeroProcessual = new System.Windows.Forms.Label();
             this.txtNumeroProcessual = new System.Windows.Forms.MaskedTextBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNomeInteressado
@@ -400,11 +401,11 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(189, 490);
+            this.btnEditar.Location = new System.Drawing.Point(181, 490);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(85, 35);
             this.btnEditar.TabIndex = 60;
-            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.Text = "CONFIRMAR";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -681,12 +682,31 @@
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluir.BackColor = System.Drawing.Color.DarkRed;
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(273, 490);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(66, 35);
+            this.btnExcluir.TabIndex = 73;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // frmEditarAcordo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(473, 540);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.txtNomeInteressado);
             this.Controls.Add(this.cbxPais);
             this.Controls.Add(this.txtTelefone);
@@ -766,5 +786,6 @@
         private System.Windows.Forms.Label lblNumeroProcessual;
         private System.Windows.Forms.MaskedTextBox txtNumeroProcessual;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

@@ -17,9 +17,9 @@ namespace CadastroDeAcordos.Classes
         { 
             foreach (char letra in TextBox.Text)
             {
-                if (!char.IsLetter(letra)) //se caractere não é letra
+                if (char.IsNumber(letra)) //se caractere é um numero
                 {
-                    MessageBox.Show("A caixa de texto aceita apenas letras");
+                    MessageBox.Show("A caixa de texto não aceita números");
                     TextBox.Text = TextBox.Text.Remove(TextBox.Text.Length - 1);
                     TextBox.Select();
                 }
@@ -71,11 +71,11 @@ namespace CadastroDeAcordos.Classes
         //verifica se txtBox de data é válida
         public bool eUmaData(Control textBox)
         {
-            bool validacao = true;
+            bool validacao = false;
 
-            if(textBox.Text.Length != 10)
+            if( textBox.Text.Length == 10 && int.Parse(textBox.Text.Substring(0, 2)) <= 31 && int.Parse(textBox.Text.Substring(3, 2)) <= 12)
             {
-                validacao = false;
+                validacao = true;
             }
             return validacao;
         }
@@ -118,19 +118,10 @@ namespace CadastroDeAcordos.Classes
                     camposNaoPreenchidos += $"\n- {(string)campo.Tag.ToString()}";
                 else if (campo.Name == "txtDataFinal" && !eUmaData(campo))
                     camposNaoPreenchidos += $"\n- {(string)campo.Tag.ToString()}";
-
-                /*if(campo.Name != "txtNumeroProcessual" && !campoEstaPreenchido(campo))
-                    camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";
-                else if (campo.Name == "txtNumeroProcessual" && !numProcessualEValido(campo))
-                    camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";
-                else if (campo.Name == "txtDataPublicacao" && !eUmaData(campo))
-                    camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";
-                else if (campo.Name == "txtDataInicial" && !eUmaData(campo))
-                    camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";
-                else if (campo.Name == "txtDataFinal" && !eUmaData(campo))
-                    camposNaoPreenchidos += $"\n- {(string)campo.Name.Substring(3)}";*/
             }
             return camposNaoPreenchidos;
         }
+
+
     }
 }
