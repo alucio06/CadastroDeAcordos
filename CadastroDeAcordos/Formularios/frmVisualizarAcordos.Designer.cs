@@ -56,6 +56,7 @@
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.btnAtualizarLista = new FontAwesome.Sharp.IconButton();
             this.btnNovoAcordo = new FontAwesome.Sharp.IconButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGriedViewListaAcordos)).BeginInit();
             this.panel2.SuspendLayout();
@@ -144,6 +145,7 @@
             this.dataGriedViewListaAcordos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGriedViewListaAcordos.Size = new System.Drawing.Size(900, 487);
             this.dataGriedViewListaAcordos.TabIndex = 21;
+            this.dataGriedViewListaAcordos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGriedViewListaAcordos_CellContentClick);
             // 
             // panel2
             // 
@@ -772,5 +774,6 @@
         private FontAwesome.Sharp.IconButton btnLimparFiltros;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnExcluir;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

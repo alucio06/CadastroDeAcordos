@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using System.Globalization;
 using CadastroDeAcordos.Classes;
 using System.Data.SqlClient;
-using CadastroDeAcordos.Formularios;
+using CadastroDeAcordos.Formularios;]
+using System.Threading;
 
 namespace CadastroDeAcordos
 {
@@ -23,14 +24,17 @@ namespace CadastroDeAcordos
         public frmVisualizarAcordos()
         {
             InitializeComponent();
+            
         }
 
         //alimenta a tabela com dados do banco
         public void frmVisualizarAcordos_Load(object sender, EventArgs e)
         {
+
             RetornaDados lerDados1 = new RetornaDados();
             dataGriedViewListaAcordos.DataSource = lerDados.MostrarDados();
             tabAuxiliar = lerDados1.MostrarDados();
+
         }
 
         //botao cadastrar acordo abre a tela de cadastro
@@ -226,18 +230,18 @@ namespace CadastroDeAcordos
                 frmEditarAcordo editarAcordo = new frmEditarAcordo();
                 editarAcordo.preencherCampos(
                     dataGriedViewListaAcordos.CurrentRow.Cells["Número Processual"].Value.ToString(),
-                    dataGriedViewListaAcordos.CurrentRow.Cells["Tipo de Acordo"].Value.ToString(), 
-                    dataGriedViewListaAcordos.CurrentRow.Cells["Continente"].Value.ToString(), 
-                    dataGriedViewListaAcordos.CurrentRow.Cells["País"].Value.ToString(), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Tipo de Acordo"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Continente"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["País"].Value.ToString(),
                     dataGriedViewListaAcordos.CurrentRow.Cells["Instituição"].Value.ToString(),
                     dataGriedViewListaAcordos.CurrentRow.Cells["Data de Publicação"].Value.ToString(),
                     dataGriedViewListaAcordos.CurrentRow.Cells["Data de Início"].Value.ToString(),
-                    dataGriedViewListaAcordos.CurrentRow.Cells["Data Final"].Value.ToString(), 
-                    dataGriedViewListaAcordos.CurrentRow.Cells["Situação"].Value.ToString(), 
-                    dataGriedViewListaAcordos.CurrentRow.Cells["Interessado"].Value.ToString(), 
-                    dataGriedViewListaAcordos.CurrentRow.Cells["Email"].Value.ToString(), 
-                    dataGriedViewListaAcordos.CurrentRow.Cells["Telefone"].Value.ToString(), 
-                    dataGriedViewListaAcordos.CurrentRow.Cells["Celular"].Value.ToString(), 
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Data Final"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Situação"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Interessado"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Email"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Telefone"].Value.ToString(),
+                    dataGriedViewListaAcordos.CurrentRow.Cells["Celular"].Value.ToString(),
                     dataGriedViewListaAcordos.CurrentRow.Cells["Descrição"].Value.ToString(),
                     dataGriedViewListaAcordos.CurrentRow.Cells["Status"].Value.ToString(),
                     dataGriedViewListaAcordos.CurrentRow.Cells["Data Último Status"].Value.ToString()
@@ -254,8 +258,12 @@ namespace CadastroDeAcordos
             if (resultado.ToString() == "Yes")
             {
                 excluir = new Excluir(dataGriedViewListaAcordos.CurrentRow.Cells["Número Processual"].Value.ToString());
-            } 
+            }
         }
 
+        private void dataGriedViewListaAcordos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

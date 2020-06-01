@@ -39,8 +39,6 @@
             this.cbPais = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbContinente = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbSituacao = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbTipoDeAcordo = new System.Windows.Forms.ComboBox();
             this.btnLimparFiltros = new FontAwesome.Sharp.IconButton();
@@ -92,11 +90,12 @@
             this.btnEditar.TabIndex = 44;
             this.btnEditar.Text = "GERAR RELATÓRIO";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(664, 115);
+            this.label8.Location = new System.Drawing.Point(454, 114);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 13);
             this.label8.TabIndex = 52;
@@ -370,15 +369,16 @@
             "West Bank",
             "Zâmbia",
             "Zimbabué"});
-            this.cbPais.Location = new System.Drawing.Point(667, 131);
+            this.cbPais.Location = new System.Drawing.Point(457, 130);
             this.cbPais.Name = "cbPais";
-            this.cbPais.Size = new System.Drawing.Size(138, 21);
+            this.cbPais.Size = new System.Drawing.Size(136, 21);
             this.cbPais.TabIndex = 51;
+            this.cbPais.SelectedIndexChanged += new System.EventHandler(this.cbPais_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(502, 115);
+            this.label7.Location = new System.Drawing.Point(297, 114);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 50;
@@ -400,41 +400,16 @@
             "Ásia",
             "Europa",
             "Oceania"});
-            this.cbContinente.Location = new System.Drawing.Point(505, 131);
+            this.cbContinente.Location = new System.Drawing.Point(300, 130);
             this.cbContinente.Name = "cbContinente";
-            this.cbContinente.Size = new System.Drawing.Size(140, 21);
+            this.cbContinente.Size = new System.Drawing.Size(136, 21);
             this.cbContinente.TabIndex = 49;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(328, 115);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "Situação";
-            // 
-            // cbSituacao
-            // 
-            this.cbSituacao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSituacao.ForeColor = System.Drawing.Color.Gray;
-            this.cbSituacao.FormattingEnabled = true;
-            this.cbSituacao.Items.AddRange(new object[] {
-            "Todos",
-            "Aguardando",
-            "Em análise",
-            "Concluído"});
-            this.cbSituacao.Location = new System.Drawing.Point(331, 131);
-            this.cbSituacao.Name = "cbSituacao";
-            this.cbSituacao.Size = new System.Drawing.Size(147, 21);
-            this.cbSituacao.TabIndex = 47;
+            this.cbContinente.SelectedIndexChanged += new System.EventHandler(this.cbContinente_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(154, 115);
+            this.label5.Location = new System.Drawing.Point(139, 114);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 13);
             this.label5.TabIndex = 46;
@@ -455,10 +430,11 @@
             "Mobilidade",
             "Memorando de Entendimento",
             "Outros"});
-            this.cbTipoDeAcordo.Location = new System.Drawing.Point(157, 131);
+            this.cbTipoDeAcordo.Location = new System.Drawing.Point(142, 130);
             this.cbTipoDeAcordo.Name = "cbTipoDeAcordo";
-            this.cbTipoDeAcordo.Size = new System.Drawing.Size(151, 21);
+            this.cbTipoDeAcordo.Size = new System.Drawing.Size(136, 21);
             this.cbTipoDeAcordo.TabIndex = 45;
+            this.cbTipoDeAcordo.SelectedIndexChanged += new System.EventHandler(this.cbTipoDeAcordo_SelectedIndexChanged);
             // 
             // btnLimparFiltros
             // 
@@ -468,7 +444,7 @@
             this.btnLimparFiltros.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLimparFiltros.IconColor = System.Drawing.Color.Black;
             this.btnLimparFiltros.IconSize = 1;
-            this.btnLimparFiltros.Location = new System.Drawing.Point(825, 131);
+            this.btnLimparFiltros.Location = new System.Drawing.Point(612, 129);
             this.btnLimparFiltros.Name = "btnLimparFiltros";
             this.btnLimparFiltros.Rotation = 0D;
             this.btnLimparFiltros.Size = new System.Drawing.Size(96, 21);
@@ -484,9 +460,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel3.Controls.Add(this.dataGriedViewAcordosVigentes);
-            this.panel3.Location = new System.Drawing.Point(157, 170);
+            this.panel3.Location = new System.Drawing.Point(142, 170);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(870, 424);
+            this.panel3.Size = new System.Drawing.Size(885, 424);
             this.panel3.TabIndex = 55;
             // 
             // dataGriedViewAcordosVigentes
@@ -539,7 +515,7 @@
             this.dataGriedViewAcordosVigentes.RowTemplate.Height = 28;
             this.dataGriedViewAcordosVigentes.RowTemplate.ReadOnly = true;
             this.dataGriedViewAcordosVigentes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewAcordosVigentes.Size = new System.Drawing.Size(870, 424);
+            this.dataGriedViewAcordosVigentes.Size = new System.Drawing.Size(885, 424);
             this.dataGriedViewAcordosVigentes.TabIndex = 21;
             // 
             // frmAcordosVigentes
@@ -553,8 +529,6 @@
             this.Controls.Add(this.cbPais);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbContinente);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.cbSituacao);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbTipoDeAcordo);
             this.Controls.Add(this.btnEditar);
@@ -580,8 +554,6 @@
         private System.Windows.Forms.ComboBox cbPais;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbContinente;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbSituacao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbTipoDeAcordo;
         private FontAwesome.Sharp.IconButton btnLimparFiltros;
