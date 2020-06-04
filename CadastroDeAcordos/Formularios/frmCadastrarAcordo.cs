@@ -31,7 +31,7 @@ namespace CadastroDeAcordos
             if (isValid.camposObrigatoriosSaoValidos(retornaCamposObrigatorios()) == true)
             {
                 Cadastro cad = new Cadastro();
-                if (cbxSituacao.Text == "Concluído")
+                if (cbxSituacao.Text == "[CONCLUÍDO] ARQUIVADO")
                 {
                     cad = new Cadastro(txtNumeroProcessual.Text.Replace(',', '.'), cbxTipoDeAcordo.Text, cbxContinente.Text, cbxPais.Text, txtNomeInstituicao.Text, DateTime.Parse(txtDataPublicacao.Text), DateTime.Parse(txtDataInicio.Text), DateTime.Parse(txtDataFinal.Text), cbxSituacao.Text, txtNomeInteressado.Text, txtEmail.Text, txtTelefone.Text, txtCelular.Text, txtDescricao.Text, txtStatus.Text, DateTime.Now.Date, DateTime.Now);
                 }
@@ -85,7 +85,7 @@ namespace CadastroDeAcordos
                 }
             }
 
-            if (cbxSituacao.Text == "Concluído")
+            if (cbxSituacao.Text == "[CONCLUÍDO] ARQUIVADO")
             {
                 camposObrigatorios.Add(txtDataPublicacao);
                 camposObrigatorios.Add(txtDataInicio);
@@ -106,12 +106,12 @@ namespace CadastroDeAcordos
 
         private void frmCadastrarAcordo_Load(object sender, EventArgs e)
         {
-
+            alimentaComboBox();
         }
 
         private void cbxSituacao_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbxSituacao.Text == "Concluído")
+            if(cbxSituacao.Text == "[CONCLUÍDO] ARQUIVADO")
             {
                 lblDataPublicacao.Text = "Data de Publicação*";
                 lblDataInicio.Text = "Data de Início*";
@@ -140,6 +140,17 @@ namespace CadastroDeAcordos
         private void form_MouseUp(object sender, MouseEventArgs e)
         {
             mouseClicked = false;
+        }
+
+        //inicializa as informações dos comboBox (Situação e tipo de acordo) com dados do banco
+        private void alimentaComboBox()
+        {
+            RetornaDados lerDados1 = new RetornaDados();
+            RetornaDados lerDados2 = new RetornaDados();
+            cbxSituacao.DataSource = lerDados1.SituacoesPossiveis("cadastrar");
+            cbxTipoDeAcordo.DataSource = lerDados2.tiposDeAcordo("cadastrar");
+            cbxSituacao.SelectedValue = "";
+            cbxTipoDeAcordo.SelectedValue = "";
         }
 
         /*SqlConnection conexao;

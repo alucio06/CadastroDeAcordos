@@ -21,7 +21,7 @@ namespace CadastroDeAcordos
         public Cadastro(string numeroProcessual, string tipoAcordo, string continente, string pais, string instituicao, DateTime dataPublicacao, DateTime dataInicio, DateTime dataFinal, string situacao, string interessado, string email, string telefone, string celular, string descricao, string status, DateTime dataUltStatus, DateTime dataCadastro)
         {
             //Comando SQL --SqlCommand
-            cmd.CommandText = "insert into Acordoss (numeroProcessual, tipoAcordo, continente, pais, instituicao, dataPublicacao, dataInicio, dataFinal, situacao, interessado, email, telefone, celular, descricao, status, dataUltStatus, dataCadastro ) values (@NUMEROPROCESSUAL, @TIPOACORDO, @CONTINENTE, @PAIS, @INSTITUICAO, @DATAPUBLICACAO, @DATAINICIO, @DATAFINAL, @SITUACAO, @INTERESSADO, @EMAIL, @TELEFONE, @CELULAR, @DESCRICAO, @STATUS, @DATAULTSTATUS, @DATACADASTRO)";
+            cmd.CommandText = "insert into Acordos (numeroProcessual, tipoAcordo, continente, pais, instituicao, dataPublicacao, dataInicio, dataFinal, situacao, interessado, email, telefone, celular, descricao, status, dataUltStatus, dataCadastro ) values (@NUMEROPROCESSUAL, @TIPOACORDO, @CONTINENTE, @PAIS, @INSTITUICAO, @DATAPUBLICACAO, @DATAINICIO, @DATAFINAL, @SITUACAO, @INTERESSADO, @EMAIL, @TELEFONE, @CELULAR, @DESCRICAO, @STATUS, @DATAULTSTATUS, @DATACADASTRO)";
 
             //Parametros
             cmd.Parameters.AddWithValue("@NUMEROPROCESSUAL", numeroProcessual);
@@ -64,7 +64,7 @@ namespace CadastroDeAcordos
         public Cadastro(string numeroProcessual, string tipoAcordo, string continente, string pais, string instituicao, string situacao, string interessado, string email, string telefone, string celular, string descricao, string status, DateTime dataUltStatus, DateTime dataCadastro)
         {
             //Comando SQL --SqlCommand
-            cmd.CommandText = "insert into Acordoss (numeroProcessual, tipoAcordo, continente, pais, instituicao, situacao, interessado, email, telefone, celular, descricao, status, dataUltStatus, dataCadastro) values (@NUMEROPROCESSUAL, @TIPOACORDO, @CONTINENTE, @PAIS, @INSTITUICAO, @SITUACAO, @INTERESSADO, @EMAIL, @TELEFONE, @CELULAR, @DESCRICAO, @STATUS, @DATAULTSTATUS, @DATACADASTRO)";
+            cmd.CommandText = "insert into Acordos (numeroProcessual, tipoAcordo, continente, pais, instituicao, situacao, interessado, email, telefone, celular, descricao, status, dataUltStatus, dataCadastro) values (@NUMEROPROCESSUAL, @TIPOACORDO, @CONTINENTE, @PAIS, @INSTITUICAO, @SITUACAO, @INTERESSADO, @EMAIL, @TELEFONE, @CELULAR, @DESCRICAO, @STATUS, @DATAULTSTATUS, @DATACADASTRO)";
 
             //Parametros
             cmd.Parameters.AddWithValue("@NUMEROPROCESSUAL", numeroProcessual);

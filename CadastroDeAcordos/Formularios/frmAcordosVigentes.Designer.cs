@@ -468,8 +468,6 @@
             // dataGriedViewAcordosVigentes
             // 
             this.dataGriedViewAcordosVigentes.AllowUserToOrderColumns = true;
-            this.dataGriedViewAcordosVigentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGriedViewAcordosVigentes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGriedViewAcordosVigentes.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGriedViewAcordosVigentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGriedViewAcordosVigentes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;

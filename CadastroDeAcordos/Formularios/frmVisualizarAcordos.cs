@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using CadastroDeAcordos.Classes;
 using System.Data.SqlClient;
-using CadastroDeAcordos.Formularios;]
+using CadastroDeAcordos.Formularios;
 using System.Threading;
 
 namespace CadastroDeAcordos
@@ -24,17 +24,18 @@ namespace CadastroDeAcordos
         public frmVisualizarAcordos()
         {
             InitializeComponent();
-            
         }
 
         //alimenta a tabela com dados do banco
         public void frmVisualizarAcordos_Load(object sender, EventArgs e)
         {
-
+            alimentaComboBox();
+            limparFiltros();
             RetornaDados lerDados1 = new RetornaDados();
             dataGriedViewListaAcordos.DataSource = lerDados.MostrarDados();
             tabAuxiliar = lerDados1.MostrarDados();
 
+            formataDataGridView();
         }
 
         //botao cadastrar acordo abre a tela de cadastro
@@ -90,9 +91,9 @@ namespace CadastroDeAcordos
                     dataGriedViewListaAcordos.DataSource = tabAuxiliar;
 
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Não foi encontrado nenhum acordo com o número de processo digitado.");
                 }
             }
 
@@ -105,9 +106,9 @@ namespace CadastroDeAcordos
                     tabAuxiliar = lerDados1.BuscarPorInstituicao(txtCampoDeBusca.Text, tabAuxiliar);
                     dataGriedViewListaAcordos.DataSource = tabAuxiliar;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Não foi encontrado nenhum dado com o nome da instituição digitado.");
                 }
             }
 
@@ -120,9 +121,9 @@ namespace CadastroDeAcordos
                     tabAuxiliar = lerDados1.BuscarPorInteressado(txtCampoDeBusca.Text, tabAuxiliar);
                     dataGriedViewListaAcordos.DataSource = tabAuxiliar;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Não foi encontado nenhum dado com o nome do interessado digitado.");
                 }
             }
         }
@@ -223,6 +224,7 @@ namespace CadastroDeAcordos
             tabAuxiliar = lerDados2.MostrarDados();
         }
 
+        // chama tela para editar acordo passando as informações da linha selecionada
         private void iconButton1_Click(object sender, EventArgs e)
         {
             if (dataGriedViewListaAcordos.RowCount > 0)
@@ -261,9 +263,43 @@ namespace CadastroDeAcordos
             }
         }
 
+        //formata dataGriedView
+        private void formataDataGridView()
+        {
+            dataGriedViewListaAcordos.RowTemplate.Height = 80;
+            dataGriedViewListaAcordos.Columns["Número Processual"].Width = 140;
+            dataGriedViewListaAcordos.Columns["Tipo de Acordo"].Width = 100;
+            dataGriedViewListaAcordos.Columns["Continente"].Width = 140;
+            dataGriedViewListaAcordos.Columns["País"].Width = 100;
+            dataGriedViewListaAcordos.Columns["Instituição"].Width = 140;
+            dataGriedViewListaAcordos.Columns["Data de Publicação"].Width = 100;
+            dataGriedViewListaAcordos.Columns["Data de Início"].Width = 100;
+            dataGriedViewListaAcordos.Columns["Data Final"].Width = 100;
+            dataGriedViewListaAcordos.Columns["Situação"].Width = 100;
+            dataGriedViewListaAcordos.Columns["Interessado"].Width = 100;
+            dataGriedViewListaAcordos.Columns["Email"].Width = 140;
+            dataGriedViewListaAcordos.Columns["Telefone"].Width = 100;
+            dataGriedViewListaAcordos.Columns["Celular"].Width = 100;
+            dataGriedViewListaAcordos.Columns["Descrição"].Width = 250;
+            dataGriedViewListaAcordos.Columns["Status"].Width = 250;
+            dataGriedViewListaAcordos.Columns["Data Último Status"].Width = 100;
+            dataGriedViewListaAcordos.Columns["Data de Cadastro"].Width = 100;
+        }
+
+        //inicializa as informações dos comboBox (Situação e tipo de acordo) com dados do banco
+        private void alimentaComboBox()
+        {
+            RetornaDados lerDados1 = new RetornaDados();
+            RetornaDados lerDados2 = new RetornaDados();
+
+            cbSituacao.DataSource = lerDados1.SituacoesPossiveis("visualizar");
+            cbTipoDeAcordo.DataSource = lerDados2.tiposDeAcordo("visualizar");
+        }
+
         private void dataGriedViewListaAcordos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
     }
 }

@@ -22,7 +22,7 @@ namespace CadastroDeAcordos.Classes
         public DataTable MostrarDados()
         {
             comando.Connection = conexao.conectar();
-            comando.CommandText = "select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', situacao as 'Situação', interessado as 'Interessado', email as 'Email', telefone as 'Telefone', celular as 'Celular', descricao as 'Descrição', [status] as 'Status', dataUltStatus as 'Data Último Status', dataCadastro as 'Data de Cadastro' From AcordosTeste order by dataCadastro desc";
+            comando.CommandText = "select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', situacao as 'Situação', interessado as 'Interessado', email as 'Email', telefone as 'Telefone', celular as 'Celular', descricao as 'Descrição', [status] as 'Status', dataUltStatus as 'Data Último Status', dataCadastro as 'Data de Cadastro' From Acordos order by dataCadastro desc";
             lerDados = comando.ExecuteReader();
             tabela.Load(lerDados);
             conexao.desconectar();
@@ -89,11 +89,53 @@ namespace CadastroDeAcordos.Classes
         public DataTable RetornaAcordosVigentes()
         {
             comando.Connection = conexao.conectar();
-            comando.CommandText = "select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', interessado as 'Interessado', descricao as 'Descrição' from AcordosTeste where situacao = 'Concluído' AND dataFinal >= convert(date, GETDATE(), 101)";
+            comando.CommandText = "select numeroProcessual as 'Número Processual', tipoAcordo as 'Tipo de Acordo', continente as 'Continente', pais as 'País', instituicao as 'Instituição', dataPublicacao as 'Data de Publicação', dataInicio as 'Data de Início', dataFinal as 'Data Final', interessado as 'Interessado', descricao as 'Descrição' from Acordos where situacao = '[CONCLUÍDO] ARQUIVADO' AND dataFinal >= convert(date, GETDATE(), 101)";
             lerDados = comando.ExecuteReader();
             tabela.Load(lerDados);
             conexao.desconectar();
             return tabela;
+        }
+
+        //retorna todos os tipos de situações possíveis cadastradas no banco de dados
+        public IEnumerable<string> SituacoesPossiveis(string text)
+        {
+            comando.Connection = conexao.conectar();
+            comando.CommandText = "SELECT DISTINCT situacao from Acordos";
+            lerDados = comando.ExecuteReader();
+            tabela.Load(lerDados);
+            conexao.desconectar();
+
+            List<string> lista = new List<string>();
+
+            if(text == "visualizar") { lista.Add("Todos"); }
+
+            foreach (DataRow linha in tabela.Rows)
+            {
+                lista.Add(linha[0].ToString());
+            }
+
+            return lista;
+        }
+
+        //retorna todos os tipos de acordos cadastrados no banco de dados
+        public IEnumerable<string> tiposDeAcordo(string text)
+        {
+            comando.Connection = conexao.conectar();
+            comando.CommandText = "select distinct tipoAcordo FROM Acordos";
+            lerDados = comando.ExecuteReader();
+            tabela.Load(lerDados);
+            conexao.desconectar();
+
+            List<string> lista = new List<string>();
+
+            if (text == "visualizar") { lista.Add("Todos"); }
+
+            foreach (DataRow linha in tabela.Rows)
+            {
+                lista.Add(linha[0].ToString());
+            }
+
+            return lista;
         }
 
     }

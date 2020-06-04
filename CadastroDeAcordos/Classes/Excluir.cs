@@ -21,7 +21,7 @@ namespace CadastroDeAcordos.Classes
         public Excluir(string numeroProcessual)
         {
             //Comando SQL --SqlCommand
-            cmd.CommandText = $"delete from Acordoss where numeroProcessual = '{numeroProcessual}'";
+            cmd.CommandText = $"delete from Acordos where numeroProcessual = '{numeroProcessual}'";
 
             //Parametros
             cmd.Parameters.AddWithValue("@NUMEROPROCESSUAL", numeroProcessual);

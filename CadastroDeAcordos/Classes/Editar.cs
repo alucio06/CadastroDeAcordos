@@ -21,7 +21,7 @@ namespace CadastroDeAcordos.Classes
         public Editar(string numeroProcessualAtual, string numeroProcessualNovo, string tipoAcordo, string continente, string pais, string instituicao, DateTime dataPublicacao, DateTime dataInicio, DateTime dataFinal, string situacao, string interessado, string email, string telefone, string celular, string descricao, string status, DateTime dataUltStatus)
         {
             //Comando SQL --SqlCommand
-            cmd.CommandText = $"update Acordoss set numeroProcessual = @NUMEROPROCESSUAL, tipoAcordo = @TIPOACORDO, continente = @CONTINENTE, pais = @PAIS, instituicao = @INSTITUICAO, dataPublicacao = @DATAPUBLICACAO, dataInicio = @DATAINICIO, dataFinal = @DATAFINAL, situacao = @SITUACAO, interessado = @INTERESSADO, email = @EMAIL, telefone = @TELEFONE, celular = @CELULAR, descricao = @DESCRICAO, status = @STATUS, dataUltStatus = @DATAULTSTATUS where numeroProcessual = '{numeroProcessualAtual}'";
+            cmd.CommandText = $"update Acordos set numeroProcessual = @NUMEROPROCESSUAL, tipoAcordo = @TIPOACORDO, continente = @CONTINENTE, pais = @PAIS, instituicao = @INSTITUICAO, dataPublicacao = @DATAPUBLICACAO, dataInicio = @DATAINICIO, dataFinal = @DATAFINAL, situacao = @SITUACAO, interessado = @INTERESSADO, email = @EMAIL, telefone = @TELEFONE, celular = @CELULAR, descricao = @DESCRICAO, status = @STATUS, dataUltStatus = @DATAULTSTATUS where numeroProcessual = '{numeroProcessualAtual}'";
 
             //Parametros
             cmd.Parameters.AddWithValue("@NUMEROPROCESSUAL", numeroProcessualNovo);
@@ -63,7 +63,7 @@ namespace CadastroDeAcordos.Classes
         public Editar(string numeroProcessualAtual, string numeroProcessualNovo, string tipoAcordo, string continente, string pais, string instituicao, string situacao, string interessado, string email, string telefone, string celular, string descricao, string status, DateTime dataUltStatus)
         {
             //Comando SQL --SqlCommand
-            cmd.CommandText = $"update Acordoss set numeroProcessual = @NUMEROPROCESSUAL, tipoAcordo = @TIPOACORDO, continente = @CONTINENTE, pais = @PAIS, instituicao = @INSTITUICAO, situacao = @SITUACAO, interessado = @INTERESSADO, email = @EMAIL, telefone = @TELEFONE, celular = @CELULAR, descricao = @DESCRICAO, status = @STATUS, dataUltStatus = @DATAULTSTATUS where numeroProcessual = '{numeroProcessualAtual}'";
+            cmd.CommandText = $"update Acordos set numeroProcessual = @NUMEROPROCESSUAL, tipoAcordo = @TIPOACORDO, continente = @CONTINENTE, pais = @PAIS, instituicao = @INSTITUICAO, situacao = @SITUACAO, interessado = @INTERESSADO, email = @EMAIL, telefone = @TELEFONE, celular = @CELULAR, descricao = @DESCRICAO, status = @STATUS, dataUltStatus = @DATAULTSTATUS where numeroProcessual = '{numeroProcessualAtual}'";
 
             //Parametros
             cmd.Parameters.AddWithValue("@NUMEROPROCESSUAL", numeroProcessualNovo);
