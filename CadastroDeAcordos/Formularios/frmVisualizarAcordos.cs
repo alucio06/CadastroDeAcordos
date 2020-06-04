@@ -12,6 +12,7 @@ using CadastroDeAcordos.Classes;
 using System.Data.SqlClient;
 using CadastroDeAcordos.Formularios;
 using System.Threading;
+using ClosedXML.Excel;
 
 namespace CadastroDeAcordos
 {
@@ -296,10 +297,103 @@ namespace CadastroDeAcordos
             cbTipoDeAcordo.DataSource = lerDados2.tiposDeAcordo("visualizar");
         }
 
+        public void ExportarDados()
+        {
+            try
+            {
+                string promptValue = InputBox.ShowDialog("Título do relatório:", "Salvando");
+
+                var wb = new XLWorkbook();
+                var ws = wb.Worksheets.Add("Planilha 1");
+
+                //título do relatório
+                ws.Cell("B2").Value = $"{promptValue}";
+                var range = ws.Range("B2:K2");
+                range.Merge().Style.Font.SetBold().Font.FontSize = 20;
+
+                //Cabeçalhos do relatório
+                ws.Cell("B3").Value = "Número Processual";
+                ws.Cell("C3").Value = "Tipo de Acordo";
+                ws.Cell("D3").Value = "Continente";
+                ws.Cell("E3").Value = "País";
+                ws.Cell("F3").Value = "Instituição";
+                ws.Cell("G3").Value = "Data de Publicação";
+                ws.Cell("H3").Value = "Data de Início";
+                ws.Cell("I3").Value = "Data Final";
+                ws.Cell("J3").Value = "Situação";
+                ws.Cell("K3").Value = "Interessado";
+                ws.Cell("L3").Value = "Email";
+                ws.Cell("M3").Value = "Telefone";
+                ws.Cell("N3").Value = "Celular";
+                ws.Cell("O3").Value = "Descrição";
+                ws.Cell("P3").Value = "Status";
+                ws.Cell("Q3").Value = "Data Último Status";
+                ws.Cell("R3").Value = "Data de Cadastro";
+
+
+                // Corpo do relatório
+                var linha = 4;
+
+                for (int i = 1; i < dataGriedViewListaAcordos.Rows.Count; i++)
+                {
+                    ws.Cell($"B{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[0].Value.ToString();
+                    ws.Cell($"C{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[1].Value.ToString();
+                    ws.Cell($"D{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[2].Value.ToString();
+                    ws.Cell($"E{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[3].Value.ToString();
+                    ws.Cell($"F{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[4].Value.ToString();
+                    ws.Cell($"G{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[5].Value.ToString();
+                    ws.Cell($"H{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[6].Value.ToString();
+                    ws.Cell($"I{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[7].Value.ToString();
+                    ws.Cell($"J{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[8].Value.ToString();
+                    ws.Cell($"K{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[9].Value.ToString();
+                    ws.Cell($"L{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[10].Value.ToString();
+                    ws.Cell($"M{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[11].Value.ToString();
+                    ws.Cell($"N{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[12].Value.ToString();
+                    ws.Cell($"O{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[13].Value.ToString();
+                    ws.Cell($"P{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[14].Value.ToString();
+                    ws.Cell($"Q{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[15].Value.ToString();
+                    ws.Cell($"R{linha}").Value = dataGriedViewListaAcordos.Rows[i - 1].Cells[16].Value.ToString();
+                    linha++;
+                }
+
+                // ajusta a numeração da linha
+                linha--;
+
+                // cria uma tabela para ativar os Filtros
+                range = ws.Range("B3:R" + linha.ToString());
+                range.CreateTable();
+
+                // ajusta o tamanho da coluna de acordo com o seu conteúdo
+                ws.Columns("2-18").AdjustToContents();
+
+                // salvar o arquivo em disco
+                SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" };
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    wb.SaveAs($@"{sfd.FileName}");
+                    MessageBox.Show("Relatório salvo com sucesso.");
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possível salvar o relatório.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível salvar o relatório.");
+            }
+        }
+
         private void dataGriedViewListaAcordos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
+        private void btnGerarRelatório_Click(object sender, EventArgs e)
+        {
+            ExportarDados();
+        }
     }
 }

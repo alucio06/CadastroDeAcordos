@@ -83,7 +83,7 @@
             this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnEditar.IconColor = System.Drawing.Color.Black;
             this.btnEditar.IconSize = 16;
-            this.btnEditar.Location = new System.Drawing.Point(913, 611);
+            this.btnEditar.Location = new System.Drawing.Point(913, 652);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Rotation = 0D;
             this.btnEditar.Size = new System.Drawing.Size(114, 36);
@@ -462,7 +462,7 @@
             this.panel3.Controls.Add(this.dataGriedViewAcordosVigentes);
             this.panel3.Location = new System.Drawing.Point(142, 170);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(885, 424);
+            this.panel3.Size = new System.Drawing.Size(885, 476);
             this.panel3.TabIndex = 55;
             // 
             // dataGriedViewAcordosVigentes
@@ -513,7 +513,7 @@
             this.dataGriedViewAcordosVigentes.RowTemplate.Height = 28;
             this.dataGriedViewAcordosVigentes.RowTemplate.ReadOnly = true;
             this.dataGriedViewAcordosVigentes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewAcordosVigentes.Size = new System.Drawing.Size(885, 424);
+            this.dataGriedViewAcordosVigentes.Size = new System.Drawing.Size(885, 476);
             this.dataGriedViewAcordosVigentes.TabIndex = 21;
             // 
             // frmAcordosVigentes

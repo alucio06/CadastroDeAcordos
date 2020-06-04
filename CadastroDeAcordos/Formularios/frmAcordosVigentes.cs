@@ -33,10 +33,14 @@ namespace CadastroDeAcordos.Formularios
 
         private void frmAcordosVigentes_Load(object sender, EventArgs e)
         {
+            alimentaComboBox();
             limparFiltros();
+            
             RetornaDados lerDados1 = new RetornaDados();
             dataGriedViewAcordosVigentes.DataSource = lerDados.RetornaAcordosVigentes();
             tabAuxiliar = lerDados1.RetornaAcordosVigentes();
+
+            formataDataGridView();
         }
 
         //executa o filtro por tipo de acordo
@@ -105,11 +109,13 @@ namespace CadastroDeAcordos.Formularios
         {
             try
             {
+                string promptValue = InputBox.ShowDialog("Título do relatório:", "Salvando");
+
                 var wb = new XLWorkbook();
                 var ws = wb.Worksheets.Add("Planilha 1");
 
                 //título do relatório
-                ws.Cell("B2").Value = "Relatório";
+                ws.Cell("B2").Value = $"{promptValue}";
                 var range = ws.Range("B2:K2");
                 range.Merge().Style.Font.SetBold().Font.FontSize = 20;
 
@@ -154,49 +160,46 @@ namespace CadastroDeAcordos.Formularios
                 ws.Columns("2-11").AdjustToContents();
 
                 // salvar o arquivo em disco
-                wb.SaveAs(@"C:\Users\Andreson\Downloads\relatorio.xlsx");
+                SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" };
 
-                MessageBox.Show("Feito!");
+                if(sfd.ShowDialog() == DialogResult.OK)
+                {
+                    wb.SaveAs($@"{sfd.FileName}");
+                    MessageBox.Show("Relatório salvo com sucesso.");
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possível salvar o relatório.");
+                }
+                
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Não foi possível salvar o relatório.");
             }
+        }
 
+        //alimenta o combobox tipo de acordos com os tipos de acordos cadastrados no banco
+        private void alimentaComboBox()
+        {
+            RetornaDados lerDados1 = new RetornaDados();
+            cbTipoDeAcordo.DataSource = lerDados1.tiposDeAcordo("visualizar");
+        }
 
-
-
-
-
-
-
-            /*Microsoft.Office.Interop.Excel.Application exportarExcel = new Microsoft.Office.Interop.Excel.Application();
-
-            exportarExcel.Application.Workbooks.Add(true);
-
-            int indiceColuna = 0;
-
-            foreach(DataGridViewColumn coluna in listaAcordosVigentes.Columns)
-            {
-                indiceColuna++;
-
-                exportarExcel.Cells[1, indiceColuna] = coluna.Name;
-            }
-
-            int indiceLinha = 0;
-
-            foreach(DataGridViewRow linha in listaAcordosVigentes.Rows)
-            {
-                indiceLinha++;
-                indiceColuna = 0;
-                foreach(DataGridViewColumn coluna in listaAcordosVigentes.Columns)
-                {
-                    indiceColuna++;
-                    exportarExcel.Cells[indiceLinha + 1, indiceColuna] = linha.Cells[coluna.Name].Value;
-                }
-            }
-
-            exportarExcel.Visible = true;*/
+        //formata o datagridview
+        private void formataDataGridView()
+        {
+            dataGriedViewAcordosVigentes.RowTemplate.Height = 60;
+            dataGriedViewAcordosVigentes.Columns["Número Processual"].Width = 140;
+            dataGriedViewAcordosVigentes.Columns["Tipo de Acordo"].Width = 100;
+            dataGriedViewAcordosVigentes.Columns["Continente"].Width = 140;
+            dataGriedViewAcordosVigentes.Columns["País"].Width = 140;
+            dataGriedViewAcordosVigentes.Columns["Instituição"].Width = 140;
+            dataGriedViewAcordosVigentes.Columns["Data de Publicação"].Width = 100;
+            dataGriedViewAcordosVigentes.Columns["Data de Início"].Width = 100;
+            dataGriedViewAcordosVigentes.Columns["Data Final"].Width = 100;
+            dataGriedViewAcordosVigentes.Columns["Interessado"].Width = 140;
+            dataGriedViewAcordosVigentes.Columns["Descrição"].Width = 250;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

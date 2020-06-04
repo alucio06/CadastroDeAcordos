@@ -81,6 +81,7 @@
     <Compile Include="Classes\Editar.cs" />
     <Compile Include="Classes\Excluir.cs" />
     <Compile Include="Classes\GeraRelatorio.cs" />
+    <Compile Include="Classes\InputBox.cs" />
     <Compile Include="Classes\RetornaDados.cs" />
     <Compile Include="Classes\Validacao.cs" />
     <Compile Include="Entities\Acordo.cs" />

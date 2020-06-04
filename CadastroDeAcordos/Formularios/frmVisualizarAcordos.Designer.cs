@@ -57,6 +57,7 @@
             this.btnAtualizarLista = new FontAwesome.Sharp.IconButton();
             this.btnNovoAcordo = new FontAwesome.Sharp.IconButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnGerarRelatório = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGriedViewListaAcordos)).BeginInit();
             this.panel2.SuspendLayout();
@@ -691,6 +692,26 @@
             this.btnNovoAcordo.UseVisualStyleBackColor = false;
             this.btnNovoAcordo.Click += new System.EventHandler(this.btnNovoAcordo_Click);
             // 
+            // btnGerarRelatório
+            // 
+            this.btnGerarRelatório.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnGerarRelatório.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGerarRelatório.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerarRelatório.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnGerarRelatório.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarRelatório.ForeColor = System.Drawing.Color.White;
+            this.btnGerarRelatório.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnGerarRelatório.IconColor = System.Drawing.Color.Black;
+            this.btnGerarRelatório.IconSize = 16;
+            this.btnGerarRelatório.Location = new System.Drawing.Point(152, 633);
+            this.btnGerarRelatório.Name = "btnGerarRelatório";
+            this.btnGerarRelatório.Rotation = 0D;
+            this.btnGerarRelatório.Size = new System.Drawing.Size(114, 36);
+            this.btnGerarRelatório.TabIndex = 45;
+            this.btnGerarRelatório.Text = "GERAR RELATÓRIO";
+            this.btnGerarRelatório.UseVisualStyleBackColor = false;
+            this.btnGerarRelatório.Click += new System.EventHandler(this.btnGerarRelatório_Click);
+            // 
             // frmVisualizarAcordos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -698,6 +719,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1082, 749);
+            this.Controls.Add(this.btnGerarRelatório);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnLimparFiltros);
@@ -760,5 +782,6 @@
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnExcluir;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private FontAwesome.Sharp.IconButton btnGerarRelatório;
     }
 }
