@@ -30,7 +30,6 @@ namespace CadastroDeAcordos.Formularios
 
         private void frmEditarAcordo_Load(object sender, EventArgs e)
         {
-
         }
 
         //preenche os campos com as informações da linha selecionada na tabela
@@ -40,6 +39,9 @@ namespace CadastroDeAcordos.Formularios
             DataUltimoStatus = dataUltimoStatus;
             statusAtual = status;
             numeroProcessualAtual = numeroProcessual;
+
+            //alimenta combo box situacao e tipo de acordo
+            alimentaComboBox();
 
             //alimentando os txtBox do form
             txtNumeroProcessual.Text = numeroProcessual;
@@ -57,6 +59,7 @@ namespace CadastroDeAcordos.Formularios
             txtCelular.Text = celular;
             txtDescricao.Text = descricao;
             txtStatus.Text = status;
+
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -166,7 +169,17 @@ namespace CadastroDeAcordos.Formularios
                 excluir = new Excluir(numeroProcessualAtual);
                 this.Close();
             }
-
         }
+
+        //inicializa as informações dos comboBox (Situação e tipo de acordo) com dados do banco
+        private void alimentaComboBox()
+        {
+            RetornaDados lerDados1 = new RetornaDados();
+            RetornaDados lerDados2 = new RetornaDados();
+
+            cbxSituacao.DataSource = lerDados1.SituacoesPossiveis("cadastrar");
+            cbxTipoDeAcordo.DataSource = lerDados2.tiposDeAcordo("cadastrar");
+        }
+
     }
 }

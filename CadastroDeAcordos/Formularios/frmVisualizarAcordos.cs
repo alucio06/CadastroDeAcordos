@@ -36,6 +36,7 @@ namespace CadastroDeAcordos
             dataGriedViewListaAcordos.DataSource = lerDados.MostrarDados();
             tabAuxiliar = lerDados1.MostrarDados();
 
+            atualizaQuantidadeAcordos(dataGriedViewListaAcordos.Rows.Count.ToString());
             formataDataGridView();
         }
 
@@ -53,6 +54,7 @@ namespace CadastroDeAcordos
             dataGriedViewListaAcordos.DataSource = lerDados1.MostrarDados();
             tabAuxiliar = lerDados2.MostrarDados();
             limparFiltros();
+            atualizaQuantidadeAcordos(dataGriedViewListaAcordos.Rows.Count.ToString());
         }
 
         //formata o campo de busca para a máscara de número de processo quando botao do numeroProcessual é criado
@@ -90,6 +92,7 @@ namespace CadastroDeAcordos
                     RetornaDados lerDados1 = new RetornaDados();
                     tabAuxiliar = lerDados1.BuscarPorNumeroProcessual(txtCampoDeBusca.Text, tabAuxiliar);
                     dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+                    atualizaQuantidadeAcordos(dataGriedViewListaAcordos.Rows.Count.ToString());
 
                 }
                 catch (Exception)
@@ -106,6 +109,7 @@ namespace CadastroDeAcordos
                     RetornaDados lerDados1 = new RetornaDados();
                     tabAuxiliar = lerDados1.BuscarPorInstituicao(txtCampoDeBusca.Text, tabAuxiliar);
                     dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+                    atualizaQuantidadeAcordos(dataGriedViewListaAcordos.Rows.Count.ToString());
                 }
                 catch (Exception)
                 {
@@ -121,6 +125,7 @@ namespace CadastroDeAcordos
                     RetornaDados lerDados1 = new RetornaDados();
                     tabAuxiliar = lerDados1.BuscarPorInteressado(txtCampoDeBusca.Text, tabAuxiliar);
                     dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+                    atualizaQuantidadeAcordos(dataGriedViewListaAcordos.Rows.Count.ToString());
                 }
                 catch (Exception)
                 {
@@ -153,6 +158,7 @@ namespace CadastroDeAcordos
                     RetornaDados lerDados1 = new RetornaDados();
                     tabAuxiliar = lerDados1.FiltrarPorTipoDeAcordo(cbTipoDeAcordo.Text, tabAuxiliar);
                     dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+                    atualizaQuantidadeAcordos(dataGriedViewListaAcordos.Rows.Count.ToString());
                 }
             }
             catch (Exception)
@@ -171,6 +177,7 @@ namespace CadastroDeAcordos
                     RetornaDados lerDados1 = new RetornaDados();
                     tabAuxiliar = lerDados1.FiltrarPorSituacao(cbSituacao.Text, tabAuxiliar);
                     dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+                    atualizaQuantidadeAcordos(dataGriedViewListaAcordos.Rows.Count.ToString());
                 }
             }
             catch (Exception)
@@ -189,6 +196,7 @@ namespace CadastroDeAcordos
                     RetornaDados lerDados1 = new RetornaDados();
                     tabAuxiliar = lerDados1.FiltrarPorContinente(cbContinente.Text, tabAuxiliar);
                     dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+                    atualizaQuantidadeAcordos(dataGriedViewListaAcordos.Rows.Count.ToString());
                 }
             }
             catch (Exception)
@@ -207,6 +215,7 @@ namespace CadastroDeAcordos
                     RetornaDados lerDados1 = new RetornaDados();
                     tabAuxiliar = lerDados1.FiltrarPorPais(cbPais.Text, tabAuxiliar);
                     dataGriedViewListaAcordos.DataSource = tabAuxiliar;
+                    atualizaQuantidadeAcordos(dataGriedViewListaAcordos.Rows.Count.ToString());
                 }
             }
             catch (Exception)
@@ -223,6 +232,7 @@ namespace CadastroDeAcordos
             RetornaDados lerDados2 = new RetornaDados();
             dataGriedViewListaAcordos.DataSource = lerDados1.MostrarDados();
             tabAuxiliar = lerDados2.MostrarDados();
+            atualizaQuantidadeAcordos(dataGriedViewListaAcordos.Rows.Count.ToString());
         }
 
         // chama tela para editar acordo passando as informações da linha selecionada
@@ -297,6 +307,7 @@ namespace CadastroDeAcordos
             cbTipoDeAcordo.DataSource = lerDados2.tiposDeAcordo("visualizar");
         }
 
+        // exporta dados para uma planilha excel
         public void ExportarDados()
         {
             try
@@ -329,7 +340,6 @@ namespace CadastroDeAcordos
                 ws.Cell("P3").Value = "Status";
                 ws.Cell("Q3").Value = "Data Último Status";
                 ws.Cell("R3").Value = "Data de Cadastro";
-
 
                 // Corpo do relatório
                 var linha = 4;
@@ -380,7 +390,7 @@ namespace CadastroDeAcordos
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Não foi possível salvar o relatório.");
             }
@@ -391,9 +401,18 @@ namespace CadastroDeAcordos
 
         }
 
+        //botao gerar relatorio
         private void btnGerarRelatório_Click(object sender, EventArgs e)
         {
             ExportarDados();
         }
+
+        //atualiza a label com a quantidade de acordos que está visivel na tabela
+        private void atualizaQuantidadeAcordos(string quant)
+        {
+            quant = (int.Parse(quant) - 1).ToString();
+            lblQuantidadeAcordos.Text = quant;
+        }
+
     }
 }

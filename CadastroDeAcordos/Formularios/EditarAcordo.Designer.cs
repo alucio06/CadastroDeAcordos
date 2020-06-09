@@ -527,10 +527,6 @@
             this.cbxSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSituacao.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbxSituacao.FormattingEnabled = true;
-            this.cbxSituacao.Items.AddRange(new object[] {
-            "Aguardando",
-            "Em análise",
-            "Concluído"});
             this.cbxSituacao.Location = new System.Drawing.Point(19, 100);
             this.cbxSituacao.Name = "cbxSituacao";
             this.cbxSituacao.Size = new System.Drawing.Size(163, 21);
@@ -618,13 +614,6 @@
             this.cbxTipoDeAcordo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipoDeAcordo.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbxTipoDeAcordo.FormattingEnabled = true;
-            this.cbxTipoDeAcordo.Items.AddRange(new object[] {
-            "Acordo Geral",
-            "Cotutela",
-            "Consórcio",
-            "Mobilidade",
-            "Memorando de Entendimento",
-            "Outros"});
             this.cbxTipoDeAcordo.Location = new System.Drawing.Point(211, 60);
             this.cbxTipoDeAcordo.Name = "cbxTipoDeAcordo";
             this.cbxTipoDeAcordo.Size = new System.Drawing.Size(174, 21);

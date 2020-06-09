@@ -40,17 +40,17 @@ namespace CadastroDeAcordos
             childForm.Show();
         }
 
-        private void btnVisualizarAcordos_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frmVisualizarAcordos());
-        }
-
-        private void btnCadastrarAcordo_Click(object sender, EventArgs e)
+        private void btnAtualizarStatus_Click(object sender, EventArgs e)
         {
             openChildForm(new frmAcordosVigentes());
         }
 
-        private void btnAtualizarStatus_Click(object sender, EventArgs e)
+        private void btnListaDeAcordos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmVisualizarAcordos());
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
         {
             openChildForm(new frmAtualizarStatus());
         }

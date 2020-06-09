@@ -29,6 +29,8 @@ namespace CadastroDeAcordos.Formularios
             RetornaDados lerDados2 = new RetornaDados();
             dataGriedViewAcordosVigentes.DataSource = lerDados1.RetornaAcordosVigentes();
             tabAuxiliar = lerDados2.RetornaAcordosVigentes();
+            atualizaQuantidadeAcordos(dataGriedViewAcordosVigentes.Rows.Count.ToString());
+
         }
 
         private void frmAcordosVigentes_Load(object sender, EventArgs e)
@@ -41,6 +43,7 @@ namespace CadastroDeAcordos.Formularios
             tabAuxiliar = lerDados1.RetornaAcordosVigentes();
 
             formataDataGridView();
+            atualizaQuantidadeAcordos(dataGriedViewAcordosVigentes.Rows.Count.ToString());
         }
 
         //executa o filtro por tipo de acordo
@@ -53,6 +56,7 @@ namespace CadastroDeAcordos.Formularios
                     RetornaDados lerDados1 = new RetornaDados();
                     tabAuxiliar = lerDados1.FiltrarPorTipoDeAcordo(cbTipoDeAcordo.Text, tabAuxiliar);
                     dataGriedViewAcordosVigentes.DataSource = tabAuxiliar;
+                    atualizaQuantidadeAcordos(dataGriedViewAcordosVigentes.Rows.Count.ToString());
                 }
             }
             catch (Exception)
@@ -71,6 +75,7 @@ namespace CadastroDeAcordos.Formularios
                     RetornaDados lerDados1 = new RetornaDados();
                     tabAuxiliar = lerDados1.FiltrarPorContinente(cbContinente.Text, tabAuxiliar);
                     dataGriedViewAcordosVigentes.DataSource = tabAuxiliar;
+                    atualizaQuantidadeAcordos(dataGriedViewAcordosVigentes.Rows.Count.ToString());
                 }
             }
             catch (Exception)
@@ -89,6 +94,7 @@ namespace CadastroDeAcordos.Formularios
                     RetornaDados lerDados1 = new RetornaDados();
                     tabAuxiliar = lerDados1.FiltrarPorPais(cbPais.Text, tabAuxiliar);
                     dataGriedViewAcordosVigentes.DataSource = tabAuxiliar;
+                    atualizaQuantidadeAcordos(dataGriedViewAcordosVigentes.Rows.Count.ToString());
                 }
             }
             catch (Exception)
@@ -105,6 +111,7 @@ namespace CadastroDeAcordos.Formularios
             cbPais.SelectedItem = "Todos";
         }
 
+        //exporta um relatório para uma planilha excel
         public void ExportarDados(DataGridView listaAcordosVigentes)
         {
             try
@@ -173,7 +180,7 @@ namespace CadastroDeAcordos.Formularios
                 }
                 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Não foi possível salvar o relatório.");
             }
@@ -200,6 +207,13 @@ namespace CadastroDeAcordos.Formularios
             dataGriedViewAcordosVigentes.Columns["Data Final"].Width = 100;
             dataGriedViewAcordosVigentes.Columns["Interessado"].Width = 140;
             dataGriedViewAcordosVigentes.Columns["Descrição"].Width = 250;
+        }
+
+        //atualiza quantidade
+        private void atualizaQuantidadeAcordos(string quant)
+        {
+            quant = (int.Parse(quant) - 1).ToString();
+            lblQuantidadeAcordos.Text = quant;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

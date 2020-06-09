@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace CadastroDeAcordos.Classes
 {
@@ -107,7 +108,7 @@ namespace CadastroDeAcordos.Classes
 
             List<string> lista = new List<string>();
 
-            if(text == "visualizar") { lista.Add("Todos"); }
+            if (text == "visualizar") { lista.Add("Todos"); }
 
             foreach (DataRow linha in tabela.Rows)
             {
@@ -136,6 +137,40 @@ namespace CadastroDeAcordos.Classes
             }
 
             return lista;
+        }
+
+        //retorna quantidade de acordos por país
+        public DataTable QuantAcordosPorPais()
+        {
+            comando.Connection = conexao.conectar();
+            comando.CommandText = "select top 10 pais as 'País', COUNT(pais) as 'Quantidade de acordos' from Acordos " +
+                "group by pais order by count(2) desc";
+            lerDados = comando.ExecuteReader();
+            tabela.Load(lerDados);
+            conexao.desconectar();
+            return tabela;
+        }
+
+        //retorna quantidade de acordos por tipo
+        public DataTable QuantAcordosPorTipo()
+        {
+            comando.Connection = conexao.conectar();
+            comando.CommandText = "select top 5 tipoAcordo as 'Tipo de acordo', COUNT(tipoAcordo) as 'Quantidade de acordos' from Acordos group by tipoAcordo order by count(2) desc";
+            lerDados = comando.ExecuteReader();
+            tabela.Load(lerDados);
+            conexao.desconectar();
+            return tabela;
+        }
+
+        //retorna quantidade de acordos por ano
+        public DataTable QuantAcordosPorAno()
+        {
+            comando.Connection = conexao.conectar();
+            comando.CommandText = "select top 10 count(numeroProcessual) as 'Quantidade de acordos', DATEPART(year, dataPublicacao) as 'Data publicação' from Acordos where dataPublicacao is not null group by DATEPART(year, dataPublicacao) order by DATEPART(year, dataPublicacao) desc";
+            lerDados = comando.ExecuteReader();
+            tabela.Load(lerDados);
+            conexao.desconectar();
+            return tabela;
         }
 
     }

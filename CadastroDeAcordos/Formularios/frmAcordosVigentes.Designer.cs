@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
@@ -44,6 +44,8 @@
             this.btnLimparFiltros = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGriedViewAcordosVigentes = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblQuantidadeAcordos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGriedViewAcordosVigentes)).BeginInit();
@@ -74,7 +76,7 @@
             // btnEditar
             // 
             this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
+            this.btnEditar.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
@@ -95,7 +97,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(454, 114);
+            this.label8.Location = new System.Drawing.Point(359, 117);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 13);
             this.label8.TabIndex = 52;
@@ -369,7 +371,7 @@
             "West Bank",
             "Zâmbia",
             "Zimbabué"});
-            this.cbPais.Location = new System.Drawing.Point(457, 130);
+            this.cbPais.Location = new System.Drawing.Point(362, 133);
             this.cbPais.Name = "cbPais";
             this.cbPais.Size = new System.Drawing.Size(136, 21);
             this.cbPais.TabIndex = 51;
@@ -378,7 +380,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(297, 114);
+            this.label7.Location = new System.Drawing.Point(202, 117);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 50;
@@ -400,7 +402,7 @@
             "Ásia",
             "Europa",
             "Oceania"});
-            this.cbContinente.Location = new System.Drawing.Point(300, 130);
+            this.cbContinente.Location = new System.Drawing.Point(205, 133);
             this.cbContinente.Name = "cbContinente";
             this.cbContinente.Size = new System.Drawing.Size(136, 21);
             this.cbContinente.TabIndex = 49;
@@ -409,7 +411,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(139, 114);
+            this.label5.Location = new System.Drawing.Point(44, 117);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 13);
             this.label5.TabIndex = 46;
@@ -430,7 +432,7 @@
             "Mobilidade",
             "Memorando de Entendimento",
             "Outros"});
-            this.cbTipoDeAcordo.Location = new System.Drawing.Point(142, 130);
+            this.cbTipoDeAcordo.Location = new System.Drawing.Point(47, 133);
             this.cbTipoDeAcordo.Name = "cbTipoDeAcordo";
             this.cbTipoDeAcordo.Size = new System.Drawing.Size(136, 21);
             this.cbTipoDeAcordo.TabIndex = 45;
@@ -444,7 +446,7 @@
             this.btnLimparFiltros.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLimparFiltros.IconColor = System.Drawing.Color.Black;
             this.btnLimparFiltros.IconSize = 1;
-            this.btnLimparFiltros.Location = new System.Drawing.Point(612, 129);
+            this.btnLimparFiltros.Location = new System.Drawing.Point(517, 132);
             this.btnLimparFiltros.Name = "btnLimparFiltros";
             this.btnLimparFiltros.Rotation = 0D;
             this.btnLimparFiltros.Size = new System.Drawing.Size(96, 21);
@@ -460,9 +462,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel3.Controls.Add(this.dataGriedViewAcordosVigentes);
-            this.panel3.Location = new System.Drawing.Point(142, 170);
+            this.panel3.Location = new System.Drawing.Point(47, 170);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(885, 476);
+            this.panel3.Size = new System.Drawing.Size(980, 476);
             this.panel3.TabIndex = 55;
             // 
             // dataGriedViewAcordosVigentes
@@ -472,55 +474,75 @@
             this.dataGriedViewAcordosVigentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGriedViewAcordosVigentes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dataGriedViewAcordosVigentes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewAcordosVigentes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewAcordosVigentes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGriedViewAcordosVigentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewAcordosVigentes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewAcordosVigentes.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGriedViewAcordosVigentes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGriedViewAcordosVigentes.EnableHeadersVisualStyles = false;
             this.dataGriedViewAcordosVigentes.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGriedViewAcordosVigentes.Location = new System.Drawing.Point(0, 0);
             this.dataGriedViewAcordosVigentes.Name = "dataGriedViewAcordosVigentes";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewAcordosVigentes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewAcordosVigentes.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGriedViewAcordosVigentes.RowHeadersWidth = 25;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.NullValue = "            - ";
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1, 1, 1, 3);
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewAcordosVigentes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.NullValue = "            - ";
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(1, 1, 1, 3);
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriedViewAcordosVigentes.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGriedViewAcordosVigentes.RowTemplate.Height = 28;
             this.dataGriedViewAcordosVigentes.RowTemplate.ReadOnly = true;
             this.dataGriedViewAcordosVigentes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriedViewAcordosVigentes.Size = new System.Drawing.Size(885, 476);
+            this.dataGriedViewAcordosVigentes.Size = new System.Drawing.Size(980, 476);
             this.dataGriedViewAcordosVigentes.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(672, 154);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Total";
+            // 
+            // lblQuantidadeAcordos
+            // 
+            this.lblQuantidadeAcordos.AutoSize = true;
+            this.lblQuantidadeAcordos.BackColor = System.Drawing.Color.Transparent;
+            this.lblQuantidadeAcordos.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidadeAcordos.Location = new System.Drawing.Point(663, 118);
+            this.lblQuantidadeAcordos.Name = "lblQuantidadeAcordos";
+            this.lblQuantidadeAcordos.Size = new System.Drawing.Size(0, 37);
+            this.lblQuantidadeAcordos.TabIndex = 57;
             // 
             // frmAcordosVigentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 749);
+            this.Controls.Add(this.lblQuantidadeAcordos);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnLimparFiltros);
             this.Controls.Add(this.label8);
@@ -531,6 +553,7 @@
             this.Controls.Add(this.cbTipoDeAcordo);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAcordosVigentes";
             this.Text = "frmAcordosVigentes";
@@ -557,5 +580,7 @@
         private FontAwesome.Sharp.IconButton btnLimparFiltros;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGriedViewAcordosVigentes;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblQuantidadeAcordos;
     }
 }

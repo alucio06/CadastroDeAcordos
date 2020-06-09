@@ -34,9 +34,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSair = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnAtualizarStatus = new FontAwesome.Sharp.IconButton();
-            this.btnCadastrarAcordo = new FontAwesome.Sharp.IconButton();
-            this.btnVisualizarAcordos = new FontAwesome.Sharp.IconButton();
+            this.btnAcordosVigentes = new FontAwesome.Sharp.IconButton();
+            this.btnListaDeAcordos = new FontAwesome.Sharp.IconButton();
+            this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,9 +51,9 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(104)))), ((int)(((byte)(189)))));
             this.panelMenu.Controls.Add(this.label1);
             this.panelMenu.Controls.Add(this.panel3);
-            this.panelMenu.Controls.Add(this.btnAtualizarStatus);
-            this.panelMenu.Controls.Add(this.btnCadastrarAcordo);
-            this.panelMenu.Controls.Add(this.btnVisualizarAcordos);
+            this.panelMenu.Controls.Add(this.btnAcordosVigentes);
+            this.panelMenu.Controls.Add(this.btnListaDeAcordos);
+            this.panelMenu.Controls.Add(this.btnDashboard);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -84,6 +84,7 @@
             // 
             // btnSair
             // 
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -115,83 +116,83 @@
             this.panel4.Size = new System.Drawing.Size(106, 44);
             this.panel4.TabIndex = 6;
             // 
-            // btnAtualizarStatus
+            // btnAcordosVigentes
             // 
-            this.btnAtualizarStatus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtualizarStatus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAtualizarStatus.FlatAppearance.BorderSize = 0;
-            this.btnAtualizarStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarStatus.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnAtualizarStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizarStatus.ForeColor = System.Drawing.Color.White;
-            this.btnAtualizarStatus.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
-            this.btnAtualizarStatus.IconColor = System.Drawing.Color.White;
-            this.btnAtualizarStatus.IconSize = 22;
-            this.btnAtualizarStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizarStatus.Location = new System.Drawing.Point(0, 143);
-            this.btnAtualizarStatus.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.btnAtualizarStatus.Name = "btnAtualizarStatus";
-            this.btnAtualizarStatus.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAtualizarStatus.Rotation = 0D;
-            this.btnAtualizarStatus.Size = new System.Drawing.Size(182, 49);
-            this.btnAtualizarStatus.TabIndex = 4;
-            this.btnAtualizarStatus.Text = "Atualizar Status";
-            this.btnAtualizarStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizarStatus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAtualizarStatus.UseVisualStyleBackColor = true;
-            this.btnAtualizarStatus.Click += new System.EventHandler(this.btnAtualizarStatus_Click);
+            this.btnAcordosVigentes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAcordosVigentes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAcordosVigentes.FlatAppearance.BorderSize = 0;
+            this.btnAcordosVigentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcordosVigentes.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnAcordosVigentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcordosVigentes.ForeColor = System.Drawing.Color.White;
+            this.btnAcordosVigentes.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.btnAcordosVigentes.IconColor = System.Drawing.Color.White;
+            this.btnAcordosVigentes.IconSize = 24;
+            this.btnAcordosVigentes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcordosVigentes.Location = new System.Drawing.Point(0, 143);
+            this.btnAcordosVigentes.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.btnAcordosVigentes.Name = "btnAcordosVigentes";
+            this.btnAcordosVigentes.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnAcordosVigentes.Rotation = 0D;
+            this.btnAcordosVigentes.Size = new System.Drawing.Size(182, 49);
+            this.btnAcordosVigentes.TabIndex = 4;
+            this.btnAcordosVigentes.Text = "Acordos Vigentes";
+            this.btnAcordosVigentes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcordosVigentes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAcordosVigentes.UseVisualStyleBackColor = true;
+            this.btnAcordosVigentes.Click += new System.EventHandler(this.btnAtualizarStatus_Click);
             // 
-            // btnCadastrarAcordo
+            // btnListaDeAcordos
             // 
-            this.btnCadastrarAcordo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrarAcordo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCadastrarAcordo.FlatAppearance.BorderSize = 0;
-            this.btnCadastrarAcordo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarAcordo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnCadastrarAcordo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarAcordo.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarAcordo.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.btnCadastrarAcordo.IconColor = System.Drawing.Color.White;
-            this.btnCadastrarAcordo.IconSize = 22;
-            this.btnCadastrarAcordo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarAcordo.Location = new System.Drawing.Point(0, 94);
-            this.btnCadastrarAcordo.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.btnCadastrarAcordo.Name = "btnCadastrarAcordo";
-            this.btnCadastrarAcordo.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnCadastrarAcordo.Rotation = 0D;
-            this.btnCadastrarAcordo.Size = new System.Drawing.Size(182, 49);
-            this.btnCadastrarAcordo.TabIndex = 3;
-            this.btnCadastrarAcordo.Text = "Acordos Vigentes";
-            this.btnCadastrarAcordo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarAcordo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCadastrarAcordo.UseVisualStyleBackColor = true;
-            this.btnCadastrarAcordo.Click += new System.EventHandler(this.btnCadastrarAcordo_Click);
+            this.btnListaDeAcordos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListaDeAcordos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListaDeAcordos.FlatAppearance.BorderSize = 0;
+            this.btnListaDeAcordos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaDeAcordos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnListaDeAcordos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaDeAcordos.ForeColor = System.Drawing.Color.White;
+            this.btnListaDeAcordos.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
+            this.btnListaDeAcordos.IconColor = System.Drawing.Color.White;
+            this.btnListaDeAcordos.IconSize = 24;
+            this.btnListaDeAcordos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaDeAcordos.Location = new System.Drawing.Point(0, 94);
+            this.btnListaDeAcordos.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.btnListaDeAcordos.Name = "btnListaDeAcordos";
+            this.btnListaDeAcordos.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnListaDeAcordos.Rotation = 0D;
+            this.btnListaDeAcordos.Size = new System.Drawing.Size(182, 49);
+            this.btnListaDeAcordos.TabIndex = 3;
+            this.btnListaDeAcordos.Text = "Lista de Acordos";
+            this.btnListaDeAcordos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaDeAcordos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnListaDeAcordos.UseVisualStyleBackColor = true;
+            this.btnListaDeAcordos.Click += new System.EventHandler(this.btnListaDeAcordos_Click);
             // 
-            // btnVisualizarAcordos
+            // btnDashboard
             // 
-            this.btnVisualizarAcordos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVisualizarAcordos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVisualizarAcordos.FlatAppearance.BorderSize = 0;
-            this.btnVisualizarAcordos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarAcordos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnVisualizarAcordos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarAcordos.ForeColor = System.Drawing.Color.White;
-            this.btnVisualizarAcordos.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.btnVisualizarAcordos.IconColor = System.Drawing.Color.White;
-            this.btnVisualizarAcordos.IconSize = 25;
-            this.btnVisualizarAcordos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizarAcordos.Location = new System.Drawing.Point(0, 45);
-            this.btnVisualizarAcordos.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.btnVisualizarAcordos.Name = "btnVisualizarAcordos";
-            this.btnVisualizarAcordos.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnVisualizarAcordos.Rotation = 0D;
-            this.btnVisualizarAcordos.Size = new System.Drawing.Size(182, 49);
-            this.btnVisualizarAcordos.TabIndex = 2;
-            this.btnVisualizarAcordos.Text = "Lista de Acordos";
-            this.btnVisualizarAcordos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizarAcordos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVisualizarAcordos.UseVisualStyleBackColor = true;
-            this.btnVisualizarAcordos.Click += new System.EventHandler(this.btnVisualizarAcordos_Click);
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.ChartPie;
+            this.btnDashboard.IconColor = System.Drawing.Color.White;
+            this.btnDashboard.IconSize = 24;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 45);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnDashboard.Rotation = 0D;
+            this.btnDashboard.Size = new System.Drawing.Size(182, 49);
+            this.btnDashboard.TabIndex = 2;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // panel2
             // 
@@ -247,15 +248,15 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelChildForm;
-        private FontAwesome.Sharp.IconButton btnVisualizarAcordos;
+        private FontAwesome.Sharp.IconButton btnDashboard;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton btnSair;
         private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton btnAtualizarStatus;
-        private FontAwesome.Sharp.IconButton btnCadastrarAcordo;
+        private FontAwesome.Sharp.IconButton btnListaDeAcordos;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton btnAcordosVigentes;
     }
 }
 
