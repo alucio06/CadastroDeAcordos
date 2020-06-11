@@ -43,40 +43,44 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTotalDeAcordosFirmados = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblTotalDeAcordos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblAcordosVigentesUlt3Meses = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblAcordosVigentes = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblAcordosEmExpiracao = new System.Windows.Forms.Label();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblAcordosExpiradosUlt3Meses = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblAcordosExpirados = new System.Windows.Forms.Label();
             this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblAcordosCadastradosUlt3meses = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblAcordosEmTramitacao = new System.Windows.Forms.Label();
             this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.chartAcordosPorPais = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartAcordosPorTipo = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartAcordosPorAno = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.lblAcordosComAttRecente = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lblAcordosSemAttRecentes = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -121,8 +125,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(59)))), ((int)(((byte)(102)))));
+            this.panel2.Controls.Add(this.lblTotalDeAcordosFirmados);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.lblTotalDeAcordos);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.iconPictureBox1);
             this.panel2.Location = new System.Drawing.Point(12, 72);
@@ -130,27 +135,39 @@
             this.panel2.Size = new System.Drawing.Size(224, 100);
             this.panel2.TabIndex = 26;
             // 
+            // lblTotalDeAcordosFirmados
+            // 
+            this.lblTotalDeAcordosFirmados.AutoSize = true;
+            this.lblTotalDeAcordosFirmados.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeAcordosFirmados.ForeColor = System.Drawing.Color.White;
+            this.lblTotalDeAcordosFirmados.Location = new System.Drawing.Point(9, 76);
+            this.lblTotalDeAcordosFirmados.Name = "lblTotalDeAcordosFirmados";
+            this.lblTotalDeAcordosFirmados.Size = new System.Drawing.Size(28, 15);
+            this.lblTotalDeAcordosFirmados.TabIndex = 31;
+            this.lblTotalDeAcordosFirmados.Text = "280";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(12, 76);
+            this.label8.Location = new System.Drawing.Point(33, 76);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 15);
+            this.label8.Size = new System.Drawing.Size(141, 15);
             this.label8.TabIndex = 30;
-            this.label8.Text = "280 Acordos foram firmados";
+            this.label8.Text = "Acordos foram firmados";
             // 
-            // label7
+            // lblTotalDeAcordos
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Sans Unicode", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(4, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 45);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "300";
+            this.lblTotalDeAcordos.AutoSize = true;
+            this.lblTotalDeAcordos.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lblTotalDeAcordos.Font = new System.Drawing.Font("Lucida Sans Unicode", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeAcordos.ForeColor = System.Drawing.Color.White;
+            this.lblTotalDeAcordos.Location = new System.Drawing.Point(4, 27);
+            this.lblTotalDeAcordos.Name = "lblTotalDeAcordos";
+            this.lblTotalDeAcordos.Size = new System.Drawing.Size(89, 45);
+            this.lblTotalDeAcordos.TabIndex = 29;
+            this.lblTotalDeAcordos.Text = "300";
             // 
             // label1
             // 
@@ -182,25 +199,37 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(240)))), ((int)(((byte)(202)))));
+            this.panel3.Controls.Add(this.lblAcordosVigentesUlt3Meses);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.lblAcordosVigentes);
             this.panel3.Controls.Add(this.iconPictureBox2);
             this.panel3.Location = new System.Drawing.Point(247, 72);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(224, 100);
             this.panel3.TabIndex = 27;
             // 
+            // lblAcordosVigentesUlt3Meses
+            // 
+            this.lblAcordosVigentesUlt3Meses.AutoSize = true;
+            this.lblAcordosVigentesUlt3Meses.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcordosVigentesUlt3Meses.ForeColor = System.Drawing.Color.Black;
+            this.lblAcordosVigentesUlt3Meses.Location = new System.Drawing.Point(10, 76);
+            this.lblAcordosVigentesUlt3Meses.Name = "lblAcordosVigentesUlt3Meses";
+            this.lblAcordosVigentesUlt3Meses.Size = new System.Drawing.Size(14, 15);
+            this.lblAcordosVigentesUlt3Meses.TabIndex = 34;
+            this.lblAcordosVigentesUlt3Meses.Text = "5";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(6, 76);
+            this.label9.Location = new System.Drawing.Point(20, 76);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(183, 15);
+            this.label9.Size = new System.Drawing.Size(173, 15);
             this.label9.TabIndex = 33;
-            this.label9.Text = "5 Firmados nos últimos 3 meses";
+            this.label9.Text = "Firmados nos últimos 3 meses";
             // 
             // label3
             // 
@@ -213,16 +242,16 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "Acordos Vigentes";
             // 
-            // label10
+            // lblAcordosVigentes
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Lucida Sans Unicode", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(1, 27);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 45);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "80";
+            this.lblAcordosVigentes.AutoSize = true;
+            this.lblAcordosVigentes.Font = new System.Drawing.Font("Lucida Sans Unicode", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcordosVigentes.ForeColor = System.Drawing.Color.Black;
+            this.lblAcordosVigentes.Location = new System.Drawing.Point(1, 27);
+            this.lblAcordosVigentes.Name = "lblAcordosVigentes";
+            this.lblAcordosVigentes.Size = new System.Drawing.Size(66, 45);
+            this.lblAcordosVigentes.TabIndex = 32;
+            this.lblAcordosVigentes.Text = "80";
             // 
             // iconPictureBox2
             // 
@@ -246,7 +275,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(150)))), ((int)(((byte)(75)))));
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label14);
+            this.panel5.Controls.Add(this.lblAcordosEmExpiracao);
             this.panel5.Controls.Add(this.iconPictureBox4);
             this.panel5.Location = new System.Drawing.Point(723, 72);
             this.panel5.Name = "panel5";
@@ -275,16 +304,16 @@
             this.label5.TabIndex = 31;
             this.label5.Text = "Acordos em Expiração";
             // 
-            // label14
+            // lblAcordosEmExpiracao
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Lucida Sans Unicode", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(4, 27);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 45);
-            this.label14.TabIndex = 32;
-            this.label14.Text = "5";
+            this.lblAcordosEmExpiracao.AutoSize = true;
+            this.lblAcordosEmExpiracao.Font = new System.Drawing.Font("Lucida Sans Unicode", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcordosEmExpiracao.ForeColor = System.Drawing.Color.White;
+            this.lblAcordosEmExpiracao.Location = new System.Drawing.Point(4, 27);
+            this.lblAcordosEmExpiracao.Name = "lblAcordosEmExpiracao";
+            this.lblAcordosEmExpiracao.Size = new System.Drawing.Size(43, 45);
+            this.lblAcordosEmExpiracao.TabIndex = 32;
+            this.lblAcordosEmExpiracao.Text = "5";
             // 
             // iconPictureBox4
             // 
@@ -305,25 +334,37 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(52)))));
+            this.panel6.Controls.Add(this.lblAcordosExpiradosUlt3Meses);
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.label16);
+            this.panel6.Controls.Add(this.lblAcordosExpirados);
             this.panel6.Controls.Add(this.iconPictureBox5);
             this.panel6.Location = new System.Drawing.Point(960, 72);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(216, 100);
             this.panel6.TabIndex = 27;
             // 
+            // lblAcordosExpiradosUlt3Meses
+            // 
+            this.lblAcordosExpiradosUlt3Meses.AutoSize = true;
+            this.lblAcordosExpiradosUlt3Meses.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcordosExpiradosUlt3Meses.ForeColor = System.Drawing.Color.White;
+            this.lblAcordosExpiradosUlt3Meses.Location = new System.Drawing.Point(6, 77);
+            this.lblAcordosExpiradosUlt3Meses.Name = "lblAcordosExpiradosUlt3Meses";
+            this.lblAcordosExpiradosUlt3Meses.Size = new System.Drawing.Size(14, 15);
+            this.lblAcordosExpiradosUlt3Meses.TabIndex = 37;
+            this.lblAcordosExpiradosUlt3Meses.Text = "5";
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(8, 77);
+            this.label15.Location = new System.Drawing.Point(16, 77);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(186, 15);
+            this.label15.Size = new System.Drawing.Size(176, 15);
             this.label15.TabIndex = 36;
-            this.label15.Text = "5 Expirados nos últimos 3 meses";
+            this.label15.Text = "Expirados nos últimos 3 meses";
             // 
             // label6
             // 
@@ -336,16 +377,16 @@
             this.label6.TabIndex = 32;
             this.label6.Text = "Acordos Expirados";
             // 
-            // label16
+            // lblAcordosExpirados
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Lucida Sans Unicode", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(0, 28);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 45);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "56";
+            this.lblAcordosExpirados.AutoSize = true;
+            this.lblAcordosExpirados.Font = new System.Drawing.Font("Lucida Sans Unicode", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcordosExpirados.ForeColor = System.Drawing.Color.White;
+            this.lblAcordosExpirados.Location = new System.Drawing.Point(0, 28);
+            this.lblAcordosExpirados.Name = "lblAcordosExpirados";
+            this.lblAcordosExpirados.Size = new System.Drawing.Size(66, 45);
+            this.lblAcordosExpirados.TabIndex = 35;
+            this.lblAcordosExpirados.Text = "56";
             // 
             // iconPictureBox5
             // 
@@ -366,15 +407,29 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(211)))), ((int)(((byte)(94)))));
+            this.panel4.Controls.Add(this.lblAcordosCadastradosUlt3meses);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.lblAcordosEmTramitacao);
             this.panel4.Controls.Add(this.iconPictureBox6);
             this.panel4.Controls.Add(this.iconPictureBox3);
             this.panel4.Location = new System.Drawing.Point(484, 72);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(224, 100);
             this.panel4.TabIndex = 27;
+            // 
+            // lblAcordosCadastradosUlt3meses
+            // 
+            this.lblAcordosCadastradosUlt3meses.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAcordosCadastradosUlt3meses.AutoSize = true;
+            this.lblAcordosCadastradosUlt3meses.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcordosCadastradosUlt3meses.ForeColor = System.Drawing.Color.Maroon;
+            this.lblAcordosCadastradosUlt3meses.Location = new System.Drawing.Point(6, 76);
+            this.lblAcordosCadastradosUlt3meses.Name = "lblAcordosCadastradosUlt3meses";
+            this.lblAcordosCadastradosUlt3meses.Size = new System.Drawing.Size(14, 15);
+            this.lblAcordosCadastradosUlt3meses.TabIndex = 35;
+            this.lblAcordosCadastradosUlt3meses.Text = "6";
             // 
             // label11
             // 
@@ -383,11 +438,11 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Maroon;
-            this.label11.Location = new System.Drawing.Point(8, 76);
+            this.label11.Location = new System.Drawing.Point(17, 76);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(200, 15);
+            this.label11.Size = new System.Drawing.Size(190, 15);
             this.label11.TabIndex = 33;
-            this.label11.Text = "6 Cadastrados nos últimos 3 meses";
+            this.label11.Text = "Cadastrados nos últimos 3 meses";
             // 
             // label4
             // 
@@ -402,18 +457,18 @@
             this.label4.TabIndex = 30;
             this.label4.Text = "Acordos em Tramitação";
             // 
-            // label12
+            // lblAcordosEmTramitacao
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblAcordosEmTramitacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Lucida Sans Unicode", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Maroon;
-            this.label12.Location = new System.Drawing.Point(1, 24);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 45);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "21";
+            this.lblAcordosEmTramitacao.AutoSize = true;
+            this.lblAcordosEmTramitacao.Font = new System.Drawing.Font("Lucida Sans Unicode", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcordosEmTramitacao.ForeColor = System.Drawing.Color.Maroon;
+            this.lblAcordosEmTramitacao.Location = new System.Drawing.Point(1, 24);
+            this.lblAcordosEmTramitacao.Name = "lblAcordosEmTramitacao";
+            this.lblAcordosEmTramitacao.Size = new System.Drawing.Size(66, 45);
+            this.lblAcordosEmTramitacao.TabIndex = 32;
+            this.lblAcordosEmTramitacao.Text = "21";
             // 
             // iconPictureBox6
             // 
@@ -550,22 +605,23 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
-            this.panel7.Controls.Add(this.label19);
+            this.panel7.Controls.Add(this.lblAcordosComAttRecente);
             this.panel7.Controls.Add(this.label17);
             this.panel7.Location = new System.Drawing.Point(684, 199);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(121, 113);
             this.panel7.TabIndex = 32;
             // 
-            // panel8
+            // lblAcordosComAttRecente
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(71)))), ((int)(((byte)(73)))));
-            this.panel8.Controls.Add(this.label20);
-            this.panel8.Controls.Add(this.label18);
-            this.panel8.Location = new System.Drawing.Point(684, 318);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(121, 115);
-            this.panel8.TabIndex = 33;
+            this.lblAcordosComAttRecente.AutoSize = true;
+            this.lblAcordosComAttRecente.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcordosComAttRecente.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblAcordosComAttRecente.Location = new System.Drawing.Point(20, 50);
+            this.lblAcordosComAttRecente.Name = "lblAcordosComAttRecente";
+            this.lblAcordosComAttRecente.Size = new System.Drawing.Size(78, 55);
+            this.lblAcordosComAttRecente.TabIndex = 1;
+            this.lblAcordosComAttRecente.Text = "10";
             // 
             // label17
             // 
@@ -578,6 +634,27 @@
             this.label17.Text = "Acordos em tramitação com atualizações recentes";
             this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(71)))), ((int)(((byte)(73)))));
+            this.panel8.Controls.Add(this.lblAcordosSemAttRecentes);
+            this.panel8.Controls.Add(this.label18);
+            this.panel8.Location = new System.Drawing.Point(684, 318);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(121, 115);
+            this.panel8.TabIndex = 33;
+            // 
+            // lblAcordosSemAttRecentes
+            // 
+            this.lblAcordosSemAttRecentes.AutoSize = true;
+            this.lblAcordosSemAttRecentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcordosSemAttRecentes.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblAcordosSemAttRecentes.Location = new System.Drawing.Point(20, 47);
+            this.lblAcordosSemAttRecentes.Name = "lblAcordosSemAttRecentes";
+            this.lblAcordosSemAttRecentes.Size = new System.Drawing.Size(78, 55);
+            this.lblAcordosSemAttRecentes.TabIndex = 2;
+            this.lblAcordosSemAttRecentes.Text = "10";
+            // 
             // label18
             // 
             this.label18.Font = new System.Drawing.Font("Lucida Sans Unicode", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -588,28 +665,6 @@
             this.label18.TabIndex = 1;
             this.label18.Text = "Acordos em tramitação sem atualizações recentes";
             this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Location = new System.Drawing.Point(20, 50);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(78, 55);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "10";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label20.Location = new System.Drawing.Point(20, 47);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(78, 55);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "10";
             // 
             // frmAtualizarStatus
             // 
@@ -672,33 +727,37 @@
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTotalDeAcordos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblAcordosVigentes;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblAcordosEmTramitacao;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblAcordosEmExpiracao;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblAcordosExpirados;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox6;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartAcordosPorPais;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartAcordosPorTipo;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartAcordosPorAno;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblAcordosComAttRecente;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblAcordosSemAttRecentes;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblTotalDeAcordosFirmados;
+        private System.Windows.Forms.Label lblAcordosVigentesUlt3Meses;
+        private System.Windows.Forms.Label lblAcordosExpiradosUlt3Meses;
+        private System.Windows.Forms.Label lblAcordosCadastradosUlt3meses;
     }
 }

@@ -30,7 +30,7 @@ namespace CadastroDeAcordos.Classes
         //verifica se email é válido
         public Control emailEValido(Control textBox)
         {
-            bool validacao = textBox.Text.Contains("@") && (textBox.Text.Contains(".com") || textBox.Text.Contains(".COM"));
+            bool validacao = textBox.Text.Contains("@");
             if (textBox.Text != "" && validacao == false)
             {
                 MessageBox.Show("Email Inválido ! Por favor, digite um email válido.");
@@ -120,6 +120,53 @@ namespace CadastroDeAcordos.Classes
                     camposNaoPreenchidos += $"\n- {(string)campo.Tag.ToString()}";
             }
             return camposNaoPreenchidos;
+        }
+
+        //verifica se é um nome de usuário válido
+        public Control nomeUsuarioEValido(Control textbox)
+        {
+            //verifica se nome do usuário tem mais de 12 caracteres
+            if(textbox.Text.Length > 13)
+            {
+                MessageBox.Show("O nome de usuário deve possuir no máximo 12 caracteres");
+                textbox.Text = textbox.Text.Remove(textbox.Text.Length - 1);
+                textbox.Select();
+            }
+
+            foreach (char letra in textbox.Text)
+            {
+                if (!char.IsLetter(letra)) //se caractere não é letra
+                {
+                    MessageBox.Show("É permitido apenas letras para o nome do usuário");
+                    textbox.Text = textbox.Text.Remove(textbox.Text.Length - 1);
+                    textbox.Select();
+                }
+            }
+            return textbox;
+        }
+
+        //verifica se senha é válida
+        public Control senhaEValida(Control textbox)
+        {
+            //verifica se senha tem mais de 15 caracteres
+            if(textbox.Text.Length > 15)
+            {
+                MessageBox.Show("Sua senha deve possuir no máximo 15 caracteres");
+                textbox.Text = textbox.Text.Remove(textbox.Text.Length - 1);
+                textbox.Select();
+            }
+
+            foreach(char letra in textbox.Text)
+            {
+                if(!char.IsLetter(letra) || !char.IsNumber(letra))
+                {
+                    MessageBox.Show("Sua senha deve conter apenas letras ou números");
+                    textbox.Text = textbox.Text.Remove(textbox.Text.Length - 1);
+                    textbox.Select();
+                }
+            }
+
+            return textbox;
         }
 
 

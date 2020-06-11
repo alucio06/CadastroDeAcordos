@@ -235,6 +235,7 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "frmTelaInicial";
             this.Text = "Acordos Internacionais";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             this.panel3.ResumeLayout(false);

@@ -22,12 +22,14 @@ namespace CadastroDeAcordos
             GraficoAcordosPorPais();
             GraficoAcordosPorTipo();
             GraficoAcordosPorAno();
+            PreencheDadosDashboard();
         }
 
         private void frmAtualizarStatus_Load(object sender, EventArgs e)
         {
         }
 
+        // preenche informacoes do gráfico de acordos por país
         private void GraficoAcordosPorPais()
         {
             chartAcordosPorPais.DataSource = retornaDados.QuantAcordosPorPais();
@@ -37,6 +39,7 @@ namespace CadastroDeAcordos
             chartAcordosPorPais.Series["Series1"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
         }
 
+        // preenche informações do gráfico de acordos por tipo
         private void GraficoAcordosPorTipo()
         {
             chartAcordosPorTipo.DataSource = retornaDados.QuantAcordosPorTipo();
@@ -46,6 +49,7 @@ namespace CadastroDeAcordos
             chartAcordosPorTipo.Series["Series1"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
         }
 
+        // preenche informações do gráfico de acordos por ano
         private void GraficoAcordosPorAno()
         {
             chartAcordosPorAno.DataSource = retornaDados.QuantAcordosPorAno();
@@ -55,6 +59,37 @@ namespace CadastroDeAcordos
             chartAcordosPorAno.Series["Series1"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
         }
 
+        // preenche a quantidade dos valores do dashboard
+        private void PreencheDadosDashboard()
+        {
+            List<string> listaDados = new List<string>();
+            RetornaDados retornaDados2 = new RetornaDados();
+            DataTable table = retornaDados2.DadosDashboard();
+
+            //preenche lista com os valores da tabela
+            foreach (DataRow linha in table.Rows)
+            {
+                foreach (DataColumn coluna in table.Columns)
+                {
+                    listaDados.Add(linha[coluna].ToString());
+                }
+            }
+
+            //armazena cada valor da lista em sua respectiva label
+            lblTotalDeAcordos.Text = listaDados[0];
+            lblTotalDeAcordosFirmados.Text = listaDados[1];
+            lblAcordosVigentes.Text = listaDados[2];
+            lblAcordosVigentesUlt3Meses.Text = listaDados[3];
+            lblAcordosEmTramitacao.Text = listaDados[4];
+            lblAcordosCadastradosUlt3meses.Text = listaDados[5];
+            lblAcordosEmExpiracao.Text = listaDados[6];
+            lblAcordosExpirados.Text = listaDados[7];
+            lblAcordosExpiradosUlt3Meses.Text = listaDados[8];
+            lblAcordosComAttRecente.Text = listaDados[9];
+            lblAcordosSemAttRecentes.Text = listaDados[10];
+        }
+
+        
     }
 
 }

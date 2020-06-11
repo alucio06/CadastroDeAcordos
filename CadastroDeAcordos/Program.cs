@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CadastroDeAcordos.Formularios;
 
 namespace CadastroDeAcordos
 {
@@ -16,7 +17,7 @@ namespace CadastroDeAcordos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTelaInicial());
+            Application.Run(new frmLogin());
         }
     }
 }

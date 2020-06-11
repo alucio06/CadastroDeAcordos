@@ -173,5 +173,15 @@ namespace CadastroDeAcordos.Classes
             return tabela;
         }
 
+        //retorna quantidades para atualizar dados do Dashboard
+        public DataTable DadosDashboard()
+        {
+            comando.Connection = conexao.conectar();
+            comando.CommandText = "select * from DashboardDados";
+            lerDados = comando.ExecuteReader();
+            tabela.Load(lerDados);
+            conexao.desconectar();
+            return tabela;
+        }
     }
 }
