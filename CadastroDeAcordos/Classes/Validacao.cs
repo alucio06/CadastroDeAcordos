@@ -123,52 +123,58 @@ namespace CadastroDeAcordos.Classes
         }
 
         //verifica se é um nome de usuário válido
-        public Control nomeUsuarioEValido(Control textbox)
+        public bool nomeUsuarioEValido(string nomeUsuario)
         {
+            bool validacao = true;
+
             //verifica se nome do usuário tem mais de 12 caracteres
-            if(textbox.Text.Length > 13)
+            if(nomeUsuario.Length > 13 || nomeUsuario.Length < 4)
             {
-                MessageBox.Show("O nome de usuário deve possuir no máximo 12 caracteres");
-                textbox.Text = textbox.Text.Remove(textbox.Text.Length - 1);
-                textbox.Select();
+                validacao = false;
             }
 
-            foreach (char letra in textbox.Text)
+            foreach (char letra in nomeUsuario)
             {
                 if (!char.IsLetter(letra)) //se caractere não é letra
                 {
-                    MessageBox.Show("É permitido apenas letras para o nome do usuário");
-                    textbox.Text = textbox.Text.Remove(textbox.Text.Length - 1);
-                    textbox.Select();
+                    validacao = false;
                 }
             }
-            return textbox;
+            return validacao;
         }
 
         //verifica se senha é válida
-        public Control senhaEValida(Control textbox)
+        public bool senhaEValida(string senha)
         {
+            bool validacao = true;
             //verifica se senha tem mais de 15 caracteres
-            if(textbox.Text.Length > 15)
+            if(senha.Length > 15 || senha.Length < 6)
             {
-                MessageBox.Show("Sua senha deve possuir no máximo 15 caracteres");
-                textbox.Text = textbox.Text.Remove(textbox.Text.Length - 1);
-                textbox.Select();
+                validacao = false;
             }
 
-            foreach(char letra in textbox.Text)
+            foreach(char letra in senha)
             {
-                if(!char.IsLetter(letra) || !char.IsNumber(letra))
+                if(!(char.IsLetter(letra) || char.IsNumber(letra)))
                 {
-                    MessageBox.Show("Sua senha deve conter apenas letras ou números");
-                    textbox.Text = textbox.Text.Remove(textbox.Text.Length - 1);
-                    textbox.Select();
+                    validacao = false;
                 }
             }
 
-            return textbox;
+            return validacao;
         }
 
+        //verifica se email do usuario é válido
+        public bool emailUsuarioEValido(string email)
+        {
+            bool validacao = false;
+              
+            if (email.Contains("@"))
+            {
+                validacao = true;
+            }
+            return validacao;
+        }
 
     }
 }

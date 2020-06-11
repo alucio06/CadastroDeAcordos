@@ -13,9 +13,10 @@ namespace CadastroDeAcordos
 {
     public partial class frmTelaInicial : Form
     {
-        public frmTelaInicial()
+        public frmTelaInicial(string nomeUsuario)
         {
             InitializeComponent();
+            lblNomeUsuario.Text = nomeUsuario;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -53,6 +54,35 @@ namespace CadastroDeAcordos
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             openChildForm(new frmAtualizarStatus());
+        }
+
+        private void frmTelaInicial_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+        }
+
+        private void lblNomeUsuario_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
         }
     }
 }

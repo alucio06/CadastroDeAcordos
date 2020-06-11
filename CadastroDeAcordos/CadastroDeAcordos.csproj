@@ -77,12 +77,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CadastrarUsuario.cs" />
     <Compile Include="Classes\Cadastro.cs" />
     <Compile Include="Classes\Conexao.cs" />
     <Compile Include="Classes\Editar.cs" />
     <Compile Include="Classes\Excluir.cs" />
     <Compile Include="Classes\GeraRelatorio.cs" />
     <Compile Include="Classes\InputBox.cs" />
+    <Compile Include="Classes\VerificarLogin.cs" />
     <Compile Include="Classes\RetornaDados.cs" />
     <Compile Include="Classes\Validacao.cs" />
     <Compile Include="Entities\Acordo.cs" />

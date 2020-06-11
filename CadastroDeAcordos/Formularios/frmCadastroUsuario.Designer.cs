@@ -72,7 +72,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(182, 22);
             this.txtEmail.TabIndex = 3;
-            this.txtEmail.Leave += new System.EventHandler(this.maskedTextBox1_Leave);
             // 
             // txtUsuario
             // 
@@ -82,7 +81,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(182, 22);
             this.txtUsuario.TabIndex = 4;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtSenha
             // 
@@ -93,7 +91,6 @@
             this.txtSenha.Size = new System.Drawing.Size(182, 22);
             this.txtSenha.TabIndex = 5;
             this.txtSenha.UseSystemPasswordChar = true;
-            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // label1
             // 
@@ -134,7 +131,6 @@
             this.txtConfirmaSenha.Size = new System.Drawing.Size(182, 22);
             this.txtConfirmaSenha.TabIndex = 8;
             this.txtConfirmaSenha.UseSystemPasswordChar = true;
-            this.txtConfirmaSenha.TextChanged += new System.EventHandler(this.txtConfirmaSenha_TextChanged);
             // 
             // btnCadastrar
             // 
@@ -148,7 +144,7 @@
             this.btnCadastrar.TabIndex = 10;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.button1_Click);
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // frmCadastroUsuario
             // 

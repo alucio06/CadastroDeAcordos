@@ -17,7 +17,13 @@ namespace CadastroDeAcordos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+
+            frmLogin telaLogin = new frmLogin();
+            if (telaLogin.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new frmTelaInicial(telaLogin.txtUsuario.Text));
+            }
+            
         }
     }
 }
